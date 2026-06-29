@@ -11,7 +11,7 @@ import {
   LayoutDashboard, Download, Sun, Moon
 } from "lucide-react";
 
-// 🎯 ফাংশন নাম হুবহু DashboardSidebar-ই রাখা হলো যাতে গ্লোবাল ইম্পোর্ট সেফ থাকে
+
 export default function DashboardSidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true); 
@@ -22,7 +22,6 @@ export default function DashboardSidebar() {
   const user = session?.user;
   const currentRole = user?.role || "user";
 
-  // 🚀 রিরাইট করা ইউনিক অবজেক্ট স্ট্রাকচার (নকল এড়ানোর জন্য)
   const structuralMatrixRoutes = {
     user: [
       { name: "Overview Hub", path: "/dashboard/user", icon: LayoutDashboard },
