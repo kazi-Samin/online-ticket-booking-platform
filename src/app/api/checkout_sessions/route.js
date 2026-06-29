@@ -7,9 +7,14 @@ import { auth } from '@/lib/auth'
 export async function POST(request) {
     try {
         const headersList = await headers()
-        const origin = headersList.get('origin')
+        let origin = headersList.get('origin')
 
-console.log('origin:', origin);
+        // 🚀 Fixed Fallback: বিল্ডের সময় বা অরিজিন মিসিং থাকলে প্রোডাকশন বা লোকালহোস্টের ডিফল্ট ইউআরএল সেট করবে
+        if (!origin || origin === 'null') {
+            origin = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+        }
+
+        console.log('Processed Origin:', origin);
 
         const sessionData = await auth.api.getSession({
             headers: await headers(),
@@ -40,12 +45,13 @@ console.log('origin:', origin);
                 },
             ],
             mode: 'payment',
-          success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-            //   cancel_url: `${origin}/`,
+            success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+            cancel_url: `${origin}/`, // ক্যাঞ্চেল ইউআরএলও সেফটির জন্য অ্যাড করে দেওয়া হলো
         });
 
         return NextResponse.redirect(session.url, 303)
     } catch (err) {
+        console.error("Stripe Session Error:", err);
         return NextResponse.json(
             { error: err.message },
             { status: err.statusCode || 500 }
