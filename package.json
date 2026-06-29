@@ -1,0 +1,41 @@
+{
+  "name": "online-ticket-booking-platform",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@better-auth/mongo-adapter": "^1.6.19",
+    "@heroui/react": "^3.2.1",
+    "@heroui/styles": "^3.2.1",
+    "@react-pdf/renderer": "^4.5.1",
+    "@stripe/stripe-js": "^9.8.0",
+    "better-auth": "^1.6.19",
+    "framer-motion": "^12.40.0",
+    "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.14.0",
+    "jspdf": "^4.2.1",
+    "lucide-react": "^1.20.0",
+    "mongodb": "^7.4.0",
+    "next": "^16.2.9",
+    "next-themes": "^0.4.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-icons": "^5.6.0",
+    "react-toastify": "^11.1.0",
+    "recharts": "^3.8.1",
+    "stripe": "^22.2.2",
+    "swiper": "^12.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.9",
+    "tailwindcss": "^4"
+  }
+}
