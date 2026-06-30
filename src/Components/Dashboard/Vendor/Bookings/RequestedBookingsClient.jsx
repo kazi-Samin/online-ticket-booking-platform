@@ -482,33 +482,33 @@ export default function RequestedBookingsClient({ initialBookings }) {
   };
 
   return (
-    <div className="space-y-6 max-w-7xl mx-auto p-4 min-h-screen bg-slate-950 text-slate-200 selection:bg-teal-500/30 selection:text-white transition-colors duration-200">
+    <div className="space-y-6 max-w-7xl mx-auto p-4 min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-700 dark:text-slate-200 selection:bg-teal-500/30 selection:text-white transition-colors duration-200">
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-        <div className="bg-slate-900/40 border border-slate-800 p-6 rounded-2xl flex items-center justify-between backdrop-blur-md transition-all hover:border-amber-500/30 hover:shadow-[0_0_25px_rgba(245,158,11,0.03)]">
+        <div className="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl flex items-center justify-between backdrop-blur-md transition-all hover:border-amber-500/30 hover:shadow-[0_0_25px_rgba(245,158,11,0.03)]">
           <div className="space-y-1.5">
             <p className="text-[10px] font-black tracking-widest uppercase text-amber-400/90">Pending Requests</p>
-            <h3 className="text-3xl font-black text-white tracking-tight">{totalPending}</h3>
+            <h3 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">{totalPending}</h3>
           </div>
           <div className="p-3 bg-amber-500/10 text-amber-400 rounded-xl border border-amber-500/20 shadow-inner">
             <Hourglass className="h-5 w-5 animate-pulse" />
           </div>
         </div>
 
-        <div className="bg-slate-900/40 border border-slate-800 p-6 rounded-2xl flex items-center justify-between backdrop-blur-md transition-all hover:border-emerald-500/30 hover:shadow-[0_0_25px_rgba(16,185,129,0.03)]">
+        <div className="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl flex items-center justify-between backdrop-blur-md transition-all hover:border-emerald-500/30 hover:shadow-[0_0_25px_rgba(16,185,129,0.03)]">
           <div className="space-y-1.5">
             <p className="text-[10px] font-black tracking-widest uppercase text-emerald-400/90">Approved Bookings</p>
-            <h3 className="text-3xl font-black text-white tracking-tight">{totalAccepted}</h3>
+            <h3 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">{totalAccepted}</h3>
           </div>
           <div className="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl border border-emerald-500/20 shadow-inner">
             <CheckCircle2 className="h-5 w-5" />
           </div>
         </div>
 
-        <div className="bg-slate-900/40 border border-slate-800 p-6 rounded-2xl flex items-center justify-between backdrop-blur-md transition-all hover:border-red-500/30 hover:shadow-[0_0_25px_rgba(239,68,68,0.03)]">
+        <div className="bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl flex items-center justify-between backdrop-blur-md transition-all hover:border-red-500/30 hover:shadow-[0_0_25px_rgba(239,68,68,0.03)]">
           <div className="space-y-1.5">
             <p className="text-[10px] font-black tracking-widest uppercase text-red-400/90">Rejected Logs</p>
-            <h3 className="text-3xl font-black text-white tracking-tight">{totalRejected}</h3>
+            <h3 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">{totalRejected}</h3>
           </div>
           <div className="p-3 bg-red-500/10 text-red-400 rounded-xl border border-red-500/20 shadow-inner">
             <XCircle className="h-5 w-5" />
@@ -516,7 +516,7 @@ export default function RequestedBookingsClient({ initialBookings }) {
         </div>
       </div>
 
-      <div className="bg-slate-900/60 p-4 border border-slate-800/80 rounded-2xl flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 backdrop-blur-lg transition-all hover:border-slate-700/60">
+      <div className="bg-white dark:bg-slate-900/60 p-4 border border-slate-200 dark:border-slate-800/80 rounded-2xl flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 backdrop-blur-lg transition-all hover:border-slate-300 dark:hover:border-slate-700/60">
         <div className="relative flex-1 group">
           <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-500 group-focus-within:text-teal-400 transition-colors">
             <Search className="h-4 w-4" />
@@ -530,7 +530,7 @@ export default function RequestedBookingsClient({ initialBookings }) {
               setSearchQuery(e.target.value);
               setCurrentPage(1);
             }}
-            className="w-full bg-slate-950/40 border border-slate-800 pl-10 pr-4 py-2.5 rounded-xl text-xs font-bold text-slate-200 placeholder-slate-500 focus:outline-none focus:border-teal-500/50 focus:bg-slate-950/80 focus:ring-4 focus:ring-teal-500/10 transition-all shadow-inner"
+            className="w-full bg-slate-100 dark:bg-slate-950/40 border border-slate-200 dark:border-slate-800 pl-10 pr-4 py-2.5 rounded-xl text-xs font-bold text-slate-900 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-teal-500/50 focus:bg-white dark:focus:bg-slate-950/80 focus:ring-4 focus:ring-teal-500/10 transition-all shadow-inner"
           />
         </div>
 
@@ -545,7 +545,7 @@ export default function RequestedBookingsClient({ initialBookings }) {
                 setStatusFilter(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full bg-slate-950/40 border border-slate-800 pl-9 pr-10 py-2.5 rounded-xl text-xs font-black text-slate-300 focus:outline-none focus:border-teal-500/50 focus:bg-slate-950/80 focus:ring-4 focus:ring-teal-500/10 transition-all appearance-none cursor-pointer"
+              className="w-full bg-slate-100 dark:bg-slate-950/40 border border-slate-200 dark:border-slate-800 pl-9 pr-10 py-2.5 rounded-xl text-xs font-black text-slate-700 dark:text-slate-300 focus:outline-none focus:border-teal-500/50 focus:bg-white dark:focus:bg-slate-950/80 focus:ring-4 focus:ring-teal-500/10 transition-all appearance-none cursor-pointer"
             >
               <option value="all" className="bg-slate-950 text-slate-300">📊 All Statuses</option>
               <option value="pending" className="bg-slate-950 text-amber-400">⏳ Pending</option>
@@ -558,16 +558,16 @@ export default function RequestedBookingsClient({ initialBookings }) {
       </div>
 
       {filteredBookings.length === 0 ? (
-        <div className="bg-slate-900/20 border border-slate-800/60 rounded-2xl p-16 text-center text-slate-500 font-bold text-xs uppercase tracking-widest backdrop-blur-sm">
+        <div className="bg-white dark:bg-slate-900/20 border border-slate-200 dark:border-slate-800/60 rounded-2xl p-16 text-center text-slate-500 font-bold text-xs uppercase tracking-widest backdrop-blur-sm">
           No requested reservation logs found.
         </div>
       ) : (
-        <div className="bg-slate-900/20 border border-slate-800/80 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-md">
+        <div className="bg-white dark:bg-slate-900/20 border border-slate-200 dark:border-slate-800/80 rounded-2xl shadow-sm dark:shadow-2xl overflow-hidden backdrop-blur-md">
 
           <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-slate-900/60 border-b border-slate-800 text-[10px] font-black tracking-widest uppercase text-slate-500">
+                <tr className="bg-slate-50 dark:bg-slate-900/60 border-b border-slate-200 dark:border-slate-800 text-[10px] font-black tracking-widest uppercase text-slate-500">
                   <th className="p-4 pl-6">User Name / Email</th>
                   <th className="p-4">Ticket Title</th>
                   <th className="p-4 text-center">Booking Quantity</th>
@@ -576,16 +576,16 @@ export default function RequestedBookingsClient({ initialBookings }) {
                   <th className="p-4 pr-6 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-800/50 text-xs text-slate-300 font-medium">
+              <tbody className="divide-y divide-slate-100 dark:divide-slate-800/50 text-xs text-slate-700 dark:text-slate-300 font-medium">
                 {currentItems.map((booking) => (
                   <tr key={booking._id} className="hover:bg-slate-800/10 transition-colors">
                     <td className="p-4 pl-6">
-                      <div className="font-extrabold text-white text-sm">{booking.userName}</div>
+                      <div className="font-extrabold text-slate-900 dark:text-white text-sm">{booking.userName}</div>
                       <div className="text-[11px] text-slate-500 font-semibold mt-0.5">{booking.userEmail}</div>
                     </td>
                     <td className="p-4 font-extrabold text-teal-400">{booking.ticketTitle}</td>
                     <td className="p-4 text-center font-black text-slate-400">{booking.bookingQuantity} Units</td>
-                    <td className="p-4 font-black text-white text-sm">৳{booking.totalPrice.toLocaleString()}</td>
+                    <td className="p-4 font-black text-slate-900 dark:text-white text-sm">৳{booking.totalPrice.toLocaleString()}</td>
                     <td className="p-4 text-center">
                       <span className={`inline-block px-3 py-1 rounded-md text-[9px] font-black uppercase tracking-wider border ${
                         booking.status === 'accepted' ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' :
@@ -627,13 +627,13 @@ export default function RequestedBookingsClient({ initialBookings }) {
             </table>
           </div>
 
-          <div className="block md:hidden divide-y divide-slate-800/50">
+          <div className="block md:hidden divide-y divide-slate-100 dark:divide-slate-800/50">
             {currentItems.map((booking) => (
               <div key={booking._id} className="p-5 space-y-4 bg-transparent text-xs">
                 <div className="flex justify-between items-start">
                   <div className="space-y-1">
                     <h3 className="text-sm font-black text-teal-400">{booking.ticketTitle}</h3>
-                    <p className="text-white font-extrabold">{booking.userName}</p>
+                    <p className="text-slate-900 dark:text-white font-extrabold">{booking.userName}</p>
                     <p className="text-slate-500 font-semibold text-[11px]">{booking.userEmail}</p>
                   </div>
                   <span className={`px-2.5 py-1 rounded text-[9px] font-black uppercase tracking-wider border ${
@@ -645,14 +645,14 @@ export default function RequestedBookingsClient({ initialBookings }) {
                   </span>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 bg-slate-950/40 p-3 rounded-xl border border-slate-800/60 text-[11px]">
+                <div className="grid grid-cols-2 gap-2 bg-slate-100 dark:bg-slate-950/40 p-3 rounded-xl border border-slate-200 dark:border-slate-800/60 text-[11px]">
                   <div>
                     <span className="text-slate-500 block font-bold text-[9px] uppercase tracking-wider">Quantity</span>
-                    <span className="font-extrabold text-slate-300">{booking.bookingQuantity} Units</span>
+                    <span className="font-extrabold text-slate-700 dark:text-slate-300">{booking.bookingQuantity} Units</span>
                   </div>
                   <div>
                     <span className="text-slate-500 block font-bold text-[9px] uppercase tracking-wider">Total Price</span>
-                    <span className="font-black text-white">৳{booking.totalPrice.toLocaleString()}</span>
+                    <span className="font-black text-slate-900 dark:text-white">৳{booking.totalPrice.toLocaleString()}</span>
                   </div>
                 </div>
 
@@ -677,7 +677,7 @@ export default function RequestedBookingsClient({ initialBookings }) {
           </div>
 
           {totalPages > 1 && (
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 border-t border-slate-800/60 bg-slate-950/20">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 border-t border-slate-200 dark:border-slate-800/60 bg-white dark:bg-slate-950/20">
               <span className="text-xs font-semibold text-slate-500 text-center sm:text-left">
                 Showing <span className="text-slate-300 font-bold">{indexOfFirstItem + 1}</span> to{' '}
                 <span className="text-slate-300 font-bold">
@@ -740,7 +740,7 @@ export default function RequestedBookingsClient({ initialBookings }) {
               initial={{ opacity: 0, scale: 0.95, y: 10 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 10 }}
-              className="bg-slate-950 border border-slate-800 p-6 rounded-2xl w-full max-w-sm relative z-10 shadow-2xl space-y-5 text-center"
+              className="bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl w-full max-w-sm relative z-10 shadow-2xl space-y-5 text-center"
             >
               <div className="flex justify-center">
                 {modalConfig.type === 'accept' ? (
@@ -755,11 +755,11 @@ export default function RequestedBookingsClient({ initialBookings }) {
               </div>
 
               <div className="space-y-2">
-                <h3 className="text-sm font-black text-white uppercase tracking-wider">
+                <h3 className="text-sm font-black text-slate-900 dark:text-white uppercase tracking-wider">
                   {modalConfig.type === 'accept' ? 'Execute Approval' : 'Execute Rejection'}
                 </h3>
                 <p className="text-xs text-slate-400 font-medium leading-relaxed">
-                  Are you absolutely certain you want to toggle the status to <strong className="uppercase text-white font-extrabold">{modalConfig.type === 'accept' ? 'accepted' : 'rejected'}</strong> for{' '}
+                  Are you absolutely certain you want to toggle the status to <strong className="uppercase text-slate-900 dark:text-white font-extrabold">{modalConfig.type === 'accept' ? 'accepted' : 'rejected'}</strong> for{' '}
                   <strong className="text-teal-400 font-bold">{modalConfig.booking?.ticketTitle}</strong>?
                 </p>
               </div>
