@@ -448,22 +448,32 @@ export default function BookedTicketsClientGrid({ initialBookings }) {
                 const formattedDate = dateObj.toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' }).toUpperCase();
                 const isTimePassed = dateObj - new Date() <= 0;
 
-                return (
-                  <motion.div
-                    key={booking._id}
-                    layout
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    whileHover={{ y: -3 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="bg-slate-900/30 border border-slate-800/60 backdrop-blur-md rounded-3xl shadow-lg hover:shadow-2xl overflow-hidden relative group flex flex-col md:flex-row items-stretch md:h-56 transition-all duration-300"
-                  >
-                    <div className="relative h-48 md:h-auto md:w-[35%] shrink-0 overflow-hidden border-b md:border-b-0 md:border-r border-slate-800/60">
-                      <Image 
-                        width={400} 
-                        height={400}
-                        src={booking?.image}
+                  const getDisplayImage = (img, title) => {
+                    const titleLower = title?.toLowerCase() || "";
+                    if (img?.includes("unsplash")) {
+                      if (titleLower.includes("air") || titleLower.includes("flight") || titleLower.includes("plane") || titleLower.includes("biman")) {
+                        return "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=1600";
+                      }
+                    }
+                    return img;
+                  };
+
+                  return (
+                    <motion.div
+                      key={booking._id}
+                      layout
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      whileHover={{ y: -3 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="bg-slate-900/30 border border-slate-800/60 backdrop-blur-md rounded-3xl shadow-lg hover:shadow-2xl overflow-hidden relative group flex flex-col md:flex-row items-stretch md:h-56 transition-all duration-300"
+                    >
+                      <div className="relative h-48 md:h-auto md:w-[35%] shrink-0 overflow-hidden border-b md:border-b-0 md:border-r border-slate-800/60">
+                        <Image 
+                          width={400} 
+                          height={400}
+                          src={getDisplayImage(booking?.image, booking?.ticketTitle)}
                         alt={booking?.ticketTitle}
                         className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       />
@@ -544,7 +554,7 @@ export default function BookedTicketsClientGrid({ initialBookings }) {
                               Cancelled
                             </div>
                           ) : (
-                            <div className="text-slate-950 font-black text-[10px] text-center uppercase tracking-widest bg-amber-500 px-4 py-2 rounded-xl animate-pulse shadow-md shadow-amber-500/10">
+                            <div className="text-amber-500 dark:text-amber-400 font-black text-[10px] text-center uppercase tracking-widest bg-amber-500/10 border border-amber-500/20 px-4 py-2 rounded-xl shadow-sm">
                               Awaiting Approval
                             </div>
                           )}

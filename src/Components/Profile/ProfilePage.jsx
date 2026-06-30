@@ -298,7 +298,7 @@ export default function ProfilePage() {
               <div className={`w-full pl-12 pr-4 py-4 text-xs sm:text-sm font-black rounded-2xl border border-slate-800 bg-slate-900/30 tracking-wide ${
                 user?.emailVerified ? "text-emerald-400" : "text-amber-500"
               }`}>
-                {user?.emailVerified ? "Verified Infrastructure" : "Pending Signature Verification"}
+                {user?.emailVerified ? "Verified Account" : "Pending Verification"}
               </div>
             </div>
           </div>
