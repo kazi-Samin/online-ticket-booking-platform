@@ -6,7 +6,7 @@ import { FaTicketAlt, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'rea
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-900 pt-20 pb-8 transition-colors duration-300">
+    <footer className="w-full bg-slate-50 dark:bg-slate-950 border-t-2 border-slate-300 dark:border-slate-800 pt-20 pb-8 transition-colors duration-300">
       <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 pb-16 border-b border-slate-200 dark:border-slate-900 w-full">
