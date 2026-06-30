@@ -55,39 +55,6 @@ TicketBari bridges the gap between travel vendors and passengers. Vendors can ea
 
 ---
 
-## ⚙️ Installation & Setup (Local Development)
-
-Follow these steps to run the frontend application locally:
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/kazi-Samin/online-ticket-booking-platform.git
-cd online-ticket-booking-platform
-```
-
-### 2. Install Dependencies
-```bash
-npm install
-```
-
-### 3. Configure Environment Variables
-Create a `.env.local` file in the root directory and add the following keys:
-```env
-NEXT_PUBLIC_BACKEND_URL=http://localhost:5000
-NEXT_PUBLIC_BETTER_AUTH_URL=http://localhost:3000
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
-STRIPE_SECRET_KEY=your_stripe_secret_key
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-```
-
-### 4. Start the Development Server
-```bash
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
-
----
 
 ## 🤝 Contribution Guidelines
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
