@@ -16,6 +16,9 @@ const sansBody = Inter({
 export const metadata = {
   title: "TicketCore",
   description: "Online ticket booking platform",
+  icons: {
+    icon: '/ticket_core_logo.png',
+  }
 };
 
 export default function RootLayout({ children }) {
