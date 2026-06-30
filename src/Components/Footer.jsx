@@ -58,11 +58,16 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col sm:flex-row justify-between items-center pt-8 gap-4 w-full">
-          <p className="text-xs text-slate-450 dark:text-slate-500 font-medium">
-            &copy; 2026 TicketCore Inc. All rights reserved.
+          <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+            &copy; {new Date().getFullYear()} TicketCore Inc. All rights reserved.
           </p>
-          <div className="flex gap-6 text-xs text-slate-450 dark:text-slate-500 font-medium">
-            <span>Built securely for academic submission.</span>
+          <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 font-medium bg-slate-100 dark:bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
+            <span>Secured Payments by</span>
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" 
+              alt="Stripe" 
+              className="h-4 sm:h-5 opacity-90 hover:opacity-100 transition-opacity drop-shadow-sm" 
+            />
           </div>
         </div>
 
