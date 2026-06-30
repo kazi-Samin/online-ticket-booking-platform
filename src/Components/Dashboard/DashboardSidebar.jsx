@@ -27,6 +27,7 @@ export default function DashboardSidebar() {
       { name: "User Profile", path: "/dashboard/user/profile", icon: User },
       { name: "My Booked Tickets", path: "/dashboard/user/booked-tickets", icon: Ticket },
       { name: "Transaction History", path: "/dashboard/user/transactions", icon: History },
+      { name: "Download Tickets", path: "/dashboard/user/download-tickets", icon: Download },
     ],
     vendor: [
       { name: "Vendor Profile", path: "/dashboard/vendor/vendor-profile", icon: User },
