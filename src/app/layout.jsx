@@ -14,7 +14,7 @@ const sansBody = Inter({
 });
 
 export const metadata = {
-  title: "TicketCore || Online Ticket Booking Platform",
+  title: "TicketCore",
   description: "Online ticket booking platform",
 };
 

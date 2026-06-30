@@ -24,26 +24,22 @@ export default function DashboardSidebar() {
 
   const structuralMatrixRoutes = {
     user: [
-      { name: "Overview Hub", path: "/dashboard/user", icon: LayoutDashboard },
-      { name: "My Profile", path: "/dashboard/user/profile", icon: User },
-      { name: "Booked Slotted Tickets", path: "/dashboard/user/booked-tickets", icon: Ticket },
-      { name: "Download Vault", path: "/dashboard/user/download-tickets", icon: Download },
-      { name: "Ledger Records", path: "/dashboard/user/transactions", icon: History },
+      { name: "User Profile", path: "/dashboard/user/profile", icon: User },
+      { name: "My Booked Tickets", path: "/dashboard/user/booked-tickets", icon: Ticket },
+      { name: "Transaction History", path: "/dashboard/user/transactions", icon: History },
     ],
     vendor: [
-      { name: "Merchant Desk", path: "/dashboard/vendor", icon: LayoutDashboard },
-      { name: "Vendor Identity", path: "/dashboard/vendor/vendor-profile", icon: User },
-      { name: "Launch New Transit", path: "/dashboard/vendor/add-ticket", icon: PlusCircle },
-      { name: "Inventory Management", path: "/dashboard/vendor/my-tickets", icon: Layers },
-      { name: "Booking Orders", path: "/dashboard/vendor/bookings", icon: FolderCheck },
-      { name: "Revenue Analytics", path: "/dashboard/vendor/revenue", icon: DollarSign },
+      { name: "Vendor Profile", path: "/dashboard/vendor/vendor-profile", icon: User },
+      { name: "Add Ticket", path: "/dashboard/vendor/add-ticket", icon: PlusCircle },
+      { name: "My Added Tickets", path: "/dashboard/vendor/my-tickets", icon: Layers },
+      { name: "Requested Bookings", path: "/dashboard/vendor/bookings", icon: FolderCheck },
+      { name: "Revenue Overview", path: "/dashboard/vendor/revenue", icon: DollarSign },
     ],
     admin: [
-      { name: "Control Center", path: "/dashboard/admin", icon: LayoutDashboard },
-      { name: "Root Profile", path: "/dashboard/admin/admin-profile", icon: User },
-      { name: "Audit Transit Lines", path: "/dashboard/admin/manage-tickets", icon: ShieldAlert },
-      { name: "Orchestrate System Users", path: "/dashboard/admin/manage-users", icon: Users },
-      { name: "Promotional Spotlights", path: "/dashboard/admin/advertise", icon: Megaphone },
+      { name: "Admin Profile", path: "/dashboard/admin/admin-profile", icon: User },
+      { name: "Manage Tickets", path: "/dashboard/admin/manage-tickets", icon: ShieldAlert },
+      { name: "Manage Users", path: "/dashboard/admin/manage-users", icon: Users },
+      { name: "Advertise Tickets", path: "/dashboard/admin/advertise", icon: Megaphone },
     ]
   };
 

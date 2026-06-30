@@ -16,7 +16,7 @@
 //   ];
 
 //   return (
-//     <section className="w-full py-20 bg-zinc-50 dark:bg-zinc-950 transition-colors duration-300 overflow-hidden border-t border-b border-zinc-200/60 dark:border-zinc-900">
+//     <section className="w-full py-20 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 overflow-hidden border-t border-b border-slate-200/60 dark:border-slate-900">
 //       <div className="max-w-6xl mx-auto px-4">
 
 //         {/* সেকশন হেডার */}
@@ -36,21 +36,21 @@
 //             whileInView={{ opacity: 1, y: 0 }}
 //             viewport={{ once: true }}
 //             transition={{ delay: 0.1 }}
-//             className="text-3xl sm:text-4xl font-black tracking-tight text-zinc-950 dark:text-zinc-100"
+//             className="text-3xl sm:text-4xl font-black tracking-tight text-slate-950 dark:text-slate-100"
 //           >
 //             Connecting Transit Networks Globally
 //           </motion.h2>
 
-//           <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 font-medium leading-relaxed">
+//           <p className="text-sm text-slate-600 dark:text-slate-400 mt-3 font-medium leading-relaxed">
 //             Our optimized routing servers span across multiple continents, ensuring sub-millisecond data execution and seamless ticketing experiences everywhere.
 //           </p>
 //         </div>
 
 //         {/* ম্যাপ কন্টেনার কার্ড */}
-//         <div className="relative rounded-[32px] bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800/80 p-6 sm:p-10 shadow-sm overflow-hidden">
+//         <div className="relative rounded-[32px] bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 p-6 sm:p-10 shadow-sm overflow-hidden">
 
 //           {/* ব্যাকগ্রাউন্ড ডেকোরেティブ ব্লার গ্লো */}
-//           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-72 bg-blue-500/5 dark:bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
+//           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-72 bg-blue-500/5 dark:bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
 
 //           {/* 🗺️ ম্যাপ ইমেজ ও অ্যানিমেশন এরিয়া */}
 //           <motion.div
@@ -58,7 +58,7 @@
 //             whileInView={{ opacity: 1, scale: 1 }}
 //             viewport={{ once: true }}
 //             transition={{ duration: 0.6 }}
-//             className="relative w-full aspect-[2/1] min-h-[320px] max-h-[500px] flex items-center justify-center bg-zinc-50/50 dark:bg-zinc-950/30 rounded-2xl overflow-hidden"
+//             className="relative w-full aspect-[2/1] min-h-[320px] max-h-[500px] flex items-center justify-center bg-slate-50/50 dark:bg-slate-950/30 rounded-2xl overflow-hidden"
 //           >
 //             {/* 🖼️ নিখুঁত ওয়ার্ল্ড ম্যাপ ইমেজ ব্যাকগ্রাউন্ড (ডার্ক মোডে ইনভার্ট হবে ট্রানজিশনসহ) */}
 //             <Image width={600} height={400}
@@ -81,7 +81,7 @@
 //                 <span className="relative flex h-3 w-3 rounded-full bg-[#FF6B35] shadow-md shadow-orange-500/50" />
 
 //                 {/* হাই-কন্ট্রাস্ট ডার্ক ও লাইট লেবেল */}
-//                 <div className="absolute top-5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-zinc-950 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-950 font-black text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-xl shadow-lg border border-zinc-800 dark:border-zinc-200 opacity-100 transition-all duration-200">
+//                 <div className="absolute top-5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-slate-950 dark:bg-slate-100 text-slate-100 dark:text-slate-950 font-black text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-xl shadow-lg border border-slate-800 dark:border-slate-200 opacity-100 transition-all duration-200">
 //                   {node.label}
 //                 </div>
 //               </div>
@@ -89,34 +89,34 @@
 //           </motion.div>
 
 //           {/* বটম ইনফো গ্রিড */}
-//           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-zinc-100 dark:border-zinc-800/80 pt-8 mt-6">
+//           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-slate-100 dark:border-slate-800/80 pt-8 mt-6">
 //             <div className="flex items-center gap-3.5 pl-2">
-//               <div className="p-3 bg-zinc-50 dark:bg-zinc-950 text-[#1E3A8A] dark:text-blue-400 rounded-2xl border border-zinc-100 dark:border-zinc-800">
+//               <div className="p-3 bg-slate-50 dark:bg-slate-950 text-[#1E3A8A] dark:text-blue-400 rounded-2xl border border-slate-100 dark:border-slate-800">
 //                 <Users className="h-5 w-5" />
 //               </div>
 //               <div>
-//                 <div className="text-xl font-black text-zinc-950 dark:text-zinc-100">10M+</div>
-//                 <div className="text-xs text-zinc-500 dark:text-zinc-400 font-bold uppercase tracking-wide">Active Commuters</div>
+//                 <div className="text-xl font-black text-slate-950 dark:text-slate-100">10M+</div>
+//                 <div className="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wide">Active Commuters</div>
 //               </div>
 //             </div>
 
 //             <div className="flex items-center gap-3.5 pl-2">
-//               <div className="p-3 bg-zinc-50 dark:bg-zinc-950 text-[#FF6B35] rounded-2xl border border-zinc-100 dark:border-zinc-800">
+//               <div className="p-3 bg-slate-50 dark:bg-slate-950 text-[#FF6B35] rounded-2xl border border-slate-100 dark:border-slate-800">
 //                 <Zap className="h-5 w-5" />
 //               </div>
 //               <div>
-//                 <div className="text-xl font-black text-zinc-950 dark:text-zinc-100">&lt; 45ms</div>
-//                 <div className="text-xs text-zinc-500 dark:text-zinc-400 font-bold uppercase tracking-wide">Server Response Time</div>
+//                 <div className="text-xl font-black text-slate-950 dark:text-slate-100">&lt; 45ms</div>
+//                 <div className="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wide">Server Response Time</div>
 //               </div>
 //             </div>
 
 //             <div className="flex items-center gap-3.5 pl-2">
-//               <div className="p-3 bg-zinc-50 dark:bg-zinc-950 text-emerald-600 dark:text-emerald-400 rounded-2xl border border-zinc-100 dark:border-zinc-800">
+//               <div className="p-3 bg-slate-50 dark:bg-slate-950 text-emerald-600 dark:text-emerald-400 rounded-2xl border border-slate-100 dark:border-slate-800">
 //                 <ShieldCheck className="h-5 w-5" />
 //               </div>
 //               <div>
-//                 <div className="text-xl font-black text-zinc-950 dark:text-zinc-100">99.99%</div>
-//                 <div className="text-xs text-zinc-500 dark:text-zinc-400 font-bold uppercase tracking-wide">Transaction Uptime</div>
+//                 <div className="text-xl font-black text-slate-950 dark:text-slate-100">99.99%</div>
+//                 <div className="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wide">Transaction Uptime</div>
 //               </div>
 //             </div>
 //           </div>
@@ -151,9 +151,9 @@ export default function GlobalConnect() {
       value: '99.9%', 
       status: 'Connected', 
       icon: HiGlobe, 
-      color: 'text-indigo-600 dark:text-indigo-400', 
-      bg: 'bg-indigo-50 dark:bg-indigo-950/40 border-indigo-200 dark:border-indigo-900/50', 
-      metricColor: 'text-indigo-600 dark:text-indigo-400/90' 
+      color: 'text-teal-600 dark:text-teal-400', 
+      bg: 'bg-teal-50 dark:bg-teal-950/40 border-teal-200 dark:border-teal-900/50', 
+      metricColor: 'text-teal-600 dark:text-teal-400/90' 
     },
     { 
       id: 3, 
@@ -171,19 +171,19 @@ export default function GlobalConnect() {
   return (
     <div className="w-full bg-slate-50 dark:bg-slate-950 py-24 border-t border-slate-200 dark:border-slate-900 transition-colors duration-300 relative overflow-hidden flex justify-center items-center">
       
-      <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-indigo-500/10 dark:bg-indigo-600/10 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-teal-500/10 dark:bg-teal-600/10 rounded-full blur-[130px] pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-violet-400/10 dark:bg-violet-600/10 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
         
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-16 gap-6">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold text-xs uppercase tracking-widest mb-3">
+            <div className="flex items-center gap-2 text-teal-600 dark:text-teal-400 font-bold text-xs uppercase tracking-widest mb-3">
               <HiLightningBolt className="text-sm animate-pulse" />
               System Core Performance
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
-              Global Centralized <span className="text-indigo-600 dark:text-indigo-400">Data Architecture</span>
+              Global Centralized <span className="text-teal-600 dark:text-teal-400">Data Architecture</span>
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-sm mt-3 leading-relaxed font-medium">
               Experience flawless real-time ticket query synchronization through distributed nodes and high-availability backup framework layers.
@@ -214,7 +214,7 @@ export default function GlobalConnect() {
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 transition-colors group-hover:text-teal-600 dark:group-hover:text-teal-400">
                   {stat.title}
                 </h3>
                 

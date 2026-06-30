@@ -6,6 +6,9 @@ export const getSession = async () => {
    const session = await auth.api.getSession({
     headers: await headers() // you need to pass the headers object.
 })
+  if (session?.user && !session.user.role) {
+    session.user.role = 'user';
+  }
 return session?.user || null ;
 };
 
@@ -24,5 +27,4 @@ export const requireRole = async(role)=>{
   if(user?.role !== role){
           return redirect('/unauthorized')
   }
-
 }

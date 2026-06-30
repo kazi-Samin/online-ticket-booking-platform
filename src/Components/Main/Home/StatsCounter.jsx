@@ -39,7 +39,7 @@
 
 // export function StatsCounter() {
 //   return (
-//     <section className="w-full bg-gradient-to-br from-[#1E3A8A] via-[#162A65] to-zinc-950 text-white py-16 px-4 relative overflow-hidden transition-all duration-300">
+//     <section className="w-full bg-gradient-to-br from-[#1E3A8A] via-[#162A65] to-slate-950 text-white py-16 px-4 relative overflow-hidden transition-all duration-300">
 
 //       {/* 🔮 ব্যাকগ্রাউন্ড গ্লো ডেকোরেশন */}
 //       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 h-64 w-64 bg-[#FF6B35]/10 rounded-full blur-3xl pointer-events-none" />
@@ -72,7 +72,7 @@
 //             </div>
 
 //             {/* 🏷️ লেবেল */}
-//             <span className="text-[11px] sm:text-xs text-zinc-300 dark:text-zinc-400 font-bold tracking-widest uppercase transition-colors group-hover:text-white">
+//             <span className="text-[11px] sm:text-xs text-slate-300 dark:text-slate-400 font-bold tracking-widest uppercase transition-colors group-hover:text-white">
 //               {stat.label}
 //             </span>
 //           </motion.div>
@@ -88,7 +88,7 @@ import { Users, Ticket, Route, ShieldAlert } from 'lucide-react';
 import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
 
 const stats = [
-  { icon: <Users className="h-7 w-7 text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-500 dark:group-hover:text-indigo-300 transition-colors" />, target: 500, suffix: "K+", label: "Happy Travellers" },
+  { icon: <Users className="h-7 w-7 text-teal-600 dark:text-teal-400 group-hover:text-teal-500 dark:group-hover:text-teal-300 transition-colors" />, target: 500, suffix: "K+", label: "Happy Travellers" },
   { icon: <Ticket className="h-7 w-7 text-violet-600 dark:text-violet-400 group-hover:text-violet-500 dark:group-hover:text-violet-300 transition-colors" />, target: 1.2, suffix: "M+", label: "Tickets Sold" },
   { icon: <Route className="h-7 w-7 text-fuchsia-600 dark:text-fuchsia-400 group-hover:text-fuchsia-500 dark:group-hover:text-fuchsia-300 transition-colors" />, target: 250, suffix: "+", label: "Routes Covered" },
   { icon: <ShieldAlert className="h-7 w-7 text-rose-600 dark:text-rose-400 group-hover:text-rose-500 dark:group-hover:text-rose-300 transition-colors" />, target: 99.9, suffix: "%", label: "Reliability Rate" },
@@ -121,7 +121,7 @@ export function StatsCounter() {
   return (
     <section className="w-full bg-slate-50 dark:bg-slate-950 py-24 px-4 relative overflow-hidden flex justify-center items-center transition-colors duration-300">
       
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-teal-600/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">
@@ -133,21 +133,21 @@ export function StatsCounter() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.1, ease: "easeOut" }}
             whileHover={{ y: -12 }}
-            className="group relative flex flex-col items-center justify-center gap-5 p-8 rounded-3xl bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/50 backdrop-blur-xl hover:bg-slate-100/50 dark:hover:bg-slate-900/80 hover:border-indigo-500/30 hover:shadow-[0_0_40px_rgba(99,102,241,0.05)] dark:hover:shadow-[0_0_40px_rgba(99,102,241,0.1)] transition-all duration-500"
+            className="group relative flex flex-col items-center justify-center gap-5 p-8 rounded-3xl bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/50 backdrop-blur-xl hover:bg-slate-100/50 dark:hover:bg-slate-900/80 hover:border-teal-500/30 hover:shadow-[0_0_40px_rgba(99,102,241,0.05)] dark:hover:shadow-[0_0_40px_rgba(99,102,241,0.1)] transition-all duration-500"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-transparent opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-500" />
 
-            <div className="p-4 bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-zinc-700/50 rounded-2xl group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-500 ease-out shadow-sm dark:shadow-lg">
+            <div className="p-4 bg-slate-100/80 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/50 rounded-2xl group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-500 ease-out shadow-sm dark:shadow-lg">
               {stat.icon}
             </div>
 
             <div className="flex flex-col items-center gap-2">
-              <div className="text-4xl lg:text-5xl font-extrabold tracking-tighter text-slate-900 dark:text-zinc-100 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-600 group-hover:to-violet-500 dark:group-hover:from-indigo-400 dark:group-hover:to-violet-400 transition-all duration-300 flex items-center justify-center">
+              <div className="text-4xl lg:text-5xl font-extrabold tracking-tighter text-slate-900 dark:text-slate-100 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-teal-600 group-hover:to-violet-500 dark:group-hover:from-teal-400 dark:group-hover:to-violet-400 transition-all duration-300 flex items-center justify-center">
                 <AnimatedNumber value={stat.target} />
                 <span>{stat.suffix}</span>
               </div>
 
-              <span className="text-[11px] lg:text-xs text-slate-400 dark:text-zinc-500 font-bold tracking-[0.2em] uppercase mt-1 group-hover:text-slate-700 dark:group-hover:text-zinc-300 transition-colors duration-300">
+              <span className="text-[11px] lg:text-xs text-slate-400 dark:text-slate-500 font-bold tracking-[0.2em] uppercase mt-1 group-hover:text-slate-700 dark:group-hover:text-slate-300 transition-colors duration-300">
                 {stat.label}
               </span>
             </div>

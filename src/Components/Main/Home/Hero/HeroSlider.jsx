@@ -42,7 +42,7 @@
 //   ];
 
 //   return (
-//     <div className="relative w-full h-[20vh] min-h-[480px] bg-zinc-900 overflow-hidden">
+//     <div className="relative w-full h-[20vh] min-h-[480px] bg-slate-900 overflow-hidden">
 
 //       {/* 🔮 Swiper Background Engine */}
 //       <Swiper
@@ -58,7 +58,7 @@
 //         {slidesData.map((slide) => (
 //           <SwiperSlide key={slide.id} className="relative w-full h-full">
 //             {/* ডার্ক গ্রেডিয়েন্ট ওভারলে যাতে টেক্সট এবং কার্ড ক্রিস্টাল ক্লিয়ার দেখায় */}
-//             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-zinc-950/80 z-10" />
+//             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-slate-950/80 z-10" />
 //             <Image width={1000} height={1000}
 //               src={slide.image}
 //               alt={slide.title}
@@ -81,7 +81,7 @@
 //           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight drop-shadow-md">
 //             Where to <span className="text-[#FF6B35]">Explore?</span>
 //           </h1>
-//           <p className="text-sm sm:text-base text-zinc-200 mt-3 drop-shadow-sm font-medium">
+//           <p className="text-sm sm:text-base text-slate-200 mt-3 drop-shadow-sm font-medium">
 //             Find Cheap Bus, Train, Flight & Launch Tickets in Bangladesh
 //           </p>
 //         </motion.div>
@@ -118,7 +118,7 @@ export default function Hero() {
   ];
 
   return (
-    // ডার্ক মোডে এখানে zinc-950 এর বদলে তোমার স্ক্রিনশটের আসল কালার slate-950 দেওয়া হলো
+    // ডার্ক মোডে এখানে slate-950 এর বদলে তোমার স্ক্রিনশটের আসল কালার slate-950 দেওয়া হলো
     <div className="relative w-full min-h-[640px] bg-slate-50 dark:bg-slate-950 flex items-center justify-center overflow-hidden transition-colors duration-300">
       
       <div className="absolute inset-0 z-0 w-full h-full">
@@ -134,7 +134,7 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
         
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white mb-6">
-          Where to <span className="text-indigo-600 dark:text-indigo-400">Explore?</span>
+          Where to <span className="text-teal-600 dark:text-teal-400">Explore?</span>
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-14 font-medium">
           Find Cheap Bus, Train, Flight & Launch Tickets in Bangladesh
@@ -153,7 +153,7 @@ export default function Hero() {
                   onClick={() => setActiveTab(type.id)}
                   className={`flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold transition-all duration-200 ${
                     activeTab === type.id
-                      ? 'bg-indigo-600 text-white shadow-xl shadow-indigo-600/20'
+                      ? 'bg-teal-600 text-white shadow-xl shadow-teal-600/20'
                       : 'bg-slate-100 dark:bg-slate-800/40 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200'
                   }`}
                 >
@@ -173,7 +173,7 @@ export default function Hero() {
                 <input 
                   type="text" 
                   placeholder="Where from?" 
-                  className="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 shadow-sm transition-all text-sm font-medium"
+                  className="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 shadow-sm transition-all text-sm font-medium"
                 />
               </div>
             </div>
@@ -185,14 +185,14 @@ export default function Hero() {
                 <input 
                   type="text" 
                   placeholder="Where to?" 
-                  className="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 shadow-sm transition-all text-sm font-medium"
+                  className="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 shadow-sm transition-all text-sm font-medium"
                 />
               </div>
             </div>
 
             {/* Find Tickets Button */}
             <div className="md:col-span-4 w-full">
-              <button className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold py-4 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/10 active:scale-[0.99] text-sm tracking-wide">
+              <button className="w-full bg-teal-600 hover:bg-teal-500 text-white font-extrabold py-4 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-teal-600/10 active:scale-[0.99] text-sm tracking-wide">
                 <FaSearch className="h-4 w-4" />
                 Find Best Tickets
               </button>

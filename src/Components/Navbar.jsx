@@ -110,10 +110,10 @@ export default function Navbar() {
           {/* 🎫 লোগো সেকশন */}
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center gap-2.5 font-black tracking-tight text-slate-900 dark:text-white text-xl group">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600/10 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400 border border-indigo-500/20 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-teal-600/10 text-teal-600 dark:bg-teal-500/10 dark:text-teal-400 border border-teal-500/20 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
                 <HiTicket className="h-5 w-5 transform -rotate-12" />
               </div>
-              <span>Ticket<span className="text-indigo-600 dark:text-indigo-400 font-medium">Core</span></span>
+              <span>Ticket<span className="text-teal-600 dark:text-teal-400 font-medium">Core</span></span>
             </Link>
 
             {/* 🔗 মেনু লিংকসমূহ */}
@@ -144,7 +144,7 @@ export default function Navbar() {
                   }}
                   className={`rounded-lg px-4 py-2 text-xs font-bold tracking-wide transition-all duration-200 ${
                     pathname.startsWith("/dashboard")
-                      ? 'bg-white text-indigo-600 dark:bg-slate-800 dark:text-indigo-400 font-black shadow-sm' 
+                      ? 'bg-white text-teal-600 dark:bg-slate-800 dark:text-teal-400 font-black shadow-sm' 
                       : 'text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200'
                   }`}
                 >
@@ -296,7 +296,7 @@ export default function Navbar() {
                 }} 
                 className={`block w-full text-left rounded-xl px-4 py-2.5 text-sm font-bold ${
                   pathname.startsWith("/dashboard")
-                    ? 'bg-slate-100 text-indigo-600 dark:bg-slate-900 dark:text-indigo-400 font-black' 
+                    ? 'bg-slate-100 text-teal-600 dark:bg-slate-900 dark:text-teal-400 font-black' 
                     : 'text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900/50'
                 }`}
               >

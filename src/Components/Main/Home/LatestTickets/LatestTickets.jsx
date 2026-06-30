@@ -92,14 +92,14 @@
 //   // যদি ডাটাবেজ থেকে কোনো টিকিটই না আসে
 //   if (!tickets || tickets.length === 0) {
 //     return (
-//       <div className="w-full py-16 text-center text-zinc-500 dark:text-zinc-400 bg-[#F8FAFC] dark:bg-zinc-950">
+//       <div className="w-full py-16 text-center text-slate-500 dark:text-slate-400 bg-[#F8FAFC] dark:bg-slate-950">
 //         No latest approved tickets found.
 //       </div>
 //     );
 //   }
 
 //   return (
-//     <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-[#F8FAFC] dark:bg-zinc-950 transition-colors duration-300">
+//     <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-[#F8FAFC] dark:bg-slate-950 transition-colors duration-300">
 //       <div className="max-w-7xl mx-auto">
 
 //         {/* 🏔️ সেকশন হেডার */}
@@ -108,10 +108,10 @@
 //             <span className="text-xs font-bold uppercase tracking-widest text-[#FF6B35]">
 //               Exclusive Deals
 //             </span>
-//             <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white mt-1">
+//             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
 //               Latest Ticket Discoveries
 //             </h2>
-//             <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+//             <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
 //               Grab the newest approved routes and tickets before they run out.
 //             </p>
 //           </div>
@@ -140,10 +140,10 @@
 //               key={ticket._id || ticket.id}
 //               variants={cardVariants}
 //               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-//               className="group bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-md hover:shadow-xl border border-zinc-100 dark:border-zinc-800 flex flex-col h-full transition-all"
+//               className="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-md hover:shadow-xl border border-slate-100 dark:border-slate-800 flex flex-col h-full transition-all"
 //             >
 //               {/* 🖼️ ইমেজ */}
-//               <div className="relative h-48 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+//               <div className="relative h-48 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
 //                 <Image
 //                   width={500}
 //                   height={500}
@@ -153,7 +153,7 @@
 //                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
 //                 />
 
-//                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md dark:bg-zinc-900/90 text-[#1E3A8A] dark:text-indigo-400 px-3 py-1.5 rounded-xl text-xs font-extrabold flex items-center gap-1.5 shadow-sm uppercase tracking-wider">
+//                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md dark:bg-slate-900/90 text-[#1E3A8A] dark:text-teal-400 px-3 py-1.5 rounded-xl text-xs font-extrabold flex items-center gap-1.5 shadow-sm uppercase tracking-wider">
 //                   {getTransportIcon(ticket.transportType)}
 //                   {ticket.transportType}
 //                 </div>
@@ -162,29 +162,29 @@
 //               {/* 📝 কন্টেন্ট */}
 //               <div className="p-5 flex flex-col flex-grow justify-between">
 //                 <div>
-//                   <div className="flex items-center justify-between text-xs text-zinc-400 dark:text-zinc-500 mb-2">
+//                   <div className="flex items-center justify-between text-xs text-slate-400 dark:text-slate-500 mb-2">
 //                     <span className="flex items-center gap-1 font-medium">
-//                       <Calendar className="h-3.5 w-3.5 text-zinc-400" />
+//                       <Calendar className="h-3.5 w-3.5 text-slate-400" />
 //                       {formatDate(ticket.departureDateTime)}
 //                     </span>
 //                     <span className="text-[#FF6B35] font-bold">★★★★★</span>
 //                   </div>
 
-//                   <h3 className="text-base font-extrabold text-zinc-800 dark:text-zinc-100 line-clamp-1 group-hover:text-[#1E3A8A] dark:group-hover:text-indigo-400 transition-colors">
+//                   <h3 className="text-base font-extrabold text-slate-800 dark:text-slate-100 line-clamp-1 group-hover:text-[#1E3A8A] dark:group-hover:text-teal-400 transition-colors">
 //                     {ticket.title}
 //                   </h3>
 
-//                   <div className="flex items-center gap-2 mt-3 text-sm text-zinc-600 dark:text-zinc-300 font-semibold bg-zinc-50 dark:bg-zinc-800/50 p-2.5 rounded-xl">
-//                     <MapPin className="h-4 w-4 text-zinc-400 shrink-0" />
+//                   <div className="flex items-center gap-2 mt-3 text-sm text-slate-600 dark:text-slate-300 font-semibold bg-slate-50 dark:bg-slate-800/50 p-2.5 rounded-xl">
+//                     <MapPin className="h-4 w-4 text-slate-400 shrink-0" />
 //                     <span className="truncate">{ticket.from}</span>
-//                     <span className="text-zinc-400 font-light">→</span>
+//                     <span className="text-slate-400 font-light">→</span>
 //                     <span className="truncate">{ticket.to}</span>
 //                   </div>
 //                 </div>
 
-//                 <div className="flex items-center justify-between mt-5 pt-4 border-t border-zinc-100 dark:border-zinc-800">
+//                 <div className="flex items-center justify-between mt-5 pt-4 border-t border-slate-100 dark:border-slate-800">
 //                   <div className="flex flex-col">
-//                     <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+//                     <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
 //                       Fare From
 //                     </span>
 //                     <span className="text-lg font-black text-[#FF6B35]">
@@ -194,7 +194,7 @@
 
 //                   <Link
 //                     href={`/all-tickets/${ticket._id || ticket.id}`}
-//                     className="p-2.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 group-hover:bg-[#FF6B35] group-hover:text-white rounded-full transition-all shadow-sm active:scale-95"
+//                     className="p-2.5 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 group-hover:bg-[#FF6B35] group-hover:text-white rounded-full transition-all shadow-sm active:scale-95"
 //                   >
 //                     <ArrowRight className="h-4 w-4" />
 //                   </Link>
@@ -269,7 +269,7 @@ export default function LatestTickets() {
       case 'train': return <FaTrain className="text-amber-600 dark:text-amber-400" />;
       case 'flight': case 'plane': return <FaPlane className="text-sky-600 dark:text-sky-400" />;
       case 'launch': case 'ship': return <FaShip className="text-cyan-600 dark:text-cyan-400" />;
-      default: return <FaBus className="text-indigo-600 dark:text-indigo-400" />;
+      default: return <FaBus className="text-teal-600 dark:text-teal-400" />;
     }
   };
 
@@ -296,19 +296,19 @@ export default function LatestTickets() {
     <div className="w-full bg-slate-50 dark:bg-slate-950 py-20 border-t border-slate-200 dark:border-slate-900 transition-colors duration-300 relative overflow-hidden flex justify-center items-center">
       
       <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-violet-500/5 dark:bg-violet-600/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/5 dark:bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-teal-500/5 dark:bg-teal-600/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 gap-4">
           <div>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
-              Latest Available <span className="text-indigo-600 dark:text-indigo-400">Tickets</span>
+              Latest Available <span className="text-teal-600 dark:text-teal-400">Tickets</span>
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">Grab your seats before they are completely sold out</p>
           </div>
           {/* 🚀 Fixed: Route path matched to verified '/all-tickets' directory */}
-          <Link href="/all-tickets" className="flex items-center gap-2 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all group">
+          <Link href="/all-tickets" className="flex items-center gap-2 text-sm font-bold text-teal-600 dark:text-teal-400 hover:text-teal-500 dark:hover:text-teal-300 transition-all group">
             View All Tickets 
             <FaArrowRight className="h-3 w-3 transform transition-transform group-hover:translate-x-1" />
           </Link>
@@ -318,7 +318,7 @@ export default function LatestTickets() {
           {tickets.map((ticket) => (
             <div 
               key={ticket._id || ticket.id} 
-              className="bg-white dark:bg-slate-900/40 backdrop-blur-xl border border-slate-200 dark:border-slate-800/80 rounded-2xl p-6 hover:border-slate-300 dark:hover:border-slate-700/60 shadow-md dark:shadow-xl hover:shadow-xl dark:hover:shadow-indigo-600/5 transition-all duration-300 hover:-translate-y-1 group text-left"
+              className="bg-white dark:bg-slate-900/40 backdrop-blur-xl border border-slate-200 dark:border-slate-800/80 rounded-2xl p-6 hover:border-slate-300 dark:hover:border-slate-700/60 shadow-md dark:shadow-xl hover:shadow-xl dark:hover:shadow-teal-600/5 transition-all duration-300 hover:-translate-y-1 group text-left"
             >
               <div className="flex justify-between items-center mb-5">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-lg shadow-sm dark:shadow-none">
@@ -329,7 +329,7 @@ export default function LatestTickets() {
                 </span>
               </div>
 
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors truncate">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors truncate">
                 {ticket.title}
               </h3>
 
@@ -356,7 +356,7 @@ export default function LatestTickets() {
                 {/* 🚀 Fixed: Click triggers authenticated gate checking for '/all-tickets/:id' */}
                 <button 
                   onClick={() => handleBookingRedirect(ticket._id || ticket.id)}
-                  className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition-all shadow-lg shadow-indigo-600/10 active:scale-[0.98]"
+                  className="bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition-all shadow-lg shadow-teal-600/10 active:scale-[0.98]"
                 >
                   Book Now
                 </button>

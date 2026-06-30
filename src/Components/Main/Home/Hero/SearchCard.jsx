@@ -31,11 +31,11 @@
 //   ];
 
 //   return (
-//     <div className="w-full max-w-4xl bg-white/95 dark:bg-slate-900/90 backdrop-blur-md rounded-3xl shadow-2xl border border-zinc-100 dark:border-slate-800/60 p-6 lg:p-8 text-zinc-800 dark:text-slate-100 transition-colors duration-200">
+//     <div className="w-full max-w-4xl bg-white/95 dark:bg-slate-900/90 backdrop-blur-md rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-800/60 p-6 lg:p-8 text-slate-800 dark:text-slate-100 transition-colors duration-200">
 //       <form onSubmit={handleSearch} className="flex flex-col gap-6">
 
 //         {/* 🎛️ যানবাহন সিলেকশন ট্যাব গ্রুপ */}
-//         <div className="flex flex-wrap gap-2 border-b border-zinc-100 dark:border-slate-800/60 pb-4">
+//         <div className="flex flex-wrap gap-2 border-b border-slate-100 dark:border-slate-800/60 pb-4">
 //           {transportTypes.map((type) => (
 //             <button
 //               key={type.key}
@@ -44,7 +44,7 @@
 //               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
 //                 transport === type.key
 //                   ? "bg-[#1E3A8A] dark:bg-blue-600 text-white shadow-md shadow-blue-900/20"
-//                   : "bg-zinc-50 dark:bg-slate-800 hover:bg-zinc-100 dark:hover:bg-slate-700/80 text-zinc-600 dark:text-slate-300"
+//                   : "bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700/80 text-slate-600 dark:text-slate-300"
 //               }`}
 //             >
 //               {type.label}
@@ -57,30 +57,30 @@
 
 //           {/* From Location */}
 //           <div className="md:col-span-4 relative flex flex-col gap-1 w-full">
-//             <label className="text-xs font-bold text-zinc-500 dark:text-slate-400 uppercase tracking-wider pl-1">From</label>
+//             <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider pl-1">From</label>
 //             <div className="relative flex items-center">
-//               <MapPin className="absolute left-3 h-4 w-4 text-zinc-400 dark:text-slate-500 z-10" />
+//               <MapPin className="absolute left-3 h-4 w-4 text-slate-400 dark:text-slate-500 z-10" />
 //               <Input
 //                 name="from"
 //                 value={from}
 //                 onChange={(e) => setFrom(e.target.value)}
 //                 placeholder="Where from?"
-//                 className="w-full h-12 pl-8 pr-3 rounded-xl border border-zinc-200 dark:border-slate-800 bg-zinc-50 dark:bg-slate-950 text-zinc-800 dark:text-slate-100 text-sm outline-none transition-colors focus:border-indigo-500 dark:focus:border-blue-500"
+//                 className="w-full h-12 pl-8 pr-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 text-sm outline-none transition-colors focus:border-teal-500 dark:focus:border-blue-500"
 //               />
 //             </div>
 //           </div>
 
 //           {/* To Location */}
 //           <div className="md:col-span-4 relative flex flex-col gap-1 w-full">
-//             <label className="text-xs font-bold text-zinc-500 dark:text-slate-400 uppercase tracking-wider pl-1">To</label>
+//             <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider pl-1">To</label>
 //             <div className="relative flex items-center">
-//               <Navigation className="absolute left-3 h-4 w-4 text-zinc-400 dark:text-slate-500 z-10" />
+//               <Navigation className="absolute left-3 h-4 w-4 text-slate-400 dark:text-slate-500 z-10" />
 //               <Input
 //                 name="to"
 //                 value={to}
 //                 onChange={(e) => setTo(e.target.value)}
 //                 placeholder="Where to?"
-//                 className="w-full h-12 pl-8 pr-3 rounded-xl border border-zinc-200 dark:border-slate-800 bg-zinc-50 dark:bg-slate-950 text-zinc-800 dark:text-slate-100 text-sm outline-none transition-colors focus:border-indigo-500 dark:focus:border-blue-500"
+//                 className="w-full h-12 pl-8 pr-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 text-sm outline-none transition-colors focus:border-teal-500 dark:focus:border-blue-500"
 //               />
 //             </div>
 //           </div>
@@ -133,10 +133,10 @@ export default function SearchCard() {
   ];
 
   return (
-    <div className="w-full max-w-4xl bg-zinc-950/40 backdrop-blur-xl rounded-[32px] shadow-2xl border border-indigo-500/10 p-6 lg:p-8 text-zinc-100 transition-all duration-300">
+    <div className="w-full max-w-4xl bg-slate-950/40 backdrop-blur-xl rounded-[32px] shadow-2xl border border-teal-500/10 p-6 lg:p-8 text-slate-100 transition-all duration-300">
       <form onSubmit={handleSearch} className="flex flex-col gap-8">
         
-        <div className="flex flex-wrap gap-2.5 border-b border-zinc-800/60 pb-5">
+        <div className="flex flex-wrap gap-2.5 border-b border-slate-800/60 pb-5">
           {transportTypes.map((type) => {
             const IconComponent = type.icon;
             const isActive = transport === type.key;
@@ -147,11 +147,11 @@ export default function SearchCard() {
                 onClick={() => setTransport(type.key)}
                 className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 border ${
                   isActive
-                    ? "bg-indigo-600 border-indigo-500 text-white shadow-lg shadow-indigo-600/30"
-                    : "bg-zinc-900/50 dark:bg-zinc-900/30 border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800/50 text-zinc-400 hover:text-zinc-200"
+                    ? "bg-teal-600 border-teal-500 text-white shadow-lg shadow-teal-600/30"
+                    : "bg-slate-900/50 dark:bg-slate-900/30 border-slate-800 hover:border-slate-700 hover:bg-slate-800/50 text-slate-400 hover:text-slate-200"
                 }`}
               >
-                <IconComponent className={`h-4 w-4 ${isActive ? "text-white" : "text-zinc-500"}`} />
+                <IconComponent className={`h-4 w-4 ${isActive ? "text-white" : "text-slate-500"}`} />
                 {type.label}
               </button>
             );
@@ -161,29 +161,29 @@ export default function SearchCard() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-end text-left">
           
           <div className="md:col-span-4 flex flex-col gap-2 w-full">
-            <label className="text-xs font-black text-indigo-400 uppercase tracking-widest pl-1">From Location</label>
+            <label className="text-xs font-black text-teal-400 uppercase tracking-widest pl-1">From Location</label>
             <div className="relative flex items-center group">
-              <MapPin className="absolute left-4 h-5 w-5 text-zinc-500 group-focus-within:text-indigo-400 transition-colors z-10" />
+              <MapPin className="absolute left-4 h-5 w-5 text-slate-500 group-focus-within:text-teal-400 transition-colors z-10" />
               <Input
                 name="from"
                 value={from}
                 onChange={(e) => setFrom(e.target.value)}
                 placeholder="Where are you leaving from?"
-                className="w-full h-14 pl-10 pr-4 rounded-2xl border border-zinc-800 bg-zinc-900/40 text-zinc-200 text-sm outline-none transition-all focus:border-indigo-500 placeholder:text-zinc-600"
+                className="w-full h-14 pl-10 pr-4 rounded-2xl border border-slate-800 bg-slate-900/40 text-slate-200 text-sm outline-none transition-all focus:border-teal-500 placeholder:text-slate-600"
               />
             </div>
           </div>
 
           <div className="md:col-span-4 flex flex-col gap-2 w-full">
-            <label className="text-xs font-black text-indigo-400 uppercase tracking-widest pl-1">To Destination</label>
+            <label className="text-xs font-black text-teal-400 uppercase tracking-widest pl-1">To Destination</label>
             <div className="relative flex items-center group">
-              <Navigation className="absolute left-4 h-5 w-5 text-zinc-500 group-focus-within:text-indigo-400 transition-colors z-10" />
+              <Navigation className="absolute left-4 h-5 w-5 text-slate-500 group-focus-within:text-teal-400 transition-colors z-10" />
               <Input
                 name="to"
                 value={to}
                 onChange={(e) => setTo(e.target.value)}
                 placeholder="Where is your destination?"
-                className="w-full h-14 pl-10 pr-4 rounded-2xl border border-zinc-800 bg-zinc-900/40 text-zinc-200 text-sm outline-none transition-all focus:border-indigo-500 placeholder:text-zinc-600"
+                className="w-full h-14 pl-10 pr-4 rounded-2xl border border-slate-800 bg-slate-900/40 text-slate-200 text-sm outline-none transition-all focus:border-teal-500 placeholder:text-slate-600"
               />
             </div>
           </div>
@@ -191,7 +191,7 @@ export default function SearchCard() {
           <div className="md:col-span-4 w-full">
             <Button
               type="submit"
-              className="w-full h-14 bg-indigo-600 hover:bg-indigo-500 text-white font-black text-sm rounded-2xl shadow-xl shadow-indigo-600/20 transition-all duration-300 flex items-center justify-center gap-2.5 active:scale-[0.98]"
+              className="w-full h-14 bg-teal-600 hover:bg-teal-500 text-white font-black text-sm rounded-2xl shadow-xl shadow-teal-600/20 transition-all duration-300 flex items-center justify-center gap-2.5 active:scale-[0.98]"
             >
               <Compass className="h-5 w-5 animate-spin-slow" />
               Find Premium Tickets
