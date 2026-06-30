@@ -17,7 +17,7 @@ export default function TicketFilter({ search, setSearch, filterStatus, setFilte
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search by route, title or city..."
-          className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-sm text-[#1E293B] dark:text-[#E2E8F0] placeholder-slate-400 focus:outline-none focus:border-[#1E3A8A] dark:focus:border-blue-500 transition-colors"
+          className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-sm text-[#1E293B] dark:text-[#E2E8F0] placeholder-slate-400 focus:outline-none focus:border-teal-600 dark:focus:border-teal-500 transition-colors"
         />
       </div>
 

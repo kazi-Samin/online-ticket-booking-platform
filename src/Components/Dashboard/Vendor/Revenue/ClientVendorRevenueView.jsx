@@ -87,7 +87,7 @@ export default function ClientVendorRevenueView({ data }) {
           </div>
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-widest">Total Pipeline</span>
-            <span className="text-xs font-black text-[#1E3A8A] dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10 px-2 py-0.5 rounded-md">Total</span>
+            <span className="text-xs font-black text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-500/10 px-2 py-0.5 rounded-md">Total</span>
           </div>
           <div className="mt-4">
             <span className="text-3xl font-black tracking-tight text-[#1E293B] dark:text-white block">{totalTicketsAdded}</span>
@@ -114,7 +114,7 @@ export default function ClientVendorRevenueView({ data }) {
               <YAxis stroke="#94A3B8" className="fill-slate-400 dark:fill-slate-500" fontSize={10} fontWeight="700" axisLine={false} tickLine={false} />
               <Tooltip content={CustomTooltip} cursor={{ fill: 'currentColor', className: 'text-slate-50 dark:text-slate-900/40', opacity: 0.4 }} />
               <Legend verticalAlign="top" height={36} iconType="circle" iconSize={8} wrapperStyle={{ fontSize: '11px', fontWeight: '700' }} />
-              <Bar dataKey="Added" fill="#1E3A8A" dark-fill="#3b82f6" className="fill-blue-800 dark:fill-blue-500" radius={[10, 10, 0, 0]} maxBarSize={60} />
+              <Bar dataKey="Added" fill="#0d9488" dark-fill="#2dd4bf" className="fill-teal-800 dark:fill-teal-500" radius={[10, 10, 0, 0]} maxBarSize={60} />
               <Bar dataKey="Sold" fill="#10b981" radius={[10, 10, 0, 0]} maxBarSize={60} />
             </BarChart>
           </ResponsiveContainer>
@@ -154,7 +154,7 @@ export default function ClientVendorRevenueView({ data }) {
                         {/* Ticket Title */}
                         <td className="py-4 px-6">
                           <div className="flex items-center space-x-3">
-                            <div className="h-8 w-8 rounded-xl bg-slate-100 dark:bg-slate-800/60 text-[#1E3A8A] dark:text-blue-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                            <div className="h-8 w-8 rounded-xl bg-slate-100 dark:bg-slate-800/60 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                               <Ticket className="h-4 w-4" />
                             </div>
                             <div>

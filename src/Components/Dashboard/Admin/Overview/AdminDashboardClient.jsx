@@ -91,7 +91,7 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
         {/* 🌟 ড্যাশবোর্ড হেডার */}
         <div className="border-b border-slate-200 dark:border-slate-800 pb-5">
           <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 dark:text-white">
-            System Administration <span className="text-blue-600 dark:text-blue-400">Overview</span>
+            System Administration <span className="text-teal-600 dark:text-teal-400">Overview</span>
           </h1>
           <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-1">
             Real-time analytics engine • Live system control matrix & database logs.
@@ -101,7 +101,7 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
         {/* ==================== 🎫 সেকশন ১: টিকিট কন্ট্রোল এবং এনালিটিক্স ==================== */}
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <ShieldAlert className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+            <ShieldAlert className="h-5 w-5 text-teal-600 dark:text-teal-400" />
             <h2 className="text-sm font-black uppercase tracking-wider text-slate-900 dark:text-slate-100">Ticket Management Matrix</h2>
           </div>
 
@@ -110,12 +110,12 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
             <div className="lg:col-span-2 grid grid-cols-2 gap-4">
               <div
                 onClick={() => router.push('/dashboard/admin/manage-tickets')}
-                className="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-sm hover:border-blue-500 dark:hover:border-blue-500 cursor-pointer transition-all group flex flex-col justify-between"
+                className="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-sm hover:border-teal-500 dark:hover:border-teal-500 cursor-pointer transition-all group flex flex-col justify-between"
               >
-                <div className="p-3 bg-slate-100 dark:bg-slate-800 w-fit rounded-2xl"><Layers className="h-5 w-5 text-blue-600 dark:text-blue-400" /></div>
+                <div className="p-3 bg-slate-100 dark:bg-slate-800 w-fit rounded-2xl"><Layers className="h-5 w-5 text-teal-600 dark:text-teal-400" /></div>
                 <div className="mt-4">
                   <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-slate-400">Total System Tickets</p>
-                  <h3 className="text-3xl font-black mt-1 text-slate-900 dark:text-white group-hover:text-blue-500 transition-colors">{ticketStats.total}</h3>
+                  <h3 className="text-3xl font-black mt-1 text-slate-900 dark:text-white group-hover:text-teal-500 transition-colors">{ticketStats.total}</h3>
                 </div>
               </div>
 
@@ -226,7 +226,7 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
                         {ticket?.from || 'N/A'} ➔ {ticket?.to || 'N/A'}
                       </td>
                       <td className="py-3 px-5 text-xs font-black text-center text-slate-900 dark:text-white">{ticket?.quantity ?? 0}</td>
-                      <td className="py-3 px-5 text-xs font-black text-blue-600 dark:text-blue-400">৳{(ticket?.pricePerUnit ?? 0).toLocaleString()}</td>
+                      <td className="py-3 px-5 text-xs font-black text-teal-600 dark:text-teal-400">৳{(ticket?.pricePerUnit ?? 0).toLocaleString()}</td>
                       <td className="py-3 px-5 text-center">
                         <span className={`inline-flex items-center text-[9px] font-black uppercase tracking-wide px-2 py-0.5 rounded-md ${
                           ticket?.verificationStatus === 'approved' ? 'bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400' :
@@ -258,23 +258,23 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
         {/* ==================== 👥 সেকশন ২: ইউজার কন্ট্রোল এবং ডিস্ট্রিবিউশন চার্ট ==================== */}
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <Users className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+            <Users className="h-5 w-5 text-teal-600 dark:text-teal-400" />
             <h2 className="text-sm font-black uppercase tracking-wider text-slate-900 dark:text-white">User Matrix Management</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* ইউজার CARD গ্রিড */}
             <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-4">
-              <div onClick={() => router.push('/dashboard/admin/manage-users')} className="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl cursor-pointer hover:border-blue-500 transition-all flex flex-col justify-between shadow-sm">
-                <div className="p-2.5 bg-slate-100 dark:bg-slate-800 w-fit rounded-xl"><Users className="h-4 w-4 text-blue-600 dark:text-blue-400" /></div>
+              <div onClick={() => router.push('/dashboard/admin/manage-users')} className="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl cursor-pointer hover:border-teal-500 transition-all flex flex-col justify-between shadow-sm">
+                <div className="p-2.5 bg-slate-100 dark:bg-slate-800 w-fit rounded-xl"><Users className="h-4 w-4 text-teal-600 dark:text-teal-400" /></div>
                 <div className="mt-4">
                   <p className="text-[10px] uppercase tracking-wider font-bold text-slate-400">Total Users</p>
                   <h4 className="text-2xl font-black text-slate-900 dark:text-white mt-0.5">{userStats.total}</h4>
                 </div>
               </div>
 
-              <div onClick={() => router.push('/dashboard/admin/manage-users')} className="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl cursor-pointer hover:border-blue-500 transition-all flex flex-col justify-between shadow-sm">
-                <div className="p-2.5 bg-blue-50 dark:bg-blue-500/10 w-fit rounded-xl"><UserCheck className="h-4 w-4 text-blue-500" /></div>
+              <div onClick={() => router.push('/dashboard/admin/manage-users')} className="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl cursor-pointer hover:border-teal-500 transition-all flex flex-col justify-between shadow-sm">
+                <div className="p-2.5 bg-teal-50 dark:bg-teal-500/10 w-fit rounded-xl"><UserCheck className="h-4 w-4 text-teal-500" /></div>
                 <div className="mt-4">
                   <p className="text-[10px] uppercase tracking-wider font-bold text-slate-400">Active Members</p>
                   <h4 className="text-2xl font-black text-slate-900 dark:text-white mt-0.5">{userStats.regularUsers}</h4>

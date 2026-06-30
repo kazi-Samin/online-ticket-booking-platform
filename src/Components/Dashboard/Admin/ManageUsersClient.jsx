@@ -126,10 +126,10 @@ export default function ManageUsersClient({ initialUsers = [] }) {
 
         <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 rounded-3xl flex items-center justify-between shadow-xs">
           <div>
-            <p className="text-[10px] font-black tracking-widest uppercase text-blue-600 dark:text-blue-400">System Admins</p>
+            <p className="text-[10px] font-black tracking-widest uppercase text-teal-600 dark:text-teal-400">System Admins</p>
             <h3 className="text-2xl font-black text-slate-900 dark:text-white mt-1">{totalAdmins}</h3>
           </div>
-          <div className="p-3 bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-2xl"><ShieldCheck className="h-5 w-5" /></div>
+          <div className="p-3 bg-teal-50 dark:bg-teal-500/10 text-teal-600 dark:text-teal-400 rounded-2xl"><ShieldCheck className="h-5 w-5" /></div>
         </div>
 
         <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 rounded-3xl flex items-center justify-between shadow-xs">
@@ -160,7 +160,7 @@ export default function ManageUsersClient({ initialUsers = [] }) {
             placeholder="Filter database accounts by identity..."
             value={searchQuery}
             onChange={(e) => { setSearchQuery(e.target.value); setCurrentPage(1); }}
-            className="w-full bg-slate-50 dark:bg-black border border-slate-200 dark:border-slate-800 pl-10 pr-4 py-2.5 rounded-xl text-xs font-bold focus:outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-slate-900 transition-all text-slate-800 dark:text-slate-200"
+            className="w-full bg-slate-50 dark:bg-black border border-slate-200 dark:border-slate-800 pl-10 pr-4 py-2.5 rounded-xl text-xs font-bold focus:outline-none focus:border-teal-500 focus:bg-white dark:focus:bg-slate-900 transition-all text-slate-800 dark:text-slate-200"
           />
         </div>
 
@@ -169,7 +169,7 @@ export default function ManageUsersClient({ initialUsers = [] }) {
           <select
             value={roleFilter}
             onChange={(e) => { setRoleFilter(e.target.value); setCurrentPage(1); }}
-            className="w-full bg-slate-50 dark:bg-black border border-slate-200 dark:border-slate-800 pl-9 pr-10 py-2.5 rounded-xl text-xs font-black text-slate-700 dark:text-slate-300 focus:outline-none focus:border-blue-500 appearance-none cursor-pointer"
+            className="w-full bg-slate-50 dark:bg-black border border-slate-200 dark:border-slate-800 pl-9 pr-10 py-2.5 rounded-xl text-xs font-black text-slate-700 dark:text-slate-300 focus:outline-none focus:border-teal-500 appearance-none cursor-pointer"
           >
             <option value="all">📊 All Matrix Logs</option>
             <option value="user">👤 Standard Users</option>
@@ -184,7 +184,7 @@ export default function ManageUsersClient({ initialUsers = [] }) {
       {/* ==================== 🏷️ SYSTEM INFRASTRUCTURE GUIDE ==================== */}
       <div className="bg-slate-100/60 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/60 rounded-2xl p-3 px-4 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-[11px] text-slate-500 dark:text-slate-400 font-bold">
         <span className="flex items-center gap-1 text-slate-400 dark:text-slate-500"><Info className="h-3.5 w-3.5" /> Command Console Matrix:</span>
-        <span className="flex items-center gap-1.5"><Shield className="h-3.5 w-3.5 text-blue-600" /> Administrative Provision</span>
+        <span className="flex items-center gap-1.5"><Shield className="h-3.5 w-3.5 text-teal-600" /> Administrative Provision</span>
         <span className="flex items-center gap-1.5"><Store className="h-3.5 w-3.5 text-emerald-600" /> Merchant Authority</span>
         <span className="flex items-center gap-1.5"><Ban className="h-3.5 w-3.5 text-orange-500" /> Flag Fraud Log</span>
       </div>
@@ -228,7 +228,7 @@ export default function ManageUsersClient({ initialUsers = [] }) {
                         user.isFraud 
                           ? 'bg-red-100 border-red-200 text-red-700 dark:bg-red-500/10 dark:text-red-400 dark:border-red-500/20' 
                           : user.role === 'admin' 
-                          ? 'bg-blue-100 border-blue-200 text-blue-700 dark:bg-blue-500/10 dark:text-blue-400 dark:border-blue-500/20' 
+                          ? 'bg-teal-100 border-teal-200 text-teal-700 dark:bg-teal-500/10 dark:text-teal-400 dark:border-teal-500/20' 
                           : user.role === 'vendor' 
                           ? 'bg-emerald-100 border-emerald-200 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 dark:border-emerald-500/20' 
                           : 'bg-slate-100 border-slate-200 text-slate-600 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-700'
@@ -244,7 +244,7 @@ export default function ManageUsersClient({ initialUsers = [] }) {
                           onClick={() => openActionModal(user._id, user.name, 'changeRole', { role: 'admin' })}
                           disabled={user.role === 'admin' || user.isFraud}
                           title="Grant Admin Privileges"
-                          className="p-2 rounded-xl border border-blue-200 dark:border-blue-500/20 bg-blue-50/50 text-blue-600 dark:bg-blue-500/5 dark:text-blue-400 hover:bg-blue-600 dark:hover:bg-blue-500 hover:text-white dark:hover:text-white transition-all disabled:opacity-10 disabled:cursor-not-allowed cursor-pointer"
+                          className="p-2 rounded-xl border border-teal-200 dark:border-teal-500/20 bg-teal-50/50 text-teal-600 dark:bg-teal-500/5 dark:text-teal-400 hover:bg-teal-600 dark:hover:bg-teal-500 hover:text-white dark:hover:text-white transition-all disabled:opacity-10 disabled:cursor-not-allowed cursor-pointer"
                         >
                           <Shield className="h-3.5 w-3.5" />
                         </button>
@@ -294,7 +294,7 @@ export default function ManageUsersClient({ initialUsers = [] }) {
           </button>
 
           <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-            Log Node <span className="text-blue-600 dark:text-blue-400 font-black">{currentPage}</span> of <span className="text-slate-800 dark:text-white font-black">{totalPages}</span>
+            Log Node <span className="text-teal-600 dark:text-teal-400 font-black">{currentPage}</span> of <span className="text-slate-800 dark:text-white font-black">{totalPages}</span>
           </span>
 
           <button
@@ -319,7 +319,7 @@ export default function ManageUsersClient({ initialUsers = [] }) {
                 {modalContext.actionType === 'toggleFraud' && modalContext.payload.isFraud ? (
                   <div className="p-2 bg-red-50 dark:bg-red-500/10 rounded-xl"><AlertTriangle className="h-5 w-5 text-red-500 animate-pulse" /></div>
                 ) : (
-                  <div className="p-2 bg-blue-50 dark:bg-blue-500/10 rounded-xl"><Shield className="h-5 w-5 text-blue-500" /></div>
+                  <div className="p-2 bg-teal-50 dark:bg-teal-500/10 rounded-xl"><Shield className="h-5 w-5 text-teal-500" /></div>
                 )}
                 <h3 className="text-sm font-black uppercase tracking-wider text-slate-900 dark:text-white">
                   {modalContext.actionType === 'toggleFraud' && modalContext.payload.isFraud ? 'Security Sanction Alert' : 'System Role Access Mutation'}
@@ -334,7 +334,7 @@ export default function ManageUsersClient({ initialUsers = [] }) {
                     <>Do you request to lift the restriction ledger from <span className="font-bold text-slate-900 dark:text-white">{modalContext.userName}</span> and restore operator privileges?</>
                   )
                 ) : (
-                  <>Authorize security level alteration for <span className="font-bold text-slate-900 dark:text-white">{modalContext.userName}</span>. Inherit new privileges as <span className="text-blue-500 dark:text-blue-400 font-black uppercase">{modalContext.payload.role}</span>?</>
+                  <>Authorize security level alteration for <span className="font-bold text-slate-900 dark:text-white">{modalContext.userName}</span>. Inherit new privileges as <span className="text-teal-500 dark:text-teal-400 font-black uppercase">{modalContext.payload.role}</span>?</>
                 )}
               </p>
 
@@ -345,7 +345,7 @@ export default function ManageUsersClient({ initialUsers = [] }) {
                   className={`px-5 py-2 rounded-xl text-xs font-black uppercase tracking-wider text-white shadow-lg transition-all active:scale-95 cursor-pointer ${
                     modalContext.actionType === 'toggleFraud' && modalContext.payload.isFraud 
                       ? 'bg-red-600 hover:bg-red-500 shadow-red-500/10' 
-                      : 'bg-blue-600 hover:bg-blue-500 shadow-blue-500/10'
+                      : 'bg-teal-600 hover:bg-teal-500 shadow-teal-500/10'
                   }`}
                 >
                   Execute Confirm

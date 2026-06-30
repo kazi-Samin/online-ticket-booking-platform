@@ -85,7 +85,7 @@ export default function MyTicketsClient({ initialTickets }) {
               onClick={() => handlePageChange(number)}
               className={`w-10 h-10 rounded-xl text-xs font-black border transition-all duration-200 ${
                 currentPage === number
-                  ? "bg-[#1E3A8A] border-[#1E3A8A] text-white shadow-md shadow-blue-900/20"
+                  ? "bg-teal-600 border-teal-600 text-white shadow-md shadow-teal-900/20"
                   : "bg-white dark:bg-[#0F172A] border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:border-slate-400"
               }`}
             >

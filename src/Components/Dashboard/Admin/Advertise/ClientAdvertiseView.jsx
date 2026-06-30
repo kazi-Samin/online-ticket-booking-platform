@@ -205,7 +205,7 @@ export default function ClientAdvertiseView({ initialTickets = [] }) {
                                 {ticket.title}
                               </span>
                               <span className="text-[10px] uppercase text-slate-400 font-black tracking-wider flex items-center mt-0.5 dark:text-slate-500">
-                                <span className={`h-1.5 w-1.5 rounded-full mr-1 ${isFraudulent ? 'bg-rose-500 animate-pulse' : ticket.transportType === 'plane' ? 'bg-blue-500' : 'bg-amber-500'}`} />
+                                <span className={`h-1.5 w-1.5 rounded-full mr-1 ${isFraudulent ? 'bg-rose-500 animate-pulse' : ticket.transportType === 'plane' ? 'bg-teal-500' : 'bg-amber-500'}`} />
                                 {ticket.transportType}
                               </span>
                             </div>
@@ -217,7 +217,7 @@ export default function ClientAdvertiseView({ initialTickets = [] }) {
                             <div className="flex items-center text-slate-700 font-bold dark:text-slate-300">
                               <span>{ticket.from}</span>
                               <span className="text-slate-300 mx-1.5 dark:text-slate-600">➔</span>
-                              <span className={isFraudulent ? 'text-rose-600 dark:text-rose-400' : 'text-[#1E3A8A] dark:text-blue-400'}>{ticket.to}</span>
+                              <span className={isFraudulent ? 'text-rose-600 dark:text-rose-400' : 'text-teal-600 dark:text-teal-400'}>{ticket.to}</span>
                             </div>
                             <span className="text-[10px] text-slate-400 font-medium block dark:text-slate-500">{formattedDate}</span>
                           </div>
@@ -256,10 +256,10 @@ export default function ClientAdvertiseView({ initialTickets = [] }) {
                                   onChange={() => handleToggleAdvertise(ticket._id, ticket.isAdvertised, isFraudulent)}
                                   className="sr-only peer"
                                 />
-                                <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#1E3A8A] dark:bg-slate-800 dark:after:border-slate-600 dark:peer-checked:bg-blue-600"></div>
+                                <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-teal-600 dark:bg-slate-800 dark:after:border-slate-600 dark:peer-checked:bg-teal-600"></div>
                                 <span className="ml-2.5 text-[10px] font-black uppercase tracking-wider w-14 text-left">
                                   {isTicketAdvertised ? (
-                                    <span className="text-[#1E3A8A] bg-blue-50 px-2 py-0.5 rounded-md flex items-center justify-center dark:bg-blue-500/10 dark:text-blue-400">
+                                    <span className="text-teal-600 bg-teal-50 px-2 py-0.5 rounded-md flex items-center justify-center dark:bg-teal-500/10 dark:text-teal-400">
                                       <Eye className="h-3 w-3 mr-0.5" /> Live
                                     </span>
                                   ) : (
@@ -345,7 +345,7 @@ export default function ClientAdvertiseView({ initialTickets = [] }) {
             <div className="space-y-1">
               <h4 className="text-base font-black text-[#1E293B] tracking-tight dark:text-white">Campaign Limit Reached</h4>
               <p className="text-xs text-slate-400 font-medium px-2 leading-relaxed dark:text-slate-400">
-                Maximum advertisement capacity reached. You can only feature up to <span className="text-[#1E3A8A] font-bold dark:text-blue-400">6 tickets</span> concurrently on the homepage banner. Please deactivate an existing slot before enabling a new campaign.
+                Maximum advertisement capacity reached. You can only feature up to <span className="text-teal-600 font-bold dark:text-teal-400">6 tickets</span> concurrently on the homepage banner. Please deactivate an existing slot before enabling a new campaign.
               </p>
             </div>
 

@@ -147,7 +147,7 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
               setSearchQuery(e.target.value);
               setCurrentPage(1);
             }}
-            className="w-full bg-slate-50 dark:bg-black border border-slate-200 dark:border-slate-800 pl-10 pr-4 py-2.5 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-200 focus:outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-slate-900 transition-all"
+            className="w-full bg-slate-50 dark:bg-black border border-slate-200 dark:border-slate-800 pl-10 pr-4 py-2.5 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-200 focus:outline-none focus:border-teal-500 focus:bg-white dark:focus:bg-slate-900 transition-all"
           />
         </div>
 
@@ -160,7 +160,7 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
               setStatusFilter(e.target.value);
               setCurrentPage(1);
             }}
-            className="w-full bg-slate-50 dark:bg-black border border-slate-200 dark:border-slate-800 pl-9 pr-10 py-2.5 rounded-xl text-xs font-black text-slate-700 dark:text-slate-300 focus:outline-none focus:border-blue-500 appearance-none cursor-pointer"
+            className="w-full bg-slate-50 dark:bg-black border border-slate-200 dark:border-slate-800 pl-9 pr-10 py-2.5 rounded-xl text-xs font-black text-slate-700 dark:text-slate-300 focus:outline-none focus:border-teal-500 appearance-none cursor-pointer"
           >
             <option value="all">📊 All Matrix Pipelines</option>
             <option value="pending">⏳ Verification Pending</option>
@@ -209,7 +209,7 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
                     </td>
                     <td className="p-4 font-black text-sm text-slate-900 dark:text-white max-w-[200px] truncate">{ticket.title}</td>
                     <td className="p-4 font-mono text-slate-400 dark:text-slate-500 text-[11px]">{ticket.vendorEmail}</td>
-                    <td className="p-4 uppercase tracking-wider text-[10px] font-black text-blue-600 dark:text-blue-400">{ticket.transportType}</td>
+                    <td className="p-4 uppercase tracking-wider text-[10px] font-black text-teal-600 dark:text-teal-400">{ticket.transportType}</td>
                     <td className="p-4 font-black text-slate-900 dark:text-white text-sm">৳ {(ticket.pricePerUnit ?? 0).toLocaleString()}</td>
                     <td className="p-4 text-center">
                       <span className={`inline-block px-2.5 py-0.5 rounded-md text-[9px] font-black uppercase tracking-wider border ${
@@ -267,7 +267,7 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
                 <div className="grid grid-cols-2 gap-2 text-[11px] border-y border-slate-100 dark:border-slate-800/60 py-2.5">
                   <div>
                     <span className="text-slate-400 block text-[9px] uppercase font-bold tracking-wider">Classification</span>
-                    <span className="font-bold uppercase text-blue-600 dark:text-blue-400">{ticket.transportType}</span>
+                    <span className="font-bold uppercase text-teal-600 dark:text-teal-400">{ticket.transportType}</span>
                   </div>
                   <div>
                     <span className="text-slate-400 block text-[9px] uppercase font-bold tracking-wider">Tariff Rate</span>
@@ -319,7 +319,7 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
             <span>Previous</span>
           </button>
           <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-            Page Matrix <span className="text-blue-600 dark:text-blue-400 font-black">{currentPage}</span> of <span className="text-slate-800 dark:text-white font-black">{totalPages}</span>
+            Page Matrix <span className="text-teal-600 dark:text-teal-400 font-black">{currentPage}</span> of <span className="text-slate-800 dark:text-white font-black">{totalPages}</span>
           </span>
           <button
             onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
@@ -351,7 +351,7 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
               className="w-full max-w-md bg-white dark:bg-slate-950 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl p-6 space-y-6 relative z-10"
             >
               <div className="flex items-center space-x-3">
-                <div className="p-2 bg-blue-50 dark:bg-blue-500/10 rounded-xl"><AlertTriangle className="h-5 w-5 text-blue-500" /></div>
+                <div className="p-2 bg-teal-50 dark:bg-teal-500/10 rounded-xl"><AlertTriangle className="h-5 w-5 text-teal-500" /></div>
                 <h3 className="text-sm font-black uppercase tracking-wider text-slate-900 dark:text-white">
                   Confirm Clearance Alteration
                 </h3>

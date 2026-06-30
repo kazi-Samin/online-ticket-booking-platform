@@ -112,7 +112,7 @@ export default function VendorDashboardClient({ user, tickets = [], bookings = [
         <div className="space-y-1.5 z-10">
           <span className="text-[11px] font-black uppercase text-emerald-400 tracking-widest block">Operational Node</span>
           <h1 className="text-2xl md:text-3xl font-black text-[#1E293B] dark:text-slate-100 tracking-tight">
-            Welcome back, <span className="text-[#1E3A8A] dark:text-blue-400">{user?.name || 'Premium Vendor'}</span> 👋
+            Welcome back, <span className="text-teal-600 dark:text-teal-400">{user?.name || 'Premium Vendor'}</span> 👋
           </h1>
           <p className="text-xs text-slate-400 dark:text-slate-400 font-semibold">Monitor your transport inventory, fleet grids, and continuous injection revenue pipelines.</p>
         </div>
@@ -125,17 +125,17 @@ export default function VendorDashboardClient({ user, tickets = [], bookings = [
             <PlusCircle className="h-4 w-4 mr-1.5" /> Add New Ticket
           </Link>
         </div>
-        <div className="absolute right-0 top-0 w-40 h-40 bg-[#1E3A8A]/5 dark:bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute right-0 top-0 w-40 h-40 bg-teal-500/5 dark:bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
       </div>
 
       {/* ================= SECTION 1: ADD TICKETS OVERVIEW ================= */}
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Layers className="h-5 w-5 text-[#1E3A8A] dark:text-blue-400" />
+            <Layers className="h-5 w-5 text-teal-600 dark:text-teal-400" />
             <h2 className="text-lg font-black text-[#1E293B] dark:text-slate-100 tracking-tight">Fleet Inventory Metrics</h2>
           </div>
-          <Link href="/dashboard/vendor/my-tickets" className="text-xs font-bold text-[#1E3A8A] dark:text-blue-400 hover:underline flex items-center">
+          <Link href="/dashboard/vendor/my-tickets" className="text-xs font-bold text-teal-600 dark:text-teal-400 hover:underline flex items-center">
             Manage Inventory <ArrowUpRight className="h-3.5 w-3.5 ml-0.5" />
           </Link>
         </div>
@@ -278,7 +278,7 @@ export default function VendorDashboardClient({ user, tickets = [], bookings = [
                           <span className="font-bold text-slate-800 dark:text-slate-100 block">{b?.userName || 'Unknown'}</span>
                           <span className="text-[10px] text-slate-400 dark:text-slate-500 block">{b?.from} ➔ {b?.to}</span>
                         </td>
-                        <td className="py-3.5 px-5 font-bold text-[#1E3A8A] dark:text-blue-400">{b?.ticketTitle}</td>
+                        <td className="py-3.5 px-5 font-bold text-teal-600 dark:text-teal-400">{b?.ticketTitle}</td>
                         <td className="py-3.5 px-5 font-mono">{b?.bookingQuantity}</td>
                         <td className="py-3.5 px-5 font-black text-slate-800 dark:text-slate-100">৳{b?.totalPrice?.toLocaleString()}</td>
                         <td className="py-3.5 px-5">
@@ -333,7 +333,7 @@ export default function VendorDashboardClient({ user, tickets = [], bookings = [
           </div>
           <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/60 p-5 rounded-2xl shadow-sm space-y-2 transition-colors duration-200">
             <span className="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-wider block">Total Allocations Sold</span>
-            <span className="text-2xl font-black text-[#1E3A8A] dark:text-blue-400 block">{revenueStats.totalTicketsSold} <span className="text-xs text-slate-400 dark:text-slate-500 font-normal">Seats</span></span>
+            <span className="text-2xl font-black text-teal-600 dark:text-teal-400 block">{revenueStats.totalTicketsSold} <span className="text-xs text-slate-400 dark:text-slate-500 font-normal">Seats</span></span>
           </div>
           <div className="bg-[#1E293B] dark:bg-slate-950 text-white p-5 rounded-2xl shadow-md space-y-2 relative overflow-hidden transition-colors duration-200">
             <span className="text-[10px] font-black uppercase text-green-400 tracking-wider block">Gross Vault Revenue</span>

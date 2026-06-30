@@ -162,7 +162,7 @@ export default function AddTicketForm() {
 
         {/* SECTION 1: Core Identity Metadata */}
         <div className="space-y-5">
-          <h3 className="text-sm font-extrabold uppercase tracking-widest text-[#1E3A8A] dark:text-blue-400 border-b border-slate-100 dark:border-slate-800 pb-2 flex items-center gap-2">
+          <h3 className="text-sm font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400 border-b border-slate-100 dark:border-slate-800 pb-2 flex items-center gap-2">
             <Tag className="h-4 w-4" /> Primary Metadata
           </h3>
 
@@ -225,7 +225,7 @@ export default function AddTicketForm() {
 
         {/* SECTION 2: Inventory logistics */}
         <div className="space-y-5">
-          <h3 className="text-sm font-extrabold uppercase tracking-widest text-[#1E3A8A] dark:text-blue-400 border-b border-slate-100 dark:border-slate-800 pb-2 flex items-center gap-2">
+          <h3 className="text-sm font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400 border-b border-slate-100 dark:border-slate-800 pb-2 flex items-center gap-2">
             <Bus className="h-4 w-4" /> Inventory Logistics
           </h3>
 
@@ -309,7 +309,7 @@ export default function AddTicketForm() {
 
         {/* SECTION 3: Transit Perks */}
         <div className="space-y-4">
-          <h3 className="text-sm font-extrabold uppercase tracking-widest text-[#1E3A8A] dark:text-blue-400 border-b border-slate-100 dark:border-slate-800 pb-2 flex items-center gap-2">
+          <h3 className="text-sm font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400 border-b border-slate-100 dark:border-slate-800 pb-2 flex items-center gap-2">
             <Sparkles className="h-4 w-4" /> Transit Perks & Accommodations
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 pt-1">
@@ -341,7 +341,7 @@ export default function AddTicketForm() {
 
         {/* SECTION 4: Image Upload Stream Wrapper */}
         <div className="space-y-4">
-          <h3 className="text-sm font-extrabold uppercase tracking-widest text-[#1E3A8A] dark:text-blue-400 border-b border-slate-100 dark:border-slate-800 pb-2 flex items-center gap-2">
+          <h3 className="text-sm font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400 border-b border-slate-100 dark:border-slate-800 pb-2 flex items-center gap-2">
             <ImageIcon className="h-4 w-4" /> Imagery Presentation Media
           </h3>
 
@@ -393,7 +393,7 @@ export default function AddTicketForm() {
 
         {/* SECTION 5: Implicit Security Data Nodes */}
         <div className="space-y-4">
-          <h3 className="text-sm font-extrabold uppercase tracking-widest text-[#1E3A8A] dark:text-blue-400 border-b border-slate-100 dark:border-slate-800 pb-2 flex items-center gap-2">
+          <h3 className="text-sm font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400 border-b border-slate-100 dark:border-slate-800 pb-2 flex items-center gap-2">
             <User className="h-4 w-4" /> Vendor Authority Identity Validation
           </h3>
 
