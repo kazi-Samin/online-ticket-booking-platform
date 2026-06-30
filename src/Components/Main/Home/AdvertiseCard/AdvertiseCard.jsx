@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Sparkles, ArrowUpRight, Calendar, Clock } from "lucide-react";
+import { getTransportImage } from "@/lib/defaultImages";
 
 // Swiper এর প্রয়োজনীয় স্টাইল ইম্পোর্ট
 import "swiper/css";
@@ -77,8 +78,8 @@ export default function AdvertiseCard() {
   if (!tickets || tickets.length === 0) return null;
 
   return (
-    // 🎨 Fixed UI: Synced to deep obsidian gradient backgrounds matching TicketCore design identity
-    <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#09090b] via-slate-950 to-[#09090b] text-slate-100 transition-colors duration-300 overflow-hidden relative">
+    // 🎨 Fixed UI: Supports both Light and Dark themes dynamically
+    <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300 overflow-hidden relative">
       <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-teal-600/5 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto relative z-10">
@@ -89,10 +90,10 @@ export default function AdvertiseCard() {
             <Sparkles className="h-3.5 w-3.5 filter drop-shadow-[0_0_4px_rgba(129,140,248,0.6)]" />
             Featured Destinations
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
             Top Picked Packages
           </h2>
-          <p className="text-sm text-slate-400 mt-2 max-w-xl font-medium">
+          <p className="text-sm text-slate-600 dark:text-slate-400 mt-2 max-w-xl font-medium">
             Exclusive routes handpicked by our experts for your luxury and comfort. Book now before slots run out!
           </p>
         </div>
@@ -123,13 +124,13 @@ export default function AdvertiseCard() {
                   whileHover={{ y: -8 }}
                   transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                   onClick={() => router.push(`/all-tickets/${ticket._id || ticket.id}`)}
-                  className="group relative h-[470px] w-full rounded-[32px] overflow-hidden shadow-2xl border border-slate-900/60 bg-slate-950 cursor-pointer flex flex-col justify-end"
+                  className="group relative h-[470px] w-full rounded-[32px] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-900/60 bg-white dark:bg-slate-950 cursor-pointer flex flex-col justify-end"
                 >
 
                   {/* 🖼️ ফুল-স্কেল ব্যাকগ্রাউন্ড ইমেজ লেয়ার */}
                   <div className="absolute inset-0 z-0">
                     <Image
-                      src={ticket.image || "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800"}
+                      src={ticket.image || getTransportImage(ticket.transportType)}
                       alt={ticket.title || "Destination"}
                       fill
                       unoptimized
@@ -139,31 +140,31 @@ export default function AdvertiseCard() {
                   </div>
 
                   {/* 🚏 ট্রান্সপোর্ট টাইপ ফ্লোটিং ব্যাজ */}
-                  <div className="absolute top-5 left-5 z-20 px-3.5 py-1.5 bg-slate-950/80 backdrop-blur-md border border-slate-800 text-teal-400 rounded-xl text-xs font-black uppercase tracking-wider shadow-lg">
+                  <div className="absolute top-5 left-5 z-20 px-3.5 py-1.5 bg-white/90 dark:bg-slate-950/80 backdrop-blur-md border border-slate-200 dark:border-slate-800 text-teal-600 dark:text-teal-400 rounded-xl text-xs font-black uppercase tracking-wider shadow-lg">
                     {ticket.transportType || "Transit"}
                   </div>
 
                   {/* 💎 গ্লাসমরফিক ইনফোカード */}
-                  <div className="relative z-20 m-5 p-5 bg-slate-900/80 backdrop-blur-xl rounded-2xl border border-slate-800/40 shadow-2xl transition-all">
+                  <div className="relative z-20 m-5 p-5 bg-white/90 dark:bg-slate-900/80 backdrop-blur-xl rounded-2xl border border-slate-200 dark:border-slate-800/40 shadow-2xl transition-all">
 
                     {/* ⏱️ ডেট এবং টাইম সেকশন */}
-                    <div className="flex items-center gap-3 text-xs text-slate-400 mb-2.5 font-bold">
-                      <span className="flex items-center gap-1.5 bg-slate-950/40 border border-slate-800/60 px-2.5 py-1 rounded-lg">
+                    <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 mb-2.5 font-bold">
+                      <span className="flex items-center gap-1.5 bg-slate-50 dark:bg-slate-950/40 border border-slate-200 dark:border-slate-800/60 px-2.5 py-1 rounded-lg">
                         <Calendar className="h-3.5 w-3.5 text-teal-400" />
                         {formatDate(ticket.departureDateTime)}
                       </span>
-                      <span className="flex items-center gap-1.5 bg-slate-950/40 border border-slate-800/60 px-2.5 py-1 rounded-lg">
-                        <Clock className="h-3.5 w-3.5 text-teal-400" />
+                      <span className="flex items-center gap-1.5 bg-slate-50 dark:bg-slate-950/40 border border-slate-200 dark:border-slate-800/60 px-2.5 py-1 rounded-lg">
+                        <Clock className="h-3.5 w-3.5 text-teal-600 dark:text-teal-400" />
                         {formatTime(ticket.departureDateTime)}
                       </span>
                     </div>
 
                     {/* টাইটেল এবং অ্যারো আইকন */}
                     <div className="flex items-start justify-between gap-2 mb-2 text-left">
-                      <h3 className="text-base font-black text-white line-clamp-1 group-hover:text-teal-400 transition-colors duration-300">
+                      <h3 className="text-base font-black text-slate-900 dark:text-white line-clamp-1 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">
                         {ticket.title}
                       </h3>
-                      <div className="p-1.5 bg-slate-950 border border-slate-800 text-slate-300 group-hover:bg-teal-600 group-hover:text-white group-hover:border-teal-500 rounded-xl transition-all shadow-sm shrink-0">
+                      <div className="p-1.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-300 group-hover:bg-teal-600 group-hover:text-white group-hover:border-teal-500 rounded-xl transition-all shadow-sm shrink-0">
                         <ArrowUpRight className="h-4 w-4" />
                       </div>
                     </div>
@@ -181,7 +182,7 @@ export default function AdvertiseCard() {
                         {ticket.perks.slice(0, 2).map((perk, index) => (
                           <span
                             key={index}
-                            className="text-[10px] font-black px-2.5 py-1 bg-slate-950/50 text-teal-300/90 rounded-lg border border-teal-500/10 uppercase tracking-wide"
+                            className="text-[10px] font-black px-2.5 py-1 bg-slate-50 dark:bg-slate-950/50 text-teal-600 dark:text-teal-300/90 rounded-lg border border-teal-200 dark:border-teal-500/10 uppercase tracking-wide"
                           >
                             ✨ {perk}
                           </span>
@@ -190,12 +191,12 @@ export default function AdvertiseCard() {
                     )}
 
                     {/* 💳 ফুটার গ্রিড */}
-                    <div className="flex items-center justify-between pt-3.5 border-t border-slate-800/60">
+                    <div className="flex items-center justify-between pt-3.5 border-t border-slate-200 dark:border-slate-800/60">
                       <div className="text-left">
                         <span className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest">
                           Price per unit
                         </span>
-                        <span className="text-lg font-black text-teal-400 tracking-tight">
+                        <span className="text-lg font-black text-teal-600 dark:text-teal-400 tracking-tight">
                           ৳{ticket.pricePerUnit}
                         </span>
                       </div>
@@ -204,7 +205,7 @@ export default function AdvertiseCard() {
                         <span className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest">
                           Available Slots
                         </span>
-                        <span className="inline-block text-xs font-black px-2.5 py-1 bg-teal-500/10 border border-teal-500/20 text-teal-400 rounded-lg mt-0.5">
+                        <span className="inline-block text-xs font-black px-2.5 py-1 bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/20 text-teal-600 dark:text-teal-400 rounded-lg mt-0.5">
                           {ticket.quantity} Left
                         </span>
                       </div>

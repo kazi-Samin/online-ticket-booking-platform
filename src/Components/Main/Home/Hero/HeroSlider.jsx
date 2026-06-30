@@ -1,207 +1,147 @@
-// "use client";
-
-// import React from "react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, EffectFade } from "swiper/modules";
-// import { motion } from "framer-motion";
-// // import SearchCard from "../SearchCard";
-
-// // Swiper styles আমদানি
-// import "swiper/css";
-// import "swiper/css/effect-fade";
-// import Image from "next/image";
-// import SearchCard from "./SearchCard";
-
-// export default function HeroSlider() {
-//   // স্লাইডারের ৪টি অবজেক্ট ডাটা (বাস, ট্রেন, প্লেন, লঞ্চ)
-//   const slidesData = [
-//     {
-//       id: 1,
-//       title: "Fly High, Explore Further",
-//       subtitle: "Find Cheap Flights & Airline Tickets Easily",
-//       image: "https://i.ibb.co.com/TsmpNNh/photo-1436491865332-7a61a109cc05-q-80-w-1600-auto-format-fit-crop.jpg", // Plane
-//     },
-//     {
-//       id: 2,
-//       title: "Scenic Routes & Smooth Rides",
-//       subtitle: "Book Premium Intercity Bus Tickets Instantly",
-//       image: "https://i.ibb.co.com/dZbnVjB/photo-1544620347-c4fd4a3d5957-q-80-w-1600-auto-format-fit-crop.jpg", // Bus
-//     },
-//     {
-//       id: 3,
-//       title: "Track Your Next Adventure",
-//       subtitle: "Comfortable and Secure Train Journey Across the Country",
-//       image: "https://i.ibb.co.com/tpsrs1rP/photo-1474487548417-781cb71495f3-q-80-w-1600-auto-format-fit-crop.jpg", // Train
-//     },
-//     {
-//       id: 4,
-//       title: "Sail the Serene Waters",
-//       subtitle: "Get Top-Tier Launch Cabins & Deck Slots Effortlessly",
-//       image: "https://i.ibb.co.com/Kpxzy09n/photo-1507525428034-b723cf961d3e-q-80-w-1600-auto-format-fit-crop.jpg", // Launch / Cruise Water concept
-//     },
-//   ];
-
-//   return (
-//     <div className="relative w-full h-[20vh] min-h-[480px] bg-slate-900 overflow-hidden">
-
-//       {/* 🔮 Swiper Background Engine */}
-//       <Swiper
-//         modules={[Autoplay, EffectFade]}
-//         effect={"fade"}
-//         autoplay={{
-//           delay: 5000,
-//           disableOnInteraction: false,
-//         }}
-//         loop={true}
-//         className="absolute inset-0 w-full h-full z-0"
-//       >
-//         {slidesData.map((slide) => (
-//           <SwiperSlide key={slide.id} className="relative w-full h-full">
-//             {/* ডার্ক গ্রেডিয়েন্ট ওভারলে যাতে টেক্সট এবং কার্ড ক্রিস্টাল ক্লিয়ার দেখায় */}
-//             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-slate-950/80 z-10" />
-//             <Image width={1000} height={1000}
-//               src={slide.image}
-//               alt={slide.title}
-//               className="w-full h-full object-cover object-center"
-//             />
-//           </SwiperSlide>
-//         ))}
-//       </Swiper>
-
-//       {/* 🏯 ফোরগ্রাউন্ড কন্টেন্ট লেয়ার (স্লাইডারের উপরে যা থাকবে) */}
-//       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 text-center">
-
-//         {/* টাইটেল এবং সাবটাইটেল সেকশন (Framer Motion দিয়ে মসৃণ এন্ট্রান্স) */}
-//         <motion.div
-//           initial={{ opacity: 0, y: -20 }}
-//           animate={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-//           className="mb-8 max-w-2xl text-white"
-//         >
-//           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight drop-shadow-md">
-//             Where to <span className="text-emerald-400">Explore?</span>
-//           </h1>
-//           <p className="text-sm sm:text-base text-slate-200 mt-3 drop-shadow-sm font-medium">
-//             Find Cheap Bus, Train, Flight & Launch Tickets in Bangladesh
-//           </p>
-//         </motion.div>
-
-//         {/* 💳 ইন্টারেক্টিভ সার্চ কার্ড মেকানিজম */}
-//         <motion.div
-//           initial={{ opacity: 0, scale: 0.96, y: 30 }}
-//           animate={{ opacity: 1, scale: 1, y: 0 }}
-//           transition={{ delay: 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-//           className="w-full flex justify-center"
-//         >
-//           <SearchCard />
-//         </motion.div>
-
-//       </div>
-//     </div>
-//   );
-// }
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaTrain, FaPlane, FaShip, FaSearch } from 'react-icons/fa';
 import { FaBusSimple } from 'react-icons/fa6';
+import { motion, AnimatePresence } from 'framer-motion';
+import { getTransportImage } from '@/lib/defaultImages';
+import Link from 'next/link';
 
-export default function Hero() {
+export default function HeroSlider() {
   const [activeTab, setActiveTab] = useState('all');
+  const [currentImage, setCurrentImage] = useState(
+    "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=1920"
+  );
 
   const vehicleTypes = [
-    { id: 'all', label: 'All Vehicles', icon: null },
-    { id: 'bus', label: 'Bus', icon: FaBusSimple },
-    { id: 'train', label: 'Train', icon: FaTrain },
-    { id: 'flight', label: 'Flight', icon: FaPlane },
-    { id: 'launch', label: 'Launch', icon: FaShip },
+    { id: 'all', label: 'All Vehicles', icon: null, image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=1920" },
+    { id: 'bus', label: 'Bus', icon: FaBusSimple, image: getTransportImage('bus') },
+    { id: 'train', label: 'Train', icon: FaTrain, image: getTransportImage('train') },
+    { id: 'flight', label: 'Flight', icon: FaPlane, image: getTransportImage('flight') },
+    { id: 'launch', label: 'Launch', icon: FaShip, image: getTransportImage('launch') },
   ];
 
+  // When tab changes, update the background image smoothly
+  useEffect(() => {
+    const activeVehicle = vehicleTypes.find(v => v.id === activeTab);
+    if (activeVehicle) {
+      setCurrentImage(activeVehicle.image);
+    }
+  }, [activeTab]);
+
   return (
-    // ডার্ক মোডে এখানে slate-950 এর বদলে তোমার স্ক্রিনশটের আসল কালার slate-950 দেওয়া হলো
-    <div className="relative w-full min-h-[640px] bg-slate-50 dark:bg-slate-950 flex items-center justify-center overflow-hidden transition-colors duration-300">
+    <div className="relative w-full min-h-[680px] bg-slate-50 dark:bg-slate-950 flex items-center justify-center overflow-hidden transition-colors duration-300 selection:bg-teal-500/30">
       
+      {/* 🌌 Dynamic Background System */}
       <div className="absolute inset-0 z-0 w-full h-full">
-        <img 
-          src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=1920" 
-          alt="Premium Travel Destination" 
-          className="w-full h-full object-cover opacity-35 dark:opacity-10 scale-100"
-        />
-        {/* গ্রেডিয়েন্ট টোনটা কুচকুচে কালোর বদলে slate-950 দিয়ে ম্যাচ করা হলো */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-50/20 via-slate-100/60 to-slate-50 dark:from-slate-950/40 dark:via-slate-950/80 dark:to-slate-950" />
+        <AnimatePresence mode="wait">
+          <motion.img 
+            key={currentImage}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 0.35, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            src={currentImage} 
+            alt="Travel Destination" 
+            className="w-full h-full object-cover dark:opacity-20"
+          />
+        </AnimatePresence>
+        
+        {/* Premium Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-50/10 via-slate-100/70 to-slate-50 dark:from-slate-950/40 dark:via-slate-950/90 dark:to-slate-950 z-10" />
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
         
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white mb-6">
-          Where to <span className="text-teal-600 dark:text-teal-400">Explore?</span>
-        </h1>
-        <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-14 font-medium">
-          Find Cheap Bus, Train, Flight & Launch Tickets in Bangladesh
-        </p>
+        {/* 🪄 Animated Headers */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-slate-900 dark:text-white mb-6 drop-shadow-sm">
+            Where to <span className="text-teal-600 dark:text-teal-400">Explore?</span>
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-16 font-medium">
+            Find the cheapest and most premium Bus, Train, Flight & Launch Tickets across Bangladesh.
+          </p>
+        </motion.div>
 
-        {/* সার্চ কার্ডের ব্যাকগ্রাউন্ড ডার্ক মোডে পারফেক্টলি slate-900/60 করা হয়েছে যা image_34d0ba.png এর কার্ডের সাথে মিলবে */}
-        <div className="w-full bg-white/80 dark:bg-slate-900/60 backdrop-blur-2xl border border-slate-200 dark:border-slate-800/80 p-6 sm:p-10 rounded-3xl shadow-2xl text-left transition-all duration-300">
+        {/* 🔮 Glassmorphic Search Card */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="w-full bg-white/70 dark:bg-slate-900/40 backdrop-blur-3xl border border-white/50 dark:border-slate-800/80 p-6 sm:p-10 rounded-[2rem] shadow-2xl text-left transition-all duration-300"
+        >
           
-          {/* ট্যাব সেকশনের বর্ডার */}
-          <div className="flex flex-wrap gap-2.5 mb-8 border-b border-slate-200 dark:border-slate-800/80 pb-5">
+          {/* Dynamic Tabs */}
+          <div className="flex flex-wrap gap-2 sm:gap-3 mb-8 border-b border-slate-200 dark:border-slate-800/80 pb-5">
             {vehicleTypes.map((type) => {
               const Icon = type.icon;
+              const isActive = activeTab === type.id;
               return (
                 <button
                   key={type.id}
                   onClick={() => setActiveTab(type.id)}
-                  className={`flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold transition-all duration-200 ${
-                    activeTab === type.id
-                      ? 'bg-teal-600 text-white shadow-xl shadow-teal-600/20'
-                      : 'bg-slate-100 dark:bg-slate-800/40 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200'
+                  className={`relative flex items-center gap-2 px-5 sm:px-6 py-3 rounded-2xl text-sm font-black transition-all duration-300 overflow-hidden ${
+                    isActive
+                      ? 'text-white shadow-xl shadow-teal-600/30 transform -translate-y-1'
+                      : 'bg-slate-100 dark:bg-slate-900/60 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200 border border-slate-200 dark:border-slate-800'
                   }`}
                 >
-                  {Icon && <Icon className="h-4 w-4" />}
-                  {type.label}
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeTab"
+                      className="absolute inset-0 bg-gradient-to-r from-teal-500 to-emerald-600 z-0"
+                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    />
+                  )}
+                  <div className="relative z-10 flex items-center gap-2">
+                    {Icon && <Icon className="h-4 w-4" />}
+                    {type.label}
+                  </div>
                 </button>
               );
             })}
           </div>
 
+          {/* Search Inputs */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-end w-full">
             
-            {/* From Input Container */}
             <div className="md:col-span-4 space-y-2.5 w-full">
-              <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest pl-1">From</label>
-              <div className="relative w-full">
+              <label className="text-xs font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest pl-2">Departure</label>
+              <div className="relative w-full group">
                 <input 
                   type="text" 
-                  placeholder="Where from?" 
-                  className="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 shadow-sm transition-all text-sm font-medium"
+                  placeholder="Leaving from..." 
+                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl px-5 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-teal-500 dark:focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 shadow-inner transition-all text-sm font-bold"
                 />
               </div>
             </div>
 
-            {/* To Input Container */}
             <div className="md:col-span-4 space-y-2.5 w-full">
-              <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest pl-1">To</label>
-              <div className="relative w-full">
+              <label className="text-xs font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest pl-2">Destination</label>
+              <div className="relative w-full group">
                 <input 
                   type="text" 
-                  placeholder="Where to?" 
-                  className="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 shadow-sm transition-all text-sm font-medium"
+                  placeholder="Going to..." 
+                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl px-5 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-teal-500 dark:focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 shadow-inner transition-all text-sm font-bold"
                 />
               </div>
             </div>
 
-            {/* Find Tickets Button */}
             <div className="md:col-span-4 w-full">
-              <button className="w-full bg-teal-600 hover:bg-teal-500 text-white font-extrabold py-4 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-teal-600/10 active:scale-[0.99] text-sm tracking-wide">
-                <FaSearch className="h-4 w-4" />
-                Find Best Tickets
-              </button>
+              <Link href={`/all-tickets${activeTab !== 'all' ? `?transport=${activeTab}` : ''}`}>
+                <button className="w-full bg-gradient-to-r from-slate-900 to-slate-800 dark:from-teal-600 dark:to-teal-500 hover:from-slate-800 hover:to-slate-700 dark:hover:from-teal-500 dark:hover:to-teal-400 text-white font-black py-4 px-6 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 shadow-xl shadow-slate-900/20 dark:shadow-teal-900/30 active:scale-[0.98] text-sm tracking-widest uppercase border border-slate-700 dark:border-teal-400/30">
+                  <FaSearch className="h-4 w-4" />
+                  Explore Tickets
+                </button>
+              </Link>
             </div>
 
           </div>
-
-        </div>
-
+        </motion.div>
       </div>
     </div>
   );
