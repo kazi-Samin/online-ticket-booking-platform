@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import { Form, TextField, Label, Input, FieldError, Button } from "@heroui/react";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
+import { FcGoogle } from "react-icons/fc";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
@@ -196,11 +197,9 @@ export default function LogInForm() {
                   <button
                     type="button"
                     onClick={handleGoogleSignIn}
-                    className="w-full flex items-center justify-center space-x-2.5 h-11 border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-xl text-sm font-bold text-slate-700 dark:text-slate-300 active:scale-[0.98] transition-all bg-white dark:bg-slate-900"
+                    className="w-full flex items-center justify-center space-x-3 h-12 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-xl shadow-sm hover:shadow-md text-sm font-bold text-slate-700 dark:text-slate-200 transition-all duration-200 active:scale-[0.98]"
                   >
-                    <svg className="h-4 w-4" viewBox="0 0 24 24">
-                      <path fill="#EA4335" d="M12.24 10.285V14.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l3.227-3.11C18.422 1.242 15.583 0 12.24 0 5.58 0 0 5.37 0 12s5.58 12 12.24 12c6.96 0 11.57-4.83 11.57-11.79 0-.795-.085-1.4-.195-1.925H12.24z" />
-                    </svg>
+                    <FcGoogle className="h-5 w-5" />
                     <span>Continue with Google</span>
                   </button>
                 </motion.div>
