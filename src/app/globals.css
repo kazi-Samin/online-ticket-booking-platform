@@ -1,3 +1,9 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 @variant dark (&:where(.dark, .dark *));
+
+/* Hide default browser password eye icon (Edge/IE) */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
