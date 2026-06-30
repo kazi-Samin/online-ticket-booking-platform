@@ -8,7 +8,7 @@ export const authHeader = async () => {
 }
 
 export const postMutation = async (url, data) => {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:5000";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://online-booking-ticket-server.vercel.app";
 
     try {
         const authHeadersObj = await authHeader();
@@ -37,7 +37,7 @@ export const postMutation = async (url, data) => {
 };
 
 export const deleteMutation = async (url) => {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:5000";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://online-booking-ticket-server.vercel.app";
 
     try {
         const authHeadersObj = await authHeader();
@@ -64,7 +64,7 @@ export const deleteMutation = async (url) => {
 };
 
 export const patchMutation = async (url, data) => {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:5000";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://online-booking-ticket-server.vercel.app";
 
     try {
         const authHeadersObj = await authHeader();
@@ -92,7 +92,7 @@ export const patchMutation = async (url, data) => {
 };
 
 export const getMutation = async (url) => {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:5000";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://online-booking-ticket-server.vercel.app";
 
     try {
         const authHeadersObj = await authHeader();

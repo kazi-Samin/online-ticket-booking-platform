@@ -12,7 +12,7 @@ export async function POST(request) {
 
         // 🚀 Fixed Fallback: বিল্ডের সময় বা অরিজিন মিসিং থাকলে প্রোডাকশন বা লোকালহোস্টের ডিফল্ট ইউআরএল সেট করবে
         if (!origin || origin === 'null') {
-            origin = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+            origin = process.env.NEXT_PUBLIC_API_URL || 'https://online-ticket-booking-platform-gamma.vercel.app';
         }
 
         console.log('Processed Origin:', origin);

@@ -229,7 +229,7 @@ export default function LatestTickets() {
   useEffect(() => {
     const fetchLatestTickets = async () => {
       try {
-        const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
+        const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://online-booking-ticket-server.vercel.app';
         const response = await fetch(`${backendUrl}/api/tickets/latest`, {
           cache: 'no-store'
         });

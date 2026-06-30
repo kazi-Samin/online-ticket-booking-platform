@@ -24,7 +24,7 @@ const db = client.db('online-ticket-booking-platform');
 
 export const auth = betterAuth({
   // 🚀 Fixed: বিল্ডের সময় এনভায়রনমেন্ট ভ্যারিয়েবল না থাকলেও যেন ক্র্যাশ না করে ফলব্যাক দেওয়া হলো
-  baseURL: process.env.BETTER_AUTH_URL || "http://localhost:3000",
+  baseURL: process.env.BETTER_AUTH_URL || "https://online-ticket-booking-platform-gamma.vercel.app",
   database: mongodbAdapter(db),
   emailAndPassword: {
     enabled: true,
