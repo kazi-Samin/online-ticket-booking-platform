@@ -7,20 +7,31 @@ export const metadata = {
   title: "TicketCore || Manage-Tickets",
   description: "Online ticket booking platform",
 };
+
 const ManageTicketsPage = async () => {
   const tickets = (await getAdminAllTickets()) || [];
 
   return (
-    <div className="max-w-7xl mx-auto space-y-6 p-4 sm:p-8 pb-12 text-left">
-      {/* Admin Header Banner */}
-      <div className="bg-gradient-to-r from-[#1E3A8A] to-indigo-900 dark:from-zinc-900 dark:to-zinc-950 p-6 sm:p-8 rounded-3xl shadow-xl border border-zinc-100 dark:border-zinc-800 text-white flex items-center space-x-4">
-        <div className="p-3 bg-[#FF6B35] rounded-2xl shadow-lg">
-          <ShieldCheck className="h-6 w-6 text-white" />
+    <div className="max-w-7xl mx-auto space-y-6 p-4 sm:p-8 pb-12 text-left bg-slate-50 dark:bg-black min-h-screen text-slate-800 dark:text-zinc-200 transition-colors duration-300">
+      
+      {/* ==================== 🏆 ULTRA-MODERN BRAND HEADER BANNER ==================== */}
+      <div className="relative overflow-hidden bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 p-6 sm:p-8 rounded-3xl shadow-xs flex items-center space-x-4">
+        
+        {/* 🌌 Soft Ambient Glow Background Element */}
+        <div className="absolute -top-10 -right-10 w-36 h-36 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-2xl pointer-events-none" />
+        
+        {/* Left Icon Container with Brand Identity */}
+        <div className="p-3 bg-blue-600 dark:bg-blue-500/10 text-white dark:text-blue-400 rounded-2xl shadow-md shrink-0 relative z-10">
+          <ShieldCheck className="h-6 w-6" />
         </div>
-        <div>
-          <h1 className="text-2xl font-black tracking-tight">Global Ticket Distribution Matrix</h1>
-          <p className="text-sm text-indigo-200 dark:text-zinc-400 font-medium mt-0.5">
-            Audit, verify, and modulate routing structures live.
+        
+        {/* Right Label Text Content */}
+        <div className="space-y-0.5 relative z-10">
+          <h1 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
+            Global Itinerary Auditing Matrix
+          </h1>
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-zinc-400 font-medium">
+            Monitor infrastructure compliance, audit vendor logs, and authorize pipelines live.
           </p>
         </div>
       </div>
