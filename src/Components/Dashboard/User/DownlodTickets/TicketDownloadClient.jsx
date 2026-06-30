@@ -147,7 +147,7 @@ export default function TicketDownloadClient({ initialTickets = [] }) {
               {/* টিকিট হেডার */}
               <div className="flex justify-between items-start border-b border-slate-100 dark:border-slate-900 pb-3">
                 <div className="flex items-center space-x-2.5">
-                  <div className="p-2 bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 rounded-xl">
+                  <div className="p-2 bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 rounded-xl">
                     <Ticket className="h-5 w-5" />
                   </div>
                   <div>
@@ -165,7 +165,7 @@ export default function TicketDownloadClient({ initialTickets = [] }) {
                 <div>
                   <span className="text-[9px] text-slate-400 dark:text-slate-500 uppercase block mb-0.5">From</span>
                   <div className="flex items-center text-slate-800 dark:text-slate-200">
-                    <MapPin className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400 mr-1 shrink-0" /> {ticket.from || 'N/A'}
+                    <MapPin className="h-3.5 w-3.5 text-teal-600 dark:text-teal-400 mr-1 shrink-0" /> {ticket.from || 'N/A'}
                   </div>
                 </div>
                 <div>
@@ -204,7 +204,7 @@ export default function TicketDownloadClient({ initialTickets = [] }) {
                 </div>
                 <div className="text-right">
                   <span className="text-[9px] text-slate-400 dark:text-slate-500 uppercase block">Total Price</span>
-                  <span className="text-base font-black text-blue-700 dark:text-teal-400">৳{(ticket.totalPrice || 0).toLocaleString()}</span>
+                  <span className="text-base font-black text-teal-700 dark:text-teal-400">৳{(ticket.totalPrice || 0).toLocaleString()}</span>
                 </div>
               </div>
             </div>
@@ -213,7 +213,7 @@ export default function TicketDownloadClient({ initialTickets = [] }) {
             <button
               onClick={() => handleDownload(ticket)}
               disabled={downloadingId === ticket._id}
-              className="w-full flex items-center justify-center py-3 bg-[#1E3A8A] hover:bg-[#122554] dark:bg-teal-600 dark:hover:bg-teal-700 text-white text-xs font-bold rounded-xl transition-all shadow-md disabled:opacity-60"
+              className="w-full flex items-center justify-center py-3 bg-teal-600 hover:bg-teal-700 dark:bg-teal-600 dark:hover:bg-teal-700 text-white text-xs font-bold rounded-xl transition-all shadow-md disabled:opacity-60"
             >
               {downloadingId === ticket._id ? (
                 <div className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />

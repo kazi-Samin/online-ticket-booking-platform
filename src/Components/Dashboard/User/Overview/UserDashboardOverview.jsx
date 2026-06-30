@@ -97,7 +97,7 @@ export default function UserDashboardOverview({ tickets = [], transactions = [],
 
           {/* Added */}
           <div className="p-6 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-3xl shadow-sm flex flex-col justify-between space-y-4">
-            <div className="p-3 bg-blue-50 dark:bg-blue-500/10 w-fit rounded-2xl"><Ticket className="h-5 w-5 text-blue-600 dark:text-blue-400" /></div>
+            <div className="p-3 bg-teal-50 dark:bg-teal-500/10 w-fit rounded-2xl"><Ticket className="h-5 w-5 text-teal-600 dark:text-teal-400" /></div>
             <div>
               <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-slate-400">Tickets Added</p>
               <h3 className="text-2xl font-black tracking-tight mt-1 text-slate-900 dark:text-slate-100">{stats.total}</h3>

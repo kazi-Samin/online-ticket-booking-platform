@@ -36,7 +36,7 @@ const DownloadTicketsPage = async () => {
           {/* Left: Text Stream */}
           <div className="space-y-1 relative z-10">
             <h1 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">
-              Download <span className="text-blue-600 dark:text-blue-400">Tickets</span>
+              Download <span className="text-teal-600 dark:text-teal-400">Tickets</span>
             </h1>
             <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 mt-0.5">
               Access and download PDF copies of your confirmed reservations.
@@ -44,9 +44,9 @@ const DownloadTicketsPage = async () => {
           </div>
 
           {/* Right: ⚡ High-Tech Micro Capsule Indicator Badge */}
-          <div className="bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 px-4 py-2 rounded-2xl self-start sm:self-auto shadow-sm relative z-10 transition-colors duration-200">
+          <div className="bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/20 px-4 py-2 rounded-2xl self-start sm:self-auto shadow-sm relative z-10 transition-colors duration-200">
             <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 block">Downloadable</span>
-            <span className="text-sm font-black text-blue-600 dark:text-blue-400">
+            <span className="text-sm font-black text-teal-600 dark:text-teal-400">
               {paidTickets.length} Tickets
             </span>
           </div>

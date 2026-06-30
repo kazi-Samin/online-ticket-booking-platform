@@ -448,14 +448,14 @@ export default function BookingModal({ ticket, onClose }) {
                   type="button"
                   onClick={incrementQty}
                   disabled={quantity >= maxAvailable || maxAvailable === 0}
-                  className="h-10 w-10 flex items-center justify-center bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-500 hover:to-teal-500 text-white disabled:opacity-20 disabled:cursor-not-allowed rounded-xl transition-all shadow-md shadow-blue-900/20 active:scale-95 disabled:scale-100"
+                  className="h-10 w-10 flex items-center justify-center bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white disabled:opacity-20 disabled:cursor-not-allowed rounded-xl transition-all shadow-md shadow-teal-900/20 active:scale-95 disabled:scale-100"
                 >
                   <Plus className="h-4 w-4 stroke-[3]" />
                 </button>
               </div>
             </div>
 
-            <div className="bg-blue-500/5 p-3.5 rounded-xl border border-blue-500/10 flex justify-between items-center text-xs font-bold">
+            <div className="bg-teal-500/5 p-3.5 rounded-xl border border-teal-500/10 flex justify-between items-center text-xs font-bold">
               <span className="text-slate-400">Projected Base Total:</span>
               <span className="text-base font-black text-orange-500 tracking-tight">
                 ৳{(quantity || 0) * (ticket.pricePerUnit || 0)}
@@ -481,7 +481,7 @@ export default function BookingModal({ ticket, onClose }) {
               <button
                 type="submit"
                 disabled={isSubmitting || maxAvailable === 0}
-                className="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-teal-600 hover:from-orange-500 hover:to-orange-600 text-white font-black text-xs uppercase tracking-widest rounded-xl transition-all duration-300 shadow-md disabled:opacity-20 disabled:cursor-not-allowed disabled:hover:from-blue-600 disabled:hover:to-teal-600"
+                className="px-5 py-2.5 bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-orange-500 hover:to-orange-600 text-white font-black text-xs uppercase tracking-widest rounded-xl transition-all duration-300 shadow-md disabled:opacity-20 disabled:cursor-not-allowed disabled:hover:from-teal-600 disabled:hover:to-emerald-600"
               >
                 {isSubmitting ? "Syncing Ledger..." : maxAvailable === 0 ? "Out of Stock" : "Confirm Ledger"}
               </button>
