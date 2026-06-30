@@ -85,15 +85,15 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
   const startIdx = (adPage - 1) * adsPerPage;
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-black p-4 sm:p-6 lg:p-8 text-slate-800 dark:text-zinc-200 transition-colors duration-300">
+    <div className="min-h-screen bg-slate-50 dark:bg-black p-4 sm:p-6 lg:p-8 text-slate-800 dark:text-slate-200 transition-colors duration-300">
       <div className="max-w-7xl mx-auto space-y-10">
 
         {/* 🌟 ড্যাশবোর্ড হেডার */}
-        <div className="border-b border-slate-200 dark:border-zinc-800 pb-5">
+        <div className="border-b border-slate-200 dark:border-slate-800 pb-5">
           <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 dark:text-white">
             System Administration <span className="text-blue-600 dark:text-blue-400">Overview</span>
           </h1>
-          <p className="text-xs text-slate-500 dark:text-zinc-400 font-semibold mt-1">
+          <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-1">
             Real-time analytics engine • Live system control matrix & database logs.
           </p>
         </div>
@@ -102,7 +102,7 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
         <div className="space-y-4">
           <div className="flex items-center gap-2">
             <ShieldAlert className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-            <h2 className="text-sm font-black uppercase tracking-wider text-slate-900 dark:text-zinc-100">Ticket Management Matrix</h2>
+            <h2 className="text-sm font-black uppercase tracking-wider text-slate-900 dark:text-slate-100">Ticket Management Matrix</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -110,44 +110,44 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
             <div className="lg:col-span-2 grid grid-cols-2 gap-4">
               <div
                 onClick={() => router.push('/dashboard/admin/manage-tickets')}
-                className="p-5 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl shadow-sm hover:border-blue-500 dark:hover:border-blue-500 cursor-pointer transition-all group flex flex-col justify-between"
+                className="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-sm hover:border-blue-500 dark:hover:border-blue-500 cursor-pointer transition-all group flex flex-col justify-between"
               >
-                <div className="p-3 bg-slate-100 dark:bg-zinc-800 w-fit rounded-2xl"><Layers className="h-5 w-5 text-blue-600 dark:text-blue-400" /></div>
+                <div className="p-3 bg-slate-100 dark:bg-slate-800 w-fit rounded-2xl"><Layers className="h-5 w-5 text-blue-600 dark:text-blue-400" /></div>
                 <div className="mt-4">
-                  <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-zinc-400">Total System Tickets</p>
+                  <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-slate-400">Total System Tickets</p>
                   <h3 className="text-3xl font-black mt-1 text-slate-900 dark:text-white group-hover:text-blue-500 transition-colors">{ticketStats.total}</h3>
                 </div>
               </div>
 
               <div
                 onClick={() => router.push('/dashboard/admin/manage-tickets')}
-                className="p-5 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl shadow-sm hover:border-emerald-500 cursor-pointer transition-all group flex flex-col justify-between"
+                className="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-sm hover:border-emerald-500 cursor-pointer transition-all group flex flex-col justify-between"
               >
                 <div className="p-3 bg-emerald-50 dark:bg-emerald-500/10 w-fit rounded-2xl"><CheckCircle2 className="h-5 w-5 text-emerald-500" /></div>
                 <div className="mt-4">
-                  <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-zinc-400">Approved Tickets</p>
+                  <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-slate-400">Approved Tickets</p>
                   <h3 className="text-3xl font-black mt-1 text-emerald-500">{ticketStats.approved}</h3>
                 </div>
               </div>
 
               <div
                 onClick={() => router.push('/dashboard/admin/manage-tickets')}
-                className="p-5 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl shadow-sm hover:border-amber-500 cursor-pointer transition-all group flex flex-col justify-between"
+                className="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-sm hover:border-amber-500 cursor-pointer transition-all group flex flex-col justify-between"
               >
                 <div className="p-3 bg-amber-50 dark:bg-amber-500/10 w-fit rounded-2xl"><Clock className="h-5 w-5 text-amber-500" /></div>
                 <div className="mt-4">
-                  <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-zinc-400">Pending Verification</p>
+                  <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-slate-400">Pending Verification</p>
                   <h3 className="text-3xl font-black mt-1 text-amber-500">{ticketStats.pending}</h3>
                 </div>
               </div>
 
               <div
                 onClick={() => router.push('/dashboard/admin/manage-tickets')}
-                className="p-5 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl shadow-sm hover:border-red-500 cursor-pointer transition-all group flex flex-col justify-between"
+                className="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-sm hover:border-red-500 cursor-pointer transition-all group flex flex-col justify-between"
               >
                 <div className="p-3 bg-red-50 dark:bg-red-500/10 w-fit rounded-2xl"><XCircle className="h-5 w-5 text-red-500" /></div>
                 <div className="mt-4">
-                  <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-zinc-400">Rejected Logs</p>
+                  <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-slate-400">Rejected Logs</p>
                   <h3 className="text-3xl font-black mt-1 text-red-500">{ticketStats.rejected}</h3>
                 </div>
               </div>
@@ -156,19 +156,19 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
             {/* 📊 টিকিট বার চার্ট */}
             <div
               onClick={() => router.push('/dashboard/admin/manage-tickets')}
-              className="bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl p-5 shadow-sm flex flex-col justify-between cursor-pointer hover:shadow-md transition-all min-w-0"
+              className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 shadow-sm flex flex-col justify-between cursor-pointer hover:shadow-md transition-all min-w-0"
             >
               <div className="flex items-center gap-1.5 mb-4">
-                <BarChart3 className="h-4 w-4 text-slate-400 dark:text-zinc-500" />
-                <span className="text-[11px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-400">Ticket Metrics Chart</span>
+                <BarChart3 className="h-4 w-4 text-slate-400 dark:text-slate-500" />
+                <span className="text-[11px] font-black uppercase tracking-wider text-slate-400 dark:text-slate-400">Ticket Metrics Chart</span>
               </div>
               <div className="w-full h-[180px] relative min-h-[180px]">
                 {isMounted && (
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={ticketChartData} margin={{ top: 0, right: 0, left: -25, bottom: 0 }}>
-                      <CartesianGrid strokeDasharray="3 3" vertical={false} className="stroke-slate-100 dark:stroke-zinc-800" />
-                      <XAxis dataKey="name" className="text-[10px] font-bold fill-slate-500 dark:fill-zinc-400" tickLine={false} />
-                      <YAxis className="text-[10px] font-bold fill-slate-500 dark:fill-zinc-400" tickLine={false} />
+                      <CartesianGrid strokeDasharray="3 3" vertical={false} className="stroke-slate-100 dark:stroke-slate-800" />
+                      <XAxis dataKey="name" className="text-[10px] font-bold fill-slate-500 dark:fill-slate-400" tickLine={false} />
+                      <YAxis className="text-[10px] font-bold fill-slate-500 dark:fill-slate-400" tickLine={false} />
                       <Tooltip cursor={{ fill: 'transparent' }} contentStyle={{ background: '#18181b', border: '1px solid #27272a', borderRadius: '8px', color: '#fff' }} />
                       <Bar dataKey="count" radius={[8, 8, 0, 0]}>
                         {ticketChartData.map((entry, index) => (
@@ -183,11 +183,11 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
           </div>
 
           {/* টিকিট মিনি টেবিল */}
-          <div className="bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl overflow-hidden shadow-sm">
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="bg-slate-50 dark:bg-zinc-950 border-b border-slate-200 dark:border-zinc-800 text-[10px] font-black uppercase tracking-wider text-slate-600 dark:text-zinc-400">
+                  <tr className="bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 text-[10px] font-black uppercase tracking-wider text-slate-600 dark:text-slate-400">
                     <th className="py-3 px-5">Transport / Vendor</th>
                     <th className="py-3 px-5">Route</th>
                     <th className="py-3 px-5 text-center">Gross Units</th>
@@ -195,15 +195,15 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
                     <th className="py-3 px-5 text-center">Status</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-100 dark:divide-zinc-800/60 text-slate-700 dark:text-zinc-300">
+                <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60 text-slate-700 dark:text-slate-300">
                   {paginatedTickets.map((ticket) => (
                     <tr
                       key={ticket._id}
                       onClick={() => router.push('/dashboard/admin/manage-tickets')}
-                      className="hover:bg-slate-50/50 dark:hover:bg-zinc-950/40 cursor-pointer transition-colors"
+                      className="hover:bg-slate-50/50 dark:hover:bg-slate-950/40 cursor-pointer transition-colors"
                     >
                       <td className="py-3 px-5 flex items-center gap-3">
-                        <div className="relative h-8 w-8 rounded-xl overflow-hidden border border-slate-200 dark:border-zinc-800 flex-shrink-0">
+                        <div className="relative h-8 w-8 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 flex-shrink-0">
                           {ticket?.image ? (
                             <Image
                               fill
@@ -214,7 +214,7 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
                               sizes="32px"
                             />
                           ) : (
-                            <div className="bg-slate-200 dark:bg-zinc-800 w-full h-full" />
+                            <div className="bg-slate-200 dark:bg-slate-800 w-full h-full" />
                           )}
                         </div>
                         <div>
@@ -244,11 +244,11 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
 
             {/* টিকিট টেবিল পেজিনেশন */}
             {totalTicketPages > 1 && (
-              <div className="p-3 bg-slate-50 dark:bg-zinc-950/40 border-t border-slate-100 dark:border-zinc-800 flex items-center justify-between text-xs font-bold text-slate-500 dark:text-zinc-400">
+              <div className="p-3 bg-slate-50 dark:bg-slate-950/40 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-slate-500 dark:text-slate-400">
                 <span>Page {ticketPage} of {totalTicketPages}</span>
                 <div className="flex items-center gap-1">
-                  <button disabled={ticketPage === 1} onClick={() => setTicketPage(p => p - 1)} className="p-1.5 bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 rounded-lg disabled:opacity-40"><ChevronLeft className="h-3.5 w-3.5" /></button>
-                  <button disabled={ticketPage === totalTicketPages} onClick={() => setTicketPage(p => p + 1)} className="p-1.5 bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 rounded-lg disabled:opacity-40"><ChevronRight className="h-3.5 w-3.5" /></button>
+                  <button disabled={ticketPage === 1} onClick={() => setTicketPage(p => p - 1)} className="p-1.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg disabled:opacity-40"><ChevronLeft className="h-3.5 w-3.5" /></button>
+                  <button disabled={ticketPage === totalTicketPages} onClick={() => setTicketPage(p => p + 1)} className="p-1.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg disabled:opacity-40"><ChevronRight className="h-3.5 w-3.5" /></button>
                 </div>
               </div>
             )}
@@ -265,15 +265,15 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* ইউজার CARD গ্রিড */}
             <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-4">
-              <div onClick={() => router.push('/dashboard/admin/manage-users')} className="p-5 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl cursor-pointer hover:border-blue-500 transition-all flex flex-col justify-between shadow-sm">
-                <div className="p-2.5 bg-slate-100 dark:bg-zinc-800 w-fit rounded-xl"><Users className="h-4 w-4 text-blue-600 dark:text-blue-400" /></div>
+              <div onClick={() => router.push('/dashboard/admin/manage-users')} className="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl cursor-pointer hover:border-blue-500 transition-all flex flex-col justify-between shadow-sm">
+                <div className="p-2.5 bg-slate-100 dark:bg-slate-800 w-fit rounded-xl"><Users className="h-4 w-4 text-blue-600 dark:text-blue-400" /></div>
                 <div className="mt-4">
                   <p className="text-[10px] uppercase tracking-wider font-bold text-slate-400">Total Users</p>
                   <h4 className="text-2xl font-black text-slate-900 dark:text-white mt-0.5">{userStats.total}</h4>
                 </div>
               </div>
 
-              <div onClick={() => router.push('/dashboard/admin/manage-users')} className="p-5 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl cursor-pointer hover:border-blue-500 transition-all flex flex-col justify-between shadow-sm">
+              <div onClick={() => router.push('/dashboard/admin/manage-users')} className="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl cursor-pointer hover:border-blue-500 transition-all flex flex-col justify-between shadow-sm">
                 <div className="p-2.5 bg-blue-50 dark:bg-blue-500/10 w-fit rounded-xl"><UserCheck className="h-4 w-4 text-blue-500" /></div>
                 <div className="mt-4">
                   <p className="text-[10px] uppercase tracking-wider font-bold text-slate-400">Active Members</p>
@@ -281,7 +281,7 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
                 </div>
               </div>
 
-              <div onClick={() => router.push('/dashboard/admin/manage-users')} className="p-5 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl cursor-pointer hover:border-amber-500 transition-all flex flex-col justify-between shadow-sm">
+              <div onClick={() => router.push('/dashboard/admin/manage-users')} className="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl cursor-pointer hover:border-amber-500 transition-all flex flex-col justify-between shadow-sm">
                 <div className="p-2.5 bg-amber-50 dark:bg-amber-500/10 w-fit rounded-xl"><UserMinus className="h-4 w-4 text-amber-500" /></div>
                 <div className="mt-4">
                   <p className="text-[10px] uppercase tracking-wider font-bold text-slate-400">Total Vendors</p>
@@ -289,7 +289,7 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
                 </div>
               </div>
 
-              <div onClick={() => router.push('/dashboard/admin/manage-users')} className="p-5 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl cursor-pointer hover:border-purple-500 transition-all flex flex-col justify-between shadow-sm">
+              <div onClick={() => router.push('/dashboard/admin/manage-users')} className="p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl cursor-pointer hover:border-purple-500 transition-all flex flex-col justify-between shadow-sm">
                 <div className="p-2.5 bg-purple-50 dark:bg-purple-500/10 w-fit rounded-xl"><UserCheck className="h-4 w-4 text-purple-500" /></div>
                 <div className="mt-4">
                   <p className="text-[10px] uppercase tracking-wider font-bold text-slate-400">Admins Count</p>
@@ -297,7 +297,7 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
                 </div>
               </div>
 
-              <div onClick={() => router.push('/dashboard/admin/manage-users')} className="col-span-2 sm:col-span-1 p-5 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl cursor-pointer hover:border-red-500 transition-all flex flex-col justify-between shadow-sm">
+              <div onClick={() => router.push('/dashboard/admin/manage-users')} className="col-span-2 sm:col-span-1 p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl cursor-pointer hover:border-red-500 transition-all flex flex-col justify-between shadow-sm">
                 <div className="p-2.5 bg-red-50 dark:bg-red-500/10 w-fit rounded-xl"><UserX className="h-4 w-4 text-red-500" /></div>
                 <div className="mt-4">
                   <p className="text-[10px] uppercase tracking-wider font-bold text-slate-400">Fraud Alerts</p>
@@ -309,11 +309,11 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
             {/* 📊 ইউজার ডোনাট পাই চার্ট */}
             <div
               onClick={() => router.push('/dashboard/admin/manage-users')}
-              className="bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl p-5 shadow-sm flex flex-col justify-between cursor-pointer hover:shadow-md transition-all min-w-0"
+              className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 shadow-sm flex flex-col justify-between cursor-pointer hover:shadow-md transition-all min-w-0"
             >
               <div className="flex items-center gap-1.5 mb-2">
-                <PieIcon className="h-4 w-4 text-slate-400 dark:text-zinc-500" />
-                <span className="text-[11px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-400">User Distribution Roles</span>
+                <PieIcon className="h-4 w-4 text-slate-400 dark:text-slate-500" />
+                <span className="text-[11px] font-black uppercase tracking-wider text-slate-400 dark:text-slate-400">User Distribution Roles</span>
               </div>
               <div className="w-full h-[180px] min-h-[180px] flex items-center justify-center relative">
                 {isMounted && userChartData.length > 0 && (
@@ -341,7 +341,7 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
                   <span className="text-xl font-black text-slate-900 dark:text-white">{userStats.total}</span>
                 </div>
               </div>
-              <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[9px] font-black text-slate-500 dark:text-zinc-400 uppercase mt-2">
+              <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[9px] font-black text-slate-500 dark:text-slate-400 uppercase mt-2">
                 {userChartData.map((d, i) => (
                   <span key={i} className="flex items-center gap-1">
                     <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: d.color }}></span>
@@ -364,11 +364,11 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
             {/* ক্যাম্পেইন সামারি কার্ড */}
             <div
               onClick={() => router.push('/dashboard/admin/advertise')}
-              className="p-6 bg-zinc-950 border border-zinc-800 rounded-3xl text-white flex flex-col justify-between cursor-pointer hover:border-orange-500 transition-all shadow-sm"
+              className="p-6 bg-slate-950 border border-slate-800 rounded-3xl text-white flex flex-col justify-between cursor-pointer hover:border-orange-500 transition-all shadow-sm"
             >
               <div className="p-3 bg-white/10 w-fit rounded-2xl"><Megaphone className="h-5 w-5 text-orange-500" /></div>
               <div className="mt-8">
-                <p className="text-[10px] uppercase tracking-widest font-bold text-zinc-400">Total Sponsored Campaign</p>
+                <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400">Total Sponsored Campaign</p>
                 <h3 className="text-3xl font-black tracking-tight mt-1 text-white">{(Array.isArray(advertiseTickets) ? advertiseTickets.length : 0)}</h3>
                 <div className="flex items-center gap-1 text-[11px] font-bold text-emerald-400 mt-2">
                   <PlayCircle className="h-3.5 w-3.5" /> <span>{allActiveAds.length} Streams Active Now</span>
@@ -377,34 +377,34 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
             </div>
 
             {/* রানিং প্রোমোশন টেবিল ট্র্যাকিং + পেজিনেশন */}
-            <div className="lg:col-span-3 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl overflow-hidden shadow-sm flex flex-col justify-between">
+            <div className="lg:col-span-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-sm flex flex-col justify-between">
               <div>
-                <div className="p-4 border-b border-slate-100 dark:border-zinc-800 flex items-center justify-between bg-slate-50/50 dark:bg-zinc-950/20">
-                  <span className="text-[11px] font-black uppercase tracking-wider text-slate-500 dark:text-zinc-400">Live Active Promotions Matrix</span>
+                <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50/50 dark:bg-slate-950/20">
+                  <span className="text-[11px] font-black uppercase tracking-wider text-slate-500 dark:text-slate-400">Live Active Promotions Matrix</span>
                   <span className="text-[9px] font-black px-2 py-0.5 bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-400 rounded-md">LIVE MONITOR</span>
                 </div>
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse">
                     <thead>
-                      <tr className="border-b border-slate-200 dark:border-zinc-800 text-[10px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-500">
+                      <tr className="border-b border-slate-200 dark:border-slate-800 text-[10px] font-black uppercase tracking-wider text-slate-400 dark:text-slate-500">
                         <th className="py-2.5 px-5">Campaign Transport</th>
                         <th className="py-2.5 px-5">Route Terminal</th>
                         <th className="py-2.5 px-5 text-center">Price Index</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-slate-100 dark:divide-zinc-800/40 text-slate-700 dark:text-zinc-300">
+                    <tbody className="divide-y divide-slate-100 dark:divide-slate-800/40 text-slate-700 dark:text-slate-300">
                       {paginatedAds.length > 0 ? (
                         paginatedAds.map((ad) => (
                           <tr
                             key={ad._id}
                             onClick={() => router.push('/dashboard/admin/advertise')}
-                            className="hover:bg-slate-50/50 dark:hover:bg-zinc-950/40 cursor-pointer transition-colors"
+                            className="hover:bg-slate-50/50 dark:hover:bg-slate-950/40 cursor-pointer transition-colors"
                           >
                             <td className="py-2.5 px-5 font-black text-xs text-slate-900 dark:text-white flex items-center gap-2">
                               <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse flex-shrink-0"></span>
                               {ad?.title || 'Sponsored Unit'}
                             </td>
-                            <td className="py-2.5 px-5 text-xs font-bold text-slate-500 dark:text-zinc-400">{ad?.from || 'N/A'} ➔ {ad?.to || 'N/A'}</td>
+                            <td className="py-2.5 px-5 text-xs font-bold text-slate-500 dark:text-slate-400">{ad?.from || 'N/A'} ➔ {ad?.to || 'N/A'}</td>
                             <td className="py-2.5 px-5 text-xs font-black text-center text-orange-500">৳{(ad?.pricePerUnit ?? 0).toLocaleString()}</td>
                           </tr>
                         ))
@@ -420,20 +420,20 @@ export default function AdminDashboardClient({ tickets = [], allUsers = [], adve
 
               {/* অ্যাডভারটাইজ টেবিল পেজিনেশন কন্ট্রোল */}
               {totalAdPages > 1 && (
-                <div className="p-3 bg-slate-50 dark:bg-zinc-950/40 border-t border-slate-100 dark:border-zinc-800 flex items-center justify-between text-xs font-bold text-slate-500 dark:text-zinc-400">
+                <div className="p-3 bg-slate-50 dark:bg-slate-950/40 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-slate-500 dark:text-slate-400">
                   <span>Showing {startIdx + 1}-{Math.min(startIdx + adsPerPage, allActiveAds.length)} of {allActiveAds.length} Campaigns</span>
                   <div className="flex items-center gap-1">
                     <button
                       disabled={adPage === 1}
                       onClick={(e) => { e.stopPropagation(); setAdPage(p => p - 1); }}
-                      className="p-1.5 bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 rounded-lg disabled:opacity-40"
+                      className="p-1.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg disabled:opacity-40"
                     >
                       <ChevronLeft className="h-3.5 w-3.5" />
                     </button>
                     <button
                       disabled={adPage === totalAdPages}
                       onClick={(e) => { e.stopPropagation(); setAdPage(p => p + 1); }}
-                      className="p-1.5 bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 rounded-lg disabled:opacity-40"
+                      className="p-1.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg disabled:opacity-40"
                     >
                       <ChevronRight className="h-3.5 w-3.5" />
                     </button>

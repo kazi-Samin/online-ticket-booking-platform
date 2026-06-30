@@ -37,7 +37,7 @@
 //   if (status === 'rejected' || status === 'paid') return null;
 
 //   return (
-//     <span className={`text-[11px] font-bold ${isPassed ? "text-[#EF4444]" : "text-[#FF6B35]"}`}>
+//     <span className={`text-[11px] font-bold ${isPassed ? "text-[#EF4444]" : "text-emerald-400"}`}>
 //       {isPassed ? "Expired" : `Ends in: ${timeLeft}`}
 //     </span>
 //   );
@@ -77,7 +77,7 @@
 //       case 'paid': return 'bg-[#22C55E] text-white';
 //       case 'accepted': return 'bg-[#1E3A8A] text-white';
 //       case 'rejected': return 'bg-[#EF4444] text-white';
-//       default: return 'bg-[#EAB308] text-zinc-900';
+//       default: return 'bg-[#EAB308] text-slate-900';
 //     }
 //   };
 
@@ -180,14 +180,14 @@
 
 //                       {/* Title & Route Hierarchy */}
 //                       <div className="space-y-1">
-//                         <h2 className="text-lg md:text-xl font-black text-[#1E293B] dark:text-white tracking-tight leading-tight group-hover:text-[#1E3A8A] dark:group-hover:text-indigo-400 transition-colors">
+//                         <h2 className="text-lg md:text-xl font-black text-[#1E293B] dark:text-white tracking-tight leading-tight group-hover:text-[#1E3A8A] dark:group-hover:text-teal-400 transition-colors">
 //                           {booking?.ticketTitle}
 //                         </h2>
 
 //                         <div className="flex items-center space-x-1.5 text-xs text-slate-500 dark:text-slate-400 font-bold">
 //                           <span>{booking?.from}</span>
-//                           <ArrowRight className="h-3 w-3 text-[#FF6B35] stroke-[2.5]" />
-//                           <span className="text-[#1E3A8A] dark:text-indigo-400 font-extrabold">{booking?.to}</span>
+//                           <ArrowRight className="h-3 w-3 text-emerald-400 stroke-[2.5]" />
+//                           <span className="text-[#1E3A8A] dark:text-teal-400 font-extrabold">{booking?.to}</span>
 //                         </div>
 
 //                         {/* Tracker Subtitle */}
@@ -250,7 +250,7 @@
 //                               Cancelled
 //                             </div>
 //                           ) : (
-//                             <div className="text-zinc-700 dark:text-amber-950 font-black text-[10px] text-center uppercase tracking-wider bg-[#EAB308] px-3 py-1.5 rounded-xl animate-pulse">
+//                             <div className="text-slate-700 dark:text-amber-950 font-black text-[10px] text-center uppercase tracking-wider bg-[#EAB308] px-3 py-1.5 rounded-xl animate-pulse">
 //                               Awaiting Approval
 //                             </div>
 //                           )}
@@ -302,7 +302,7 @@
 //                 <button
 //                   onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
 //                   disabled={currentPage === totalPages}
-//                   className="p-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl transition-all disabled:opacity-30 text-slate-600 dark:text-slate-400 hover:border-zinc-400 dark:hover:border-slate-600"
+//                   className="p-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl transition-all disabled:opacity-30 text-slate-600 dark:text-slate-400 hover:border-slate-400 dark:hover:border-slate-600"
 //                 >
 //                   <ChevronRight className="h-4 w-4" />
 //                 </button>
@@ -386,7 +386,7 @@ export default function BookedTicketsClientGrid({ initialBookings }) {
   const getStatusColor = (status) => {
     switch(status) {
       case 'paid': return 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20';
-      case 'accepted': return 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20';
+      case 'accepted': return 'bg-teal-500/10 text-teal-400 border border-teal-500/20';
       case 'rejected': return 'bg-rose-500/10 text-rose-400 border border-rose-500/20';
       default: return 'bg-amber-500/10 text-amber-400 border border-amber-500/20';
     }
@@ -394,10 +394,10 @@ export default function BookedTicketsClientGrid({ initialBookings }) {
 
   return (
     <div className="space-y-6 text-left">
-      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 bg-zinc-900/40 backdrop-blur-md border border-zinc-800/80 p-4 rounded-2xl shadow-xl transition-all duration-300">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 bg-slate-900/40 backdrop-blur-md border border-slate-800/80 p-4 rounded-2xl shadow-xl transition-all duration-300">
         <div className="relative flex-1">
           <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
-            <Search className="h-4 w-4 text-zinc-500" />
+            <Search className="h-4 w-4 text-slate-500" />
           </span>
           <input
             type="text"
@@ -407,12 +407,12 @@ export default function BookedTicketsClientGrid({ initialBookings }) {
               setSearchQuery(e.target.value);
               setCurrentPage(1);
             }}
-            className="w-full bg-zinc-950 border border-zinc-800 pl-10 pr-4 py-2.5 rounded-xl text-xs font-semibold text-zinc-200 placeholder-zinc-500 focus:outline-none focus:border-indigo-500/50 transition-all shadow-inner"
+            className="w-full bg-slate-950 border border-slate-800 pl-10 pr-4 py-2.5 rounded-xl text-xs font-semibold text-slate-200 placeholder-slate-500 focus:outline-none focus:border-teal-500/50 transition-all shadow-inner"
           />
         </div>
 
         <div className="relative min-w-40 flex items-center">
-          <span className="absolute left-3.5 pointer-events-none text-zinc-500">
+          <span className="absolute left-3.5 pointer-events-none text-slate-500">
             <Filter className="h-3.5 w-3.5" />
           </span>
           <select
@@ -421,7 +421,7 @@ export default function BookedTicketsClientGrid({ initialBookings }) {
               setStatusFilter(e.target.value);
               setCurrentPage(1);
             }}
-            className="w-full bg-zinc-950 border border-zinc-800 pl-9 pr-8 py-2.5 rounded-xl text-xs font-bold text-zinc-200 focus:outline-none focus:border-indigo-500/50 transition-all appearance-none cursor-pointer"
+            className="w-full bg-slate-950 border border-slate-800 pl-9 pr-8 py-2.5 rounded-xl text-xs font-bold text-slate-200 focus:outline-none focus:border-teal-500/50 transition-all appearance-none cursor-pointer"
           >
             <option value="all">All Statuses</option>
             <option value="pending">⏳ Pending</option>
@@ -429,14 +429,14 @@ export default function BookedTicketsClientGrid({ initialBookings }) {
             <option value="paid">💵 Paid</option>
             <option value="rejected">❌ Rejected</option>
           </select>
-          <div className="absolute right-3.5 pointer-events-none text-zinc-500 text-[10px]">
+          <div className="absolute right-3.5 pointer-events-none text-slate-500 text-[10px]">
             ▼
           </div>
         </div>
       </div>
 
       {filteredBookings.length === 0 ? (
-        <div className="bg-zinc-900/20 backdrop-blur-md border border-zinc-800/60 rounded-3xl p-12 text-center text-zinc-500 font-medium text-sm">
+        <div className="bg-slate-900/20 backdrop-blur-md border border-slate-800/60 rounded-3xl p-12 text-center text-slate-500 font-medium text-sm">
           No matching operational logs discovered.
         </div>
       ) : (
@@ -457,9 +457,9 @@ export default function BookedTicketsClientGrid({ initialBookings }) {
                     exit={{ opacity: 0, y: -10 }}
                     whileHover={{ y: -3 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="bg-zinc-900/30 border border-zinc-800/60 backdrop-blur-md rounded-3xl shadow-lg hover:shadow-2xl overflow-hidden relative group flex flex-col md:flex-row items-stretch md:h-56 transition-all duration-300"
+                    className="bg-slate-900/30 border border-slate-800/60 backdrop-blur-md rounded-3xl shadow-lg hover:shadow-2xl overflow-hidden relative group flex flex-col md:flex-row items-stretch md:h-56 transition-all duration-300"
                   >
-                    <div className="relative h-48 md:h-auto md:w-[35%] shrink-0 overflow-hidden border-b md:border-b-0 md:border-r border-zinc-800/60">
+                    <div className="relative h-48 md:h-auto md:w-[35%] shrink-0 overflow-hidden border-b md:border-b-0 md:border-r border-slate-800/60">
                       <Image 
                         width={400} 
                         height={400}
@@ -472,26 +472,26 @@ export default function BookedTicketsClientGrid({ initialBookings }) {
                       </span>
                     </div>
 
-                    <div className="p-6 flex-1 flex flex-col justify-between space-y-4 bg-gradient-to-br from-transparent to-zinc-950/20">
-                      <div className="flex items-center justify-between text-xs text-zinc-500 font-bold tracking-wider">
+                    <div className="p-6 flex-1 flex flex-col justify-between space-y-4 bg-gradient-to-br from-transparent to-slate-950/20">
+                      <div className="flex items-center justify-between text-xs text-slate-500 font-bold tracking-wider">
                         <div className="flex items-center space-x-1.5">
-                          <Calendar className="h-3.5 w-3.5 text-zinc-500" />
+                          <Calendar className="h-3.5 w-3.5 text-slate-500" />
                           <span>{formattedDate}</span>
                         </div>
                       </div>
 
                       <div className="space-y-1">
-                        <h2 className="text-lg md:text-xl font-black text-white tracking-tight leading-tight group-hover:text-indigo-400 transition-colors duration-300">
+                        <h2 className="text-lg md:text-xl font-black text-white tracking-tight leading-tight group-hover:text-teal-400 transition-colors duration-300">
                           {booking?.ticketTitle}
                         </h2>
 
-                        <div className="flex items-center space-x-1.5 text-xs text-zinc-400 font-bold">
+                        <div className="flex items-center space-x-1.5 text-xs text-slate-400 font-bold">
                           <span>{booking?.from}</span>
-                          <ArrowRight className="h-3 w-3 text-indigo-500 stroke-[2.5]" />
-                          <span className="text-indigo-400 font-extrabold">{booking?.to}</span>
+                          <ArrowRight className="h-3 w-3 text-teal-500 stroke-[2.5]" />
+                          <span className="text-teal-400 font-extrabold">{booking?.to}</span>
                         </div>
 
-                        <div className="flex items-center space-x-2 text-[11px] text-zinc-500 font-medium pt-0.5">
+                        <div className="flex items-center space-x-2 text-[11px] text-slate-500 font-medium pt-0.5">
                           <span>Qty: {booking.bookingQuantity} Units</span>
                           {booking.status !== 'paid' && booking.status !== 'rejected' && (
                             <>
@@ -502,9 +502,9 @@ export default function BookedTicketsClientGrid({ initialBookings }) {
                         </div>
                       </div>
 
-                      <div className="border-t border-zinc-800/80 pt-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 mt-auto">
+                      <div className="border-t border-slate-800/80 pt-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 mt-auto">
                         <div>
-                          <span className="text-[11px] text-zinc-500 font-medium block uppercase tracking-wider">Total Price</span>
+                          <span className="text-[11px] text-slate-500 font-medium block uppercase tracking-wider">Total Price</span>
                           <span className="text-xl font-black text-white">
                             ৳{booking.totalPrice.toLocaleString()}
                           </span>
@@ -544,7 +544,7 @@ export default function BookedTicketsClientGrid({ initialBookings }) {
                               Cancelled
                             </div>
                           ) : (
-                            <div className="text-zinc-950 font-black text-[10px] text-center uppercase tracking-widest bg-amber-500 px-4 py-2 rounded-xl animate-pulse shadow-md shadow-amber-500/10">
+                            <div className="text-slate-950 font-black text-[10px] text-center uppercase tracking-widest bg-amber-500 px-4 py-2 rounded-xl animate-pulse shadow-md shadow-amber-500/10">
                               Awaiting Approval
                             </div>
                           )}
@@ -558,20 +558,20 @@ export default function BookedTicketsClientGrid({ initialBookings }) {
           </div>
 
           {totalPages > 1 && (
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-zinc-800/80">
-              <span className="text-xs font-medium text-zinc-500 text-center sm:text-left">
-                Showing <span className="text-zinc-300 font-bold">{indexOfFirstItem + 1}</span> to{' '}
-                <span className="text-zinc-300 font-bold">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-slate-800/80">
+              <span className="text-xs font-medium text-slate-500 text-center sm:text-left">
+                Showing <span className="text-slate-300 font-bold">{indexOfFirstItem + 1}</span> to{' '}
+                <span className="text-slate-300 font-bold">
                   {indexOfLastItem > filteredBookings.length ? filteredBookings.length : indexOfLastItem}
                 </span>{' '}
-                of <span className="text-zinc-300 font-bold">{filteredBookings.length}</span> Results
+                of <span className="text-slate-300 font-bold">{filteredBookings.length}</span> Results
               </span>
 
               <div className="flex items-center space-x-1.5">
                 <button
                   onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                   disabled={currentPage === 1}
-                  className="p-2 bg-zinc-900 border border-zinc-800 rounded-xl transition-all disabled:opacity-30 text-zinc-400 hover:border-zinc-700"
+                  className="p-2 bg-slate-900 border border-slate-800 rounded-xl transition-all disabled:opacity-30 text-slate-400 hover:border-slate-700"
                 >
                   <ChevronLeft className="h-4 w-4" />
                 </button>
@@ -582,8 +582,8 @@ export default function BookedTicketsClientGrid({ initialBookings }) {
                     onClick={() => setCurrentPage(i + 1)}
                     className={`h-8 w-8 text-xs font-bold rounded-xl transition-all ${
                       currentPage === i + 1
-                        ? 'bg-zinc-100 text-zinc-900 shadow-xl'
-                        : 'bg-zinc-900 text-zinc-400 border border-zinc-800 hover:border-zinc-700'
+                        ? 'bg-slate-100 text-slate-900 shadow-xl'
+                        : 'bg-slate-900 text-slate-400 border border-slate-800 hover:border-slate-700'
                     }`}
                   >
                     {i + 1}
@@ -593,7 +593,7 @@ export default function BookedTicketsClientGrid({ initialBookings }) {
                 <button
                   onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                   disabled={currentPage === totalPages}
-                  className="p-2 bg-zinc-900 border border-zinc-800 rounded-xl transition-all disabled:opacity-30 text-zinc-400 hover:border-zinc-700"
+                  className="p-2 bg-slate-900 border border-slate-800 rounded-xl transition-all disabled:opacity-30 text-slate-400 hover:border-slate-700"
                 >
                   <ChevronRight className="h-4 w-4" />
                 </button>

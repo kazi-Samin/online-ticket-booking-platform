@@ -14,7 +14,7 @@ const sansBody = Inter({
 const AuthLayout = ({ children }) => {
   return (
     // এখানে bg-gray-50 বাদ দিয়ে গ্লোবাল থিম ফ্রেন্ডলি ক্লাস দেওয়া হয়েছে 
-    <div className={`${sansBody.className} min-h-screen antialiased bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 transition-colors duration-300 flex flex-col`}>
+    <div className={`${sansBody.className} min-h-screen antialiased bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 transition-colors duration-300 flex flex-col`}>
 
       {/* Dynamic Navigation Header component */}
       <Navbar />

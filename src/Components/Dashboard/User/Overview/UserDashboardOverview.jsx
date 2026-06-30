@@ -17,11 +17,11 @@ const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
     return (
-      <div className="bg-zinc-950/90 dark:bg-zinc-900/90 backdrop-blur-xl text-zinc-100 p-4 rounded-2xl border border-zinc-800 shadow-2xl space-y-1.5 text-xs">
-        <p className="font-bold text-zinc-400">{data.date}</p>
-        <p className="font-black text-sm text-indigo-400">৳{data.amount.toLocaleString()}</p>
-        <div className="border-t border-zinc-800 pt-1 mt-1">
-          <p className="font-medium text-zinc-300">Ticket: {data.title}</p>
+      <div className="bg-slate-950/90 dark:bg-slate-900/90 backdrop-blur-xl text-slate-100 p-4 rounded-2xl border border-slate-800 shadow-2xl space-y-1.5 text-xs">
+        <p className="font-bold text-slate-400">{data.date}</p>
+        <p className="font-black text-sm text-teal-400">৳{data.amount.toLocaleString()}</p>
+        <div className="border-t border-slate-800 pt-1 mt-1">
+          <p className="font-medium text-slate-300">Ticket: {data.title}</p>
         </div>
       </div>
     );
@@ -63,22 +63,22 @@ export default function UserDashboardOverview({ tickets = [], transactions = [],
   }, [tickets, currentPage]);
 
   return (
-    <div className="min-h-screen bg-slate-50/50 dark:bg-zinc-950 p-4 sm:p-6 md:p-8 font-sans transition-colors duration-300">
+    <div className="min-h-screen bg-slate-50/50 dark:bg-slate-950 p-4 sm:p-6 md:p-8 font-sans transition-colors duration-300">
       <div className="max-w-7xl mx-auto space-y-6">
 
         {/* 🌟 নতুন মিনিমালিস্ট গ্লাস হেডার */}
-        <div className="bg-white/80 dark:bg-zinc-900/80 border border-slate-200/60 dark:border-zinc-800/60 backdrop-blur-md rounded-3xl p-6 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="bg-white/80 dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 backdrop-blur-md rounded-3xl p-6 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-1">
-            <h1 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-zinc-50">
-              Welcome Back, <span className="text-indigo-600 dark:text-indigo-400">{user?.name || 'Aritro'}</span> ✨
+            <h1 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-slate-50">
+              Welcome Back, <span className="text-teal-600 dark:text-teal-400">{user?.name || 'Aritro'}</span> ✨
             </h1>
-            <p className="text-xs text-slate-500 dark:text-zinc-400 font-medium">
+            <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
               System analytics dashboard configuration & real-time ticket statistics tracking.
             </p>
           </div>
           <button
             onClick={() => router.push('/')}
-            className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-slate-900 hover:bg-slate-800 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-white text-xs font-bold rounded-2xl transition-all shadow-md active:scale-95 self-start sm:self-auto"
+            className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white text-xs font-bold rounded-2xl transition-all shadow-md active:scale-95 self-start sm:self-auto"
           >
             <ArrowLeft className="h-4 w-4" /> Back to Home
           </button>
@@ -88,7 +88,7 @@ export default function UserDashboardOverview({ tickets = [], transactions = [],
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {/* মোট খরচ */}
           <div className="p-6 bg-slate-900 text-white rounded-3xl shadow-lg border border-slate-800 flex flex-col justify-between space-y-4">
-            <div className="p-3 bg-white/10 w-fit rounded-2xl"><CreditCard className="h-5 w-5 text-indigo-400" /></div>
+            <div className="p-3 bg-white/10 w-fit rounded-2xl"><CreditCard className="h-5 w-5 text-teal-400" /></div>
             <div>
               <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400">Total Balance Spent</p>
               <h3 className="text-2xl font-black tracking-tight mt-1 text-white">৳{stats.totalSpent.toLocaleString()}</h3>
@@ -96,47 +96,47 @@ export default function UserDashboardOverview({ tickets = [], transactions = [],
           </div>
 
           {/* Added */}
-          <div className="p-6 bg-white dark:bg-zinc-900 border border-slate-200/80 dark:border-zinc-800/80 rounded-3xl shadow-sm flex flex-col justify-between space-y-4">
+          <div className="p-6 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-3xl shadow-sm flex flex-col justify-between space-y-4">
             <div className="p-3 bg-blue-50 dark:bg-blue-500/10 w-fit rounded-2xl"><Ticket className="h-5 w-5 text-blue-600 dark:text-blue-400" /></div>
             <div>
-              <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-zinc-400">Tickets Added</p>
-              <h3 className="text-2xl font-black tracking-tight mt-1 text-slate-900 dark:text-zinc-100">{stats.total}</h3>
+              <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-slate-400">Tickets Added</p>
+              <h3 className="text-2xl font-black tracking-tight mt-1 text-slate-900 dark:text-slate-100">{stats.total}</h3>
             </div>
           </div>
 
           {/* Booked */}
-          <div className="p-6 bg-white dark:bg-zinc-900 border border-slate-200/80 dark:border-zinc-800/80 rounded-3xl shadow-sm flex flex-col justify-between space-y-4">
+          <div className="p-6 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-3xl shadow-sm flex flex-col justify-between space-y-4">
             <div className="p-3 bg-amber-50 dark:bg-amber-500/10 w-fit rounded-2xl"><Clock className="h-5 w-5 text-amber-600 dark:text-amber-400" /></div>
             <div>
-              <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-zinc-400">Pending Booked</p>
-              <h3 className="text-2xl font-black tracking-tight mt-1 text-slate-900 dark:text-zinc-100">{stats.booked}</h3>
+              <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-slate-400">Pending Booked</p>
+              <h3 className="text-2xl font-black tracking-tight mt-1 text-slate-900 dark:text-slate-100">{stats.booked}</h3>
             </div>
           </div>
 
           {/* Accepted */}
-          <div className="p-6 bg-white dark:bg-zinc-900 border border-slate-200/80 dark:border-zinc-800/80 rounded-3xl shadow-sm flex flex-col justify-between space-y-4">
+          <div className="p-6 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-3xl shadow-sm flex flex-col justify-between space-y-4">
             <div className="p-3 bg-emerald-50 dark:bg-emerald-500/10 w-fit rounded-2xl"><CheckCircle2 className="h-5 w-5 text-emerald-600 dark:text-emerald-400" /></div>
             <div>
-              <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-zinc-400">Total Accepted</p>
-              <h3 className="text-2xl font-black tracking-tight mt-1 text-slate-900 dark:text-zinc-100">{stats.accepted}</h3>
+              <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-slate-400">Total Accepted</p>
+              <h3 className="text-2xl font-black tracking-tight mt-1 text-slate-900 dark:text-slate-100">{stats.accepted}</h3>
             </div>
           </div>
 
           {/* Rejected */}
-          <div className="p-6 bg-white dark:bg-zinc-900 border border-slate-200/80 dark:border-zinc-800/80 rounded-3xl shadow-sm flex flex-col justify-between space-y-4">
+          <div className="p-6 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-3xl shadow-sm flex flex-col justify-between space-y-4">
             <div className="p-3 bg-rose-50 dark:bg-rose-500/10 w-fit rounded-2xl"><XCircle className="h-5 w-5 text-rose-600 dark:text-rose-400" /></div>
             <div>
-              <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-zinc-400">Total Rejected</p>
-              <h3 className="text-2xl font-black tracking-tight mt-1 text-slate-900 dark:text-zinc-100">{stats.rejected}</h3>
+              <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500 dark:text-slate-400">Total Rejected</p>
+              <h3 className="text-2xl font-black tracking-tight mt-1 text-slate-900 dark:text-slate-100">{stats.rejected}</h3>
             </div>
           </div>
         </div>
 
         {/* 📈 নিউ জেনারেশন এরিয়া চার্ট (Smooth Flow Area) */}
-        <div className="bg-white dark:bg-zinc-900 border border-slate-200/80 dark:border-zinc-800/80 rounded-[32px] p-6 shadow-sm">
-          <div className="flex items-center gap-2 mb-6 border-b border-slate-100 dark:border-zinc-800 pb-4">
-            <Activity className="h-4 w-4 text-indigo-600 dark:text-indigo-400" />
-            <h2 className="text-xs font-black uppercase tracking-wider text-slate-800 dark:text-zinc-200">Financial Activity Network Analytics</h2>
+        <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-[32px] p-6 shadow-sm">
+          <div className="flex items-center gap-2 mb-6 border-b border-slate-100 dark:border-slate-800 pb-4">
+            <Activity className="h-4 w-4 text-teal-600 dark:text-teal-400" />
+            <h2 className="text-xs font-black uppercase tracking-wider text-slate-800 dark:text-slate-200">Financial Activity Network Analytics</h2>
           </div>
 
           <div className="w-full h-[280px]">
@@ -149,9 +149,9 @@ export default function UserDashboardOverview({ tickets = [], transactions = [],
                       <stop offset="95%" stopColor="#6366f1" stopOpacity={0}/>
                     </linearGradient>
                   </defs>
-                  <CartesianGrid strokeDasharray="3 3" vertical={false} className="stroke-slate-100 dark:stroke-zinc-800" />
-                  <XAxis dataKey="date" className="text-[10px] font-bold fill-slate-500 dark:fill-zinc-400" tickLine={false} axisLine={false} dy={10} />
-                  <YAxis width={45} className="text-[10px] font-bold fill-slate-500 dark:fill-zinc-400" tickLine={false} axisLine={false} />
+                  <CartesianGrid strokeDasharray="3 3" vertical={false} className="stroke-slate-100 dark:stroke-slate-800" />
+                  <XAxis dataKey="date" className="text-[10px] font-bold fill-slate-500 dark:fill-slate-400" tickLine={false} axisLine={false} dy={10} />
+                  <YAxis width={45} className="text-[10px] font-bold fill-slate-500 dark:fill-slate-400" tickLine={false} axisLine={false} />
                   <Tooltip content={<CustomTooltip />} cursor={{ stroke: '#6366f1', strokeWidth: 1.5 }} />
                   <Area type="monotone" dataKey="amount" stroke="#6366f1" strokeWidth={3} fillOpacity={1} fill="url(#colorAmount)" />
                 </AreaChart>
@@ -163,13 +163,13 @@ export default function UserDashboardOverview({ tickets = [], transactions = [],
         </div>
 
         {/* 📋 মডার্ন স্লিক টিকিট টেবিল (১০০% কন্ট্রাস্ট অ্যান্ড ক্লিয়ার টেক্সট গ্যারান্টি) */}
-        <div className="bg-white dark:bg-zinc-900 border border-slate-200/80 dark:border-zinc-800/80 rounded-[32px] overflow-hidden shadow-sm">
-          <div className="p-6 border-b border-slate-100 dark:border-zinc-800 flex items-center justify-between bg-slate-50/50 dark:bg-zinc-900/50">
+        <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-[32px] overflow-hidden shadow-sm">
+          <div className="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50/50 dark:bg-slate-900/50">
             <div className="flex items-center gap-2">
-              <Globe className="h-4 w-4 text-indigo-500" />
-              <h2 className="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-zinc-50">Ticket Management System</h2>
+              <Globe className="h-4 w-4 text-teal-500" />
+              <h2 className="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-slate-50">Ticket Management System</h2>
             </div>
-            <span className="text-[10px] font-black px-2.5 py-1 bg-white dark:bg-zinc-800 text-slate-800 dark:text-zinc-200 rounded-xl border border-slate-200/60 dark:border-zinc-700/60 shadow-sm">
+            <span className="text-[10px] font-black px-2.5 py-1 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-xl border border-slate-200/60 dark:border-slate-700/60 shadow-sm">
               5 Rows Per Page
             </span>
           </div>
@@ -186,28 +186,28 @@ export default function UserDashboardOverview({ tickets = [], transactions = [],
                   <th className="py-4 px-6 text-center">Status</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 dark:divide-zinc-800/50">
+              <tbody className="divide-y divide-slate-100 dark:divide-slate-800/50">
                 {paginatedTickets.length > 0 ? (
                   paginatedTickets.map((ticket) => (
                     <tr
                       key={ticket._id}
                       onClick={() => router.push('/dashboard/user/booked-tickets')}
-                      className="hover:bg-slate-50/60 dark:hover:bg-zinc-950/40 cursor-pointer transition-colors group"
+                      className="hover:bg-slate-50/60 dark:hover:bg-slate-950/40 cursor-pointer transition-colors group"
                     >
                       <td className="py-4 px-6 flex items-center gap-4">
-                        <div className="relative h-10 w-10 rounded-2xl overflow-hidden border border-slate-200 dark:border-zinc-800 flex-shrink-0 shadow-sm">
+                        <div className="relative h-10 w-10 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex-shrink-0 shadow-sm">
                           {ticket.image && <Image fill src={ticket.image} alt={ticket.ticketTitle} className="object-cover group-hover:scale-105 transition-transform duration-300" />}
                         </div>
                         <div>
-                          <div className="font-black text-xs text-slate-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{ticket.ticketTitle}</div>
-                          <div className="text-[11px] text-slate-500 dark:text-zinc-400 font-bold mt-0.5">{ticket.from} ➔ {ticket.to}</div>
+                          <div className="font-black text-xs text-slate-900 dark:text-slate-100 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">{ticket.ticketTitle}</div>
+                          <div className="text-[11px] text-slate-500 dark:text-slate-400 font-bold mt-0.5">{ticket.from} ➔ {ticket.to}</div>
                         </div>
                       </td>
-                      <td className="py-4 px-6 text-xs font-bold text-slate-700 dark:text-zinc-300">
+                      <td className="py-4 px-6 text-xs font-bold text-slate-700 dark:text-slate-300">
                         {new Date(ticket.departureDateTime).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' })}
                       </td>
-                      <td className="py-4 px-6 text-xs font-black text-center text-slate-900 dark:text-zinc-100">{ticket.bookingQuantity}</td>
-                      <td className="py-4 px-6 text-xs font-black text-indigo-600 dark:text-indigo-400">৳{ticket.totalPrice.toLocaleString()}</td>
+                      <td className="py-4 px-6 text-xs font-black text-center text-slate-900 dark:text-slate-100">{ticket.bookingQuantity}</td>
+                      <td className="py-4 px-6 text-xs font-black text-teal-600 dark:text-teal-400">৳{ticket.totalPrice.toLocaleString()}</td>
                       <td className="py-4 px-6 text-center">
                         <span className={`inline-flex items-center text-[9px] font-black uppercase tracking-wide px-2.5 py-1 rounded-xl ${
                           ticket.status === 'paid' || ticket.status === 'confirmed' || ticket.status === 'accepted'
@@ -221,7 +221,7 @@ export default function UserDashboardOverview({ tickets = [], transactions = [],
                   ))
                 ) : (
                   <tr>
-                    <td colSpan="5" className="py-12 text-center text-xs font-bold text-slate-400 dark:text-zinc-500">No system tickets detected.</td>
+                    <td colSpan="5" className="py-12 text-center text-xs font-bold text-slate-400 dark:text-slate-500">No system tickets detected.</td>
                   </tr>
                 )}
               </tbody>
@@ -230,16 +230,16 @@ export default function UserDashboardOverview({ tickets = [], transactions = [],
 
           {/* 🔘 মডার্ন পেজিনেশন প্যানেল */}
           {totalPages > 1 && (
-            <div className="p-4 bg-slate-50/50 dark:bg-zinc-950/40 border-t border-slate-100 dark:border-zinc-800 flex items-center justify-between">
-              <span className="text-xs font-bold text-slate-500 dark:text-zinc-400">
-                Showing Page <span className="text-slate-900 dark:text-zinc-100">{currentPage}</span> of {totalPages}
+            <div className="p-4 bg-slate-50/50 dark:bg-slate-950/40 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span className="text-xs font-bold text-slate-500 dark:text-slate-400">
+                Showing Page <span className="text-slate-900 dark:text-slate-100">{currentPage}</span> of {totalPages}
               </span>
               <div className="flex items-center gap-2">
                 <button
                   type="button"
                   onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                   disabled={currentPage === 1}
-                  className="p-2 bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 rounded-xl text-slate-700 dark:text-zinc-200 disabled:opacity-40 transition-all shadow-sm active:scale-95"
+                  className="p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-700 dark:text-slate-200 disabled:opacity-40 transition-all shadow-sm active:scale-95"
                 >
                   <ChevronLeft className="h-4 w-4" />
                 </button>
@@ -247,7 +247,7 @@ export default function UserDashboardOverview({ tickets = [], transactions = [],
                   type="button"
                   onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                   disabled={currentPage === totalPages}
-                  className="p-2 bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 rounded-xl text-slate-700 dark:text-zinc-200 disabled:opacity-40 transition-all shadow-sm active:scale-95"
+                  className="p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-700 dark:text-slate-200 disabled:opacity-40 transition-all shadow-sm active:scale-95"
                 >
                   <ChevronRight className="h-4 w-4" />
                 </button>

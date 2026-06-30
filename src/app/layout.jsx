@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
     >
       
       <body 
-        className="min-h-full flex flex-col bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 transition-colors duration-300" 
+        className="min-h-full flex flex-col bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50 transition-colors duration-300" 
         suppressHydrationWarning={true}
       >
         <Providers>

@@ -30,12 +30,12 @@ export default function StripePaymentButton({ bookingId, totalAmount, isTimePass
       <button
         type="submit"
         role="link"
-        className="flex items-center space-x-2 px-4 py-2.5 bg-zinc-900 hover:bg-zinc-800 text-white text-[11px] font-black uppercase tracking-widest rounded-xl transition-all shadow-sm active:scale-[0.97] group/btn"
+        className="flex items-center space-x-2 px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-[11px] font-black uppercase tracking-widest rounded-xl transition-all shadow-sm active:scale-[0.97] group/btn"
       >
         <span>Pay Now</span>
 
-        <div className="h-4 w-4 rounded-full bg-zinc-800 flex items-center justify-center transition-transform group-hover/btn:translate-x-0.5">
-          <ArrowRight className="h-2.5 w-2.5 text-[#FF6B35] stroke-3" />
+        <div className="h-4 w-4 rounded-full bg-slate-800 flex items-center justify-center transition-transform group-hover/btn:translate-x-0.5">
+          <ArrowRight className="h-2.5 w-2.5 text-emerald-400 stroke-3" />
         </div>
       </button>
     </form>

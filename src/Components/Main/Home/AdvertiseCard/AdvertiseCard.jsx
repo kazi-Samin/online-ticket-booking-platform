@@ -68,7 +68,7 @@ export default function AdvertiseCard() {
 
   if (loading) {
     return (
-      <div className="w-full py-20 flex justify-center items-center bg-[#09090b]">
+      <div className="w-full py-20 flex justify-center items-center bg-slate-950">
         <div className="animate-spin rounded-full h-8 w-8 border-2 border-teal-500 border-t-transparent"></div>
       </div>
     );

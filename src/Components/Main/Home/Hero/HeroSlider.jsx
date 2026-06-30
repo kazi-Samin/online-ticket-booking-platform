@@ -79,7 +79,7 @@
 //           className="mb-8 max-w-2xl text-white"
 //         >
 //           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight drop-shadow-md">
-//             Where to <span className="text-[#FF6B35]">Explore?</span>
+//             Where to <span className="text-emerald-400">Explore?</span>
 //           </h1>
 //           <p className="text-sm sm:text-base text-slate-200 mt-3 drop-shadow-sm font-medium">
 //             Find Cheap Bus, Train, Flight & Launch Tickets in Bangladesh

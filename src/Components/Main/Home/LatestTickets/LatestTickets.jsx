@@ -84,7 +84,7 @@
 //   if (loading) {
 //     return (
 //       <div className="w-full py-20 flex justify-center items-center">
-//         <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[#FF6B35]"></div>
+//         <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-emerald-500"></div>
 //       </div>
 //     );
 //   }
@@ -105,7 +105,7 @@
 //         {/* 🏔️ সেকশন হেডার */}
 //         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
 //           <div>
-//             <span className="text-xs font-bold uppercase tracking-widest text-[#FF6B35]">
+//             <span className="text-xs font-bold uppercase tracking-widest text-emerald-400">
 //               Exclusive Deals
 //             </span>
 //             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
@@ -167,7 +167,7 @@
 //                       <Calendar className="h-3.5 w-3.5 text-slate-400" />
 //                       {formatDate(ticket.departureDateTime)}
 //                     </span>
-//                     <span className="text-[#FF6B35] font-bold">★★★★★</span>
+//                     <span className="text-emerald-400 font-bold">★★★★★</span>
 //                   </div>
 
 //                   <h3 className="text-base font-extrabold text-slate-800 dark:text-slate-100 line-clamp-1 group-hover:text-[#1E3A8A] dark:group-hover:text-teal-400 transition-colors">
@@ -187,14 +187,14 @@
 //                     <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
 //                       Fare From
 //                     </span>
-//                     <span className="text-lg font-black text-[#FF6B35]">
+//                     <span className="text-lg font-black text-emerald-400">
 //                       ৳{ticket.pricePerUnit}
 //                     </span>
 //                   </div>
 
 //                   <Link
 //                     href={`/all-tickets/${ticket._id || ticket.id}`}
-//                     className="p-2.5 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 group-hover:bg-[#FF6B35] group-hover:text-white rounded-full transition-all shadow-sm active:scale-95"
+//                     className="p-2.5 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 group-hover:bg-emerald-600 group-hover:text-white rounded-full transition-all shadow-sm active:scale-95"
 //                   >
 //                     <ArrowRight className="h-4 w-4" />
 //                   </Link>

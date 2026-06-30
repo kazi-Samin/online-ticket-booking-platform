@@ -23,14 +23,14 @@ const ManageUserPage = async () => {
 
         {/* ==================== 🏆 MODERN PREMIUM HEADER ==================== */}
         <div className="relative overflow-hidden bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800/60 p-6 md:p-8 rounded-3xl shadow-xl shadow-slate-200/30 dark:shadow-none flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div className="absolute -top-12 -right-12 w-40 h-40 bg-gradient-to-br from-[#FF6B35]/10 to-[#1E3A8A]/10 rounded-full blur-2xl pointer-events-none" />
+          <div className="absolute -top-12 -right-12 w-40 h-40 bg-gradient-to-br from-emerald-500/10 to-[#1E3A8A]/10 rounded-full blur-2xl pointer-events-none" />
 
           <div className="space-y-1.5 relative z-10">
             <div className="flex items-center space-x-2">
               <span className="p-1.5 bg-[#1E3A8A]/10 dark:bg-[#1E3A8A]/20 text-[#1E3A8A] dark:text-blue-400 rounded-lg">
                 <Users className="h-4 w-4" />
               </span>
-              <span className="text-[10px] font-black tracking-widest uppercase text-[#FF6B35]">
+              <span className="text-[10px] font-black tracking-widest uppercase text-emerald-400">
                 Root Administration Node
               </span>
             </div>

@@ -5,7 +5,7 @@
 // import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
 
 // const stats = [
-//   { icon: <Users className="h-6 w-6 text-[#FF6B35]" />, target: 500, suffix: "K+", label: "Happy Travellers" },
+//   { icon: <Users className="h-6 w-6 text-emerald-400" />, target: 500, suffix: "K+", label: "Happy Travellers" },
 //   { icon: <Ticket className="h-6 w-6 text-blue-400" />, target: 1.2, suffix: "M+", label: "Tickets Sold" },
 //   { icon: <Route className="h-6 w-6 text-emerald-400" />, target: 250, suffix: "+", label: "Routes Covered" },
 //   { icon: <ShieldAlert className="h-6 w-6 text-purple-400" />, target: 99.9, suffix: "%", label: "Reliability Rate" },
@@ -42,7 +42,7 @@
 //     <section className="w-full bg-gradient-to-br from-[#1E3A8A] via-[#162A65] to-slate-950 text-white py-16 px-4 relative overflow-hidden transition-all duration-300">
 
 //       {/* 🔮 ব্যাকগ্রাউন্ড গ্লো ডেকোরেশন */}
-//       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 h-64 w-64 bg-[#FF6B35]/10 rounded-full blur-3xl pointer-events-none" />
+//       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 h-64 w-64 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none" />
 //       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 h-64 w-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
 //       <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center relative z-10">
@@ -66,7 +66,7 @@
 //             </div>
 
 //             {/* 📈 কাউন্টিং নাম্বার ও সাফিক্স */}
-//             <div className="text-3xl sm:text-4xl font-black tracking-tight text-white group-hover:text-[#FF6B35] transition-colors duration-300 flex items-center justify-center">
+//             <div className="text-3xl sm:text-4xl font-black tracking-tight text-white group-hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center">
 //               <AnimatedNumber value={stat.target} />
 //               <span>{stat.suffix}</span>
 //             </div>

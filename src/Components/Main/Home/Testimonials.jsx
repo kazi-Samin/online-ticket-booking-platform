@@ -53,7 +53,7 @@
 
 //       {/* 🏔️ সেকশন হেডার */}
 //       <div className="max-w-7xl mx-auto px-4 text-center mb-16 relative z-10">
-//         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-950/30 text-[#FF6B35] text-xs font-black uppercase tracking-widest mb-3">
+//         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-950/30 text-emerald-400 text-xs font-black uppercase tracking-widest mb-3">
 //           <Sparkles className="h-3.5 w-3.5" />
 //           Testimonials
 //         </div>
@@ -89,10 +89,10 @@
 //                 <div className="flex justify-between items-center mb-4">
 //                   <div className="flex gap-1">
 //                     {[...Array(5)].map((_, idx) => (
-//                       <Star key={idx} className="h-4 w-4 fill-[#FF6B35] text-[#FF6B35]" />
+//                       <Star key={idx} className="h-4 w-4 fill-[#FF6B35] text-emerald-400" />
 //                     ))}
 //                   </div>
-//                   <Quote className="h-8 w-8 text-slate-300 dark:text-slate-800 group-hover:text-[#FF6B35]/20 dark:group-hover:text-blue-500/20 transition-colors duration-300" />
+//                   <Quote className="h-8 w-8 text-slate-300 dark:text-slate-800 group-hover:text-emerald-400/20 dark:group-hover:text-blue-500/20 transition-colors duration-300" />
 //                 </div>
 
 //                 {/* 💬 কমেন্ট টেক্সট */}
@@ -103,7 +103,7 @@
 
 //               {/* 👤 ইউজার প্রোফাইল সেকশন */}
 //               <div className="flex items-center gap-3 mt-6 pt-4 border-t border-slate-200 dark:border-slate-800/80">
-//                 <div className="relative h-10 w-10 rounded-full overflow-hidden border-2 border-slate-300 dark:border-slate-700 group-hover:border-[#FF6B35] dark:group-hover:border-blue-400 transition-colors">
+//                 <div className="relative h-10 w-10 rounded-full overflow-hidden border-2 border-slate-300 dark:border-slate-700 group-hover:border-emerald-500 dark:group-hover:border-blue-400 transition-colors">
 //                   <Image
 //                     fill
 //                     src={rev.avatar}
@@ -113,7 +113,7 @@
 //                   />
 //                 </div>
 //                 <div>
-//                   <h4 className="text-xs sm:text-sm font-black text-black dark:text-white tracking-tight group-hover:text-[#FF6B35] dark:group-hover:text-blue-400 transition-colors duration-300">
+//                   <h4 className="text-xs sm:text-sm font-black text-black dark:text-white tracking-tight group-hover:text-emerald-400 dark:group-hover:text-blue-400 transition-colors duration-300">
 //                     {rev.name}
 //                   </h4>
 //                   <span className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 font-bold tracking-wide">

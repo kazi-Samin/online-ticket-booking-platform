@@ -73,16 +73,16 @@ export default function DashboardSidebar() {
   return (
     <>
       {/* Mobile Top Navigation */}
-      <div className="flex items-center justify-between bg-zinc-950 text-zinc-100 px-5 h-16 md:hidden border-b border-zinc-900 sticky top-0 z-40 shadow-md">
+      <div className="flex items-center justify-between bg-slate-950 text-slate-100 px-5 h-16 md:hidden border-b border-slate-900 sticky top-0 z-40 shadow-md">
         <Link href="/" className="flex items-center space-x-2.5 text-lg font-black tracking-tight">
-          <div className="p-2 bg-indigo-600 rounded-xl shadow-lg shadow-indigo-950/40">
+          <div className="p-2 bg-teal-600 rounded-xl shadow-lg shadow-teal-950/40">
             <Train className="h-4 w-4 text-white" />
           </div>
-          <span className="text-white">Ticket<span className="text-indigo-400">Core</span></span>
+          <span className="text-white">Ticket<span className="text-teal-400">Core</span></span>
         </Link>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="p-2 bg-zinc-900 border border-zinc-800 rounded-xl text-zinc-300"
+          className="p-2 bg-slate-900 border border-slate-800 rounded-xl text-slate-300"
         >
           {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -90,7 +90,7 @@ export default function DashboardSidebar() {
 
       {/* Main Sidebar Shell Panel */}
       <aside className={`
-        fixed inset-y-0 left-0 z-50 w-64 bg-zinc-950 text-zinc-200 border-r border-zinc-900/60 
+        fixed inset-y-0 left-0 z-50 w-64 bg-slate-950 text-slate-200 border-r border-slate-900/60 
         flex flex-col justify-between transform transition-transform duration-300 ease-out
         md:translate-x-0 md:static md:h-screen shadow-2xl
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
@@ -98,28 +98,28 @@ export default function DashboardSidebar() {
 
         <div>
           {/* Brand Logo Module */}
-          <div className="h-16 flex items-center justify-between px-6 border-b border-zinc-900/50">
+          <div className="h-16 flex items-center justify-between px-6 border-b border-slate-900/50">
             <Link href="/" className="flex items-center space-x-2.5 text-xl font-black tracking-tight text-white group">
-              <div className="p-2 bg-indigo-600 rounded-xl transition-transform duration-300 group-hover:scale-105 shadow-md shadow-indigo-950/50">
+              <div className="p-2 bg-teal-600 rounded-xl transition-transform duration-300 group-hover:scale-105 shadow-md shadow-teal-950/50">
                 <Train className="h-4 w-4 text-white" />
               </div>
-              <span>Ticket<span className="text-indigo-400 font-black">Core</span></span>
+              <span>Ticket<span className="text-teal-400 font-black">Core</span></span>
             </Link>
-            <button onClick={() => setIsOpen(false)} className="md:hidden text-zinc-500 hover:text-white">
+            <button onClick={() => setIsOpen(false)} className="md:hidden text-slate-500 hover:text-white">
               <X className="h-4 w-4" />
             </button>
           </div>
 
           {/* User Identity Matrix Badge */}
-          <div className="mx-4 my-4 p-3.5 rounded-2xl border border-zinc-900 bg-zinc-900/20 backdrop-blur-sm">
+          <div className="mx-4 my-4 p-3.5 rounded-2xl border border-slate-900 bg-slate-900/20 backdrop-blur-sm">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3 truncate">
-                <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center font-black text-xs text-white uppercase shadow-md shrink-0">
+                <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-teal-600 to-purple-600 flex items-center justify-center font-black text-xs text-white uppercase shadow-md shrink-0">
                   {user?.name ? user.name.slice(0, 2) : "TC"}
                 </div>
                 <div className="truncate text-left">
                   <p className="text-xs font-black text-white truncate tracking-tight">{user?.name || "Terminal Operator"}</p>
-                  <span className="inline-block text-[9px] uppercase font-black tracking-widest bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded-md mt-1 border border-indigo-500/20">
+                  <span className="inline-block text-[9px] uppercase font-black tracking-widest bg-teal-500/10 text-teal-400 px-2 py-0.5 rounded-md mt-1 border border-teal-500/20">
                     {currentRole}
                   </span>
                 </div>
@@ -127,7 +127,7 @@ export default function DashboardSidebar() {
 
               <button
                 onClick={toggleTheme}
-                className="p-2 bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-indigo-400 rounded-xl border border-zinc-800/80 transition-all shrink-0 ml-2"
+                className="p-2 bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-teal-400 rounded-xl border border-slate-800/80 transition-all shrink-0 ml-2"
               >
                 {isDarkMode ? <Sun className="h-3.5 w-3.5 text-amber-400" /> : <Moon className="h-3.5 w-3.5" />}
               </button>
@@ -145,12 +145,12 @@ export default function DashboardSidebar() {
                   onClick={() => setIsOpen(false)}
                   className={`flex items-center space-x-3 px-4 py-3 rounded-xl text-xs font-bold tracking-wide transition-all uppercase group ${
                     isActive(link.path)
-                      ? "bg-indigo-600 text-white shadow-lg shadow-indigo-950/60 border-l-4 border-indigo-400"
-                      : "text-zinc-400 hover:bg-zinc-900/60 hover:text-zinc-100"
+                      ? "bg-teal-600 text-white shadow-lg shadow-teal-950/60 border-l-4 border-teal-400"
+                      : "text-slate-400 hover:bg-slate-900/60 hover:text-slate-100"
                   }`}
                 >
                   <ActionIcon className={`h-4 w-4 shrink-0 transition-colors ${
-                    isActive(link.path) ? "text-white" : "text-zinc-500 group-hover:text-zinc-200"
+                    isActive(link.path) ? "text-white" : "text-slate-500 group-hover:text-slate-200"
                   }`} />
                   <span>{link.name}</span>
                 </Link>
@@ -160,7 +160,7 @@ export default function DashboardSidebar() {
         </div>
 
         {/* Global Signout Node */}
-        <div className="p-4 border-t border-zinc-900 bg-zinc-950">
+        <div className="p-4 border-t border-slate-900 bg-slate-950">
           <button
             onClick={handleLogout}
             className="w-full flex items-center justify-center space-x-2.5 px-4 py-3.5 text-xs font-black uppercase tracking-widest text-red-400 hover:text-white hover:bg-red-950/40 border border-red-900/20 rounded-xl transition-all shadow-md active:scale-[0.99]"

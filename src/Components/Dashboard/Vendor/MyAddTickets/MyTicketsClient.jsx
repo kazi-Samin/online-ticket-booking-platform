@@ -61,8 +61,8 @@ export default function MyTicketsClient({ initialTickets }) {
           </AnimatePresence>
         </div>
       ) : (
-        <div className="w-full text-center py-20 bg-white dark:bg-[#0F172A] border-2 border-dashed border-zinc-200 dark:border-zinc-800 rounded-2xl p-6">
-          <p className="text-sm font-bold text-zinc-500">No matching vendor ticket asset logs found.</p>
+        <div className="w-full text-center py-20 bg-white dark:bg-[#0F172A] border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-2xl p-6">
+          <p className="text-sm font-bold text-slate-500">No matching vendor ticket asset logs found.</p>
         </div>
       )}
 
@@ -73,7 +73,7 @@ export default function MyTicketsClient({ initialTickets }) {
           <button
             onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
-            className="p-2.5 rounded-xl border border-zinc-200 dark:border-zinc-800 text-zinc-500 hover:text-zinc-800 dark:hover:text-white disabled:opacity-30 disabled:pointer-events-none transition-colors"
+            className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 hover:text-slate-800 dark:hover:text-white disabled:opacity-30 disabled:pointer-events-none transition-colors"
           >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/></svg>
           </button>
@@ -86,7 +86,7 @@ export default function MyTicketsClient({ initialTickets }) {
               className={`w-10 h-10 rounded-xl text-xs font-black border transition-all duration-200 ${
                 currentPage === number
                   ? "bg-[#1E3A8A] border-[#1E3A8A] text-white shadow-md shadow-blue-900/20"
-                  : "bg-white dark:bg-[#0F172A] border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:border-zinc-400"
+                  : "bg-white dark:bg-[#0F172A] border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:border-slate-400"
               }`}
             >
               {number}
@@ -97,7 +97,7 @@ export default function MyTicketsClient({ initialTickets }) {
           <button
             onClick={() => currentPage < totalPages && handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className="p-2.5 rounded-xl border border-zinc-200 dark:border-zinc-800 text-zinc-500 hover:text-zinc-800 dark:hover:text-white disabled:opacity-30 disabled:pointer-events-none transition-colors"
+            className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 hover:text-slate-800 dark:hover:text-white disabled:opacity-30 disabled:pointer-events-none transition-colors"
           >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
           </button>

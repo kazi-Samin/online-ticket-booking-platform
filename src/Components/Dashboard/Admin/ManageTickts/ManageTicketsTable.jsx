@@ -94,12 +94,12 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
   };
 
   return (
-    <div className="space-y-6 max-w-7xl mx-auto p-1 text-left text-slate-800 dark:text-zinc-200">
+    <div className="space-y-6 max-w-7xl mx-auto p-1 text-left text-slate-800 dark:text-slate-200">
 
       {/* ==================== 📊 PREMIUM METRICS COUNTER CARDS ==================== */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {/* Pending Matrix */}
-        <div className="bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 p-5 rounded-3xl shadow-xs flex items-center justify-between transition-all hover:shadow-md">
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 rounded-3xl shadow-xs flex items-center justify-between transition-all hover:shadow-md">
           <div className="space-y-1">
             <p className="text-[10px] font-black tracking-widest uppercase text-amber-600 dark:text-amber-400">Awaiting Verification</p>
             <h3 className="text-2xl font-black text-slate-900 dark:text-white">{totalPending}</h3>
@@ -110,7 +110,7 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
         </div>
 
         {/* Approved Matrix */}
-        <div className="bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 p-5 rounded-3xl shadow-xs flex items-center justify-between transition-all hover:shadow-md">
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 rounded-3xl shadow-xs flex items-center justify-between transition-all hover:shadow-md">
           <div className="space-y-1">
             <p className="text-[10px] font-black tracking-widest uppercase text-emerald-600 dark:text-emerald-400">Active Fleet Assets</p>
             <h3 className="text-2xl font-black text-slate-900 dark:text-white">{totalApproved}</h3>
@@ -121,7 +121,7 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
         </div>
 
         {/* Rejected Matrix */}
-        <div className="bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 p-5 rounded-3xl shadow-xs flex items-center justify-between transition-all hover:shadow-md">
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 rounded-3xl shadow-xs flex items-center justify-between transition-all hover:shadow-md">
           <div className="space-y-1">
             <p className="text-[10px] font-black tracking-widest uppercase text-red-500">Denied Nodes</p>
             <h3 className="text-2xl font-black text-slate-900 dark:text-white">{totalRejected}</h3>
@@ -133,10 +133,10 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
       </div>
 
       {/* ==================== 🛠️ FILTER ENGINE & SEARCH CONTROLS ==================== */}
-      <div className="bg-white dark:bg-zinc-900 p-4 border border-slate-200 dark:border-zinc-800 rounded-3xl shadow-xs flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+      <div className="bg-white dark:bg-slate-900 p-4 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-xs flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
         {/* Search Field */}
         <div className="relative flex-1 group">
-          <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400 dark:text-zinc-500">
+          <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400 dark:text-slate-500">
             <Search className="h-4 w-4" />
           </span>
           <input
@@ -147,7 +147,7 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
               setSearchQuery(e.target.value);
               setCurrentPage(1);
             }}
-            className="w-full bg-slate-50 dark:bg-black border border-slate-200 dark:border-zinc-800 pl-10 pr-4 py-2.5 rounded-xl text-xs font-bold text-slate-800 dark:text-zinc-200 focus:outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-zinc-900 transition-all"
+            className="w-full bg-slate-50 dark:bg-black border border-slate-200 dark:border-slate-800 pl-10 pr-4 py-2.5 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-200 focus:outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-slate-900 transition-all"
           />
         </div>
 
@@ -160,7 +160,7 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
               setStatusFilter(e.target.value);
               setCurrentPage(1);
             }}
-            className="w-full bg-slate-50 dark:bg-black border border-slate-200 dark:border-zinc-800 pl-9 pr-10 py-2.5 rounded-xl text-xs font-black text-slate-700 dark:text-zinc-300 focus:outline-none focus:border-blue-500 appearance-none cursor-pointer"
+            className="w-full bg-slate-50 dark:bg-black border border-slate-200 dark:border-slate-800 pl-9 pr-10 py-2.5 rounded-xl text-xs font-black text-slate-700 dark:text-slate-300 focus:outline-none focus:border-blue-500 appearance-none cursor-pointer"
           >
             <option value="all">📊 All Matrix Pipelines</option>
             <option value="pending">⏳ Verification Pending</option>
@@ -173,17 +173,17 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
 
       {/* ==================== 📋 MATRIX DATA LAYOUT CONTAINER ==================== */}
       {filteredTickets.length === 0 ? (
-        <div className="bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-3xl p-12 text-center text-slate-400 font-bold text-xs uppercase tracking-widest">
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-12 text-center text-slate-400 font-bold text-xs uppercase tracking-widest">
           No records matching the current selection stream.
         </div>
       ) : (
-        <div className="bg-white dark:bg-zinc-900 rounded-3xl border border-slate-200 dark:border-zinc-800 overflow-hidden shadow-xs">
+        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xs">
 
           {/* Desktop Table: Hidden on Mobile streams */}
           <div className="hidden md:block overflow-x-auto">
             <table className="w-full border-collapse text-left">
               <thead>
-                <tr className="bg-slate-50 dark:bg-zinc-950 border-b border-slate-200 dark:border-zinc-800 text-slate-500 dark:text-zinc-400 text-[10px] font-black uppercase tracking-wider">
+                <tr className="bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-black uppercase tracking-wider">
                   <th className="p-4 pl-6 w-[10%]">Fleet Visual</th>
                   <th className="p-4 w-[25%]">Route Designation</th>
                   <th className="p-4 w-[25%]">Merchant Identifier</th>
@@ -193,29 +193,29 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
                   <th className="p-4 pr-6 text-right w-[15%]">Operation</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 dark:divide-zinc-800/40 text-xs font-bold text-slate-700 dark:text-zinc-300">
+              <tbody className="divide-y divide-slate-100 dark:divide-slate-800/40 text-xs font-bold text-slate-700 dark:text-slate-300">
                 {currentItems.map((ticket) => (
-                  <tr key={ticket._id} className="hover:bg-slate-50/50 dark:hover:bg-zinc-950/20 transition-colors">
+                  <tr key={ticket._id} className="hover:bg-slate-50/50 dark:hover:bg-slate-950/20 transition-colors">
                     <td className="p-4 pl-6">
                       <div className="relative w-14 h-9">
                         <Image 
                           src={ticket?.image || "/fallback-transit.png"} 
                           alt="Fleet Hub Illustration"
                           fill
-                          className="object-cover rounded-xl border border-slate-200 dark:border-zinc-800"
+                          className="object-cover rounded-xl border border-slate-200 dark:border-slate-800"
                           unoptimized
                         />
                       </div>
                     </td>
                     <td className="p-4 font-black text-sm text-slate-900 dark:text-white max-w-[200px] truncate">{ticket.title}</td>
-                    <td className="p-4 font-mono text-slate-400 dark:text-zinc-500 text-[11px]">{ticket.vendorEmail}</td>
+                    <td className="p-4 font-mono text-slate-400 dark:text-slate-500 text-[11px]">{ticket.vendorEmail}</td>
                     <td className="p-4 uppercase tracking-wider text-[10px] font-black text-blue-600 dark:text-blue-400">{ticket.transportType}</td>
                     <td className="p-4 font-black text-slate-900 dark:text-white text-sm">৳ {(ticket.pricePerUnit ?? 0).toLocaleString()}</td>
                     <td className="p-4 text-center">
                       <span className={`inline-block px-2.5 py-0.5 rounded-md text-[9px] font-black uppercase tracking-wider border ${
                         ticket.verificationStatus === 'approved' ? 'bg-emerald-100 border-emerald-200 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 dark:border-emerald-500/20' :
                         ticket.verificationStatus === 'rejected' ? 'bg-red-100 border-red-200 text-red-700 dark:bg-red-500/10 dark:text-red-400 dark:border-red-500/20' :
-                        'bg-slate-100 border-slate-200 text-slate-600 dark:bg-zinc-800 dark:text-zinc-400 dark:border-zinc-700'
+                        'bg-slate-100 border-slate-200 text-slate-600 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-700'
                       }`}>
                         {ticket.verificationStatus}
                       </span>
@@ -245,16 +245,16 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
           </div>
 
           {/* Mobile View Card Matrix Layout */}
-          <div className="block md:hidden divide-y divide-slate-100 dark:divide-zinc-800/40">
+          <div className="block md:hidden divide-y divide-slate-100 dark:divide-slate-800/40">
             {currentItems.map((ticket) => (
-              <div key={ticket._id} className="p-5 space-y-4 bg-white dark:bg-zinc-900 text-left">
+              <div key={ticket._id} className="p-5 space-y-4 bg-white dark:bg-slate-900 text-left">
                 <div className="flex items-center space-x-3.5">
                   <div className="relative w-16 h-12 shrink-0">
                     <Image 
                       src={ticket?.image || "/fallback-transit.png"} 
                       alt="Fleet" 
                       fill
-                      className="object-cover rounded-xl border dark:border-zinc-800"
+                      className="object-cover rounded-xl border dark:border-slate-800"
                       unoptimized
                     />
                   </div>
@@ -264,7 +264,7 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 text-[11px] border-y border-slate-100 dark:border-zinc-800/60 py-2.5">
+                <div className="grid grid-cols-2 gap-2 text-[11px] border-y border-slate-100 dark:border-slate-800/60 py-2.5">
                   <div>
                     <span className="text-slate-400 block text-[9px] uppercase font-bold tracking-wider">Classification</span>
                     <span className="font-bold uppercase text-blue-600 dark:text-blue-400">{ticket.transportType}</span>
@@ -279,7 +279,7 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
                   <span className={`px-2.5 py-0.5 rounded-md text-[9px] font-black uppercase tracking-wider border ${
                     ticket.verificationStatus === 'approved' ? 'bg-emerald-100 border-emerald-200 text-emerald-700 dark:bg-emerald-500/10' :
                     ticket.verificationStatus === 'rejected' ? 'bg-red-100 border-red-200 text-red-700 dark:bg-red-500/10' :
-                    'bg-slate-100 border-slate-200 text-slate-600 dark:bg-zinc-800'
+                    'bg-slate-100 border-slate-200 text-slate-600 dark:bg-slate-800'
                   }`}>
                     {ticket.verificationStatus}
                   </span>
@@ -309,22 +309,22 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
 
       {/* ==================== 🔢 PAGINATION SYSTEMS ENGINE ==================== */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-between bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 p-4 rounded-3xl shadow-xs">
+        <div className="flex items-center justify-between bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-3xl shadow-xs">
           <button
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
-            className="inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-zinc-800 hover:bg-slate-50 dark:hover:bg-zinc-800 disabled:opacity-30 transition-all cursor-pointer disabled:cursor-not-allowed text-slate-700 dark:text-zinc-300"
+            className="inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-30 transition-all cursor-pointer disabled:cursor-not-allowed text-slate-700 dark:text-slate-300"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
             <span>Previous</span>
           </button>
-          <span className="text-xs font-bold text-slate-400 dark:text-zinc-500 uppercase tracking-widest">
+          <span className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
             Page Matrix <span className="text-blue-600 dark:text-blue-400 font-black">{currentPage}</span> of <span className="text-slate-800 dark:text-white font-black">{totalPages}</span>
           </span>
           <button
             onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
             disabled={currentPage === totalPages}
-            className="inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-zinc-800 hover:bg-slate-50 dark:hover:bg-zinc-800 disabled:opacity-30 transition-all cursor-pointer disabled:cursor-not-allowed text-slate-700 dark:text-zinc-300"
+            className="inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-30 transition-all cursor-pointer disabled:cursor-not-allowed text-slate-700 dark:text-slate-300"
           >
             <span>Next</span>
             <ArrowRight className="h-3.5 w-3.5" />
@@ -348,7 +348,7 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
               initial={{ opacity: 0, scale: 0.95, y: 10 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 10 }}
-              className="w-full max-w-md bg-white dark:bg-zinc-950 rounded-3xl border border-slate-200 dark:border-zinc-800 shadow-2xl p-6 space-y-6 relative z-10"
+              className="w-full max-w-md bg-white dark:bg-slate-950 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl p-6 space-y-6 relative z-10"
             >
               <div className="flex items-center space-x-3">
                 <div className="p-2 bg-blue-50 dark:bg-blue-500/10 rounded-xl"><AlertTriangle className="h-5 w-5 text-blue-500" /></div>
@@ -357,7 +357,7 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
                 </h3>
               </div>
 
-              <p className="text-xs text-slate-500 dark:text-zinc-400 font-medium leading-relaxed">
+              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
                 Are you sure you want to change the network distribution status to{" "}
                 <span className={`font-black uppercase tracking-wider px-1.5 py-0.5 rounded ${
                   modalContext.targetStatus === 'approved' 
@@ -372,7 +372,7 @@ export default function ManageTicketsTable({ initialTickets = [] }) {
               <div className="flex items-center justify-end space-x-3 pt-2">
                 <button
                   onClick={closeActionModal}
-                  className="px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-300 transition-colors cursor-pointer"
+                  className="px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-900 dark:hover:bg-slate-800 dark:text-slate-300 transition-colors cursor-pointer"
                 >
                   Cancel
                 </button>

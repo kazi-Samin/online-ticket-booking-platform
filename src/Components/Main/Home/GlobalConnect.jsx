@@ -75,10 +75,10 @@
 //                 style={{ top: node.top, left: node.left }}
 //               >
 //                 {/* পালস অ্যানিমেশন */}
-//                 <span className="absolute inline-flex h-6 w-6 -top-1.5 -left-1.5 rounded-full bg-[#FF6B35]/30 animate-ping opacity-75" />
+//                 <span className="absolute inline-flex h-6 w-6 -top-1.5 -left-1.5 rounded-full bg-emerald-600/30 animate-ping opacity-75" />
 
 //                 {/* কোর পয়েন্ট */}
-//                 <span className="relative flex h-3 w-3 rounded-full bg-[#FF6B35] shadow-md shadow-orange-500/50" />
+//                 <span className="relative flex h-3 w-3 rounded-full bg-emerald-600 shadow-md shadow-orange-500/50" />
 
 //                 {/* হাই-কন্ট্রাস্ট ডার্ক ও লাইট লেবেল */}
 //                 <div className="absolute top-5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-slate-950 dark:bg-slate-100 text-slate-100 dark:text-slate-950 font-black text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-xl shadow-lg border border-slate-800 dark:border-slate-200 opacity-100 transition-all duration-200">
@@ -101,7 +101,7 @@
 //             </div>
 
 //             <div className="flex items-center gap-3.5 pl-2">
-//               <div className="p-3 bg-slate-50 dark:bg-slate-950 text-[#FF6B35] rounded-2xl border border-slate-100 dark:border-slate-800">
+//               <div className="p-3 bg-slate-50 dark:bg-slate-950 text-emerald-400 rounded-2xl border border-slate-100 dark:border-slate-800">
 //                 <Zap className="h-5 w-5" />
 //               </div>
 //               <div>

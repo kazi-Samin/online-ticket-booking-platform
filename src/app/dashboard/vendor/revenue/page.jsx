@@ -27,7 +27,7 @@ const VendorRevenuePage = async () => {
 
     return (
         /* ==================== 🌑 NEO-DARK CONTAINER ==================== */
-        <div className="min-h-screen bg-slate-50/50 dark:bg-zinc-950 p-4 md:p-8 text-left selection:bg-zinc-800 selection:text-white">
+        <div className="min-h-screen bg-slate-50/50 dark:bg-slate-950 p-4 md:p-8 text-left selection:bg-slate-800 selection:text-white">
             <div className="max-w-6xl mx-auto space-y-8">
 
                 {/* Dashboard Header */}
@@ -35,7 +35,7 @@ const VendorRevenuePage = async () => {
                     <h1 className="text-2xl md:text-3xl font-black text-white tracking-tight">
                         Vendor Revenue Hub
                     </h1>
-                    <p className="text-xs md:text-sm text-zinc-500 font-medium">
+                    <p className="text-xs md:text-sm text-slate-500 font-medium">
                         Track your ticket inventory pipeline, sales performance, and systemic payout structures.
                     </p>
                 </div>

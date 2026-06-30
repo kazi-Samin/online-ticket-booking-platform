@@ -79,7 +79,7 @@ export default function LogInForm() {
         initial={{ opacity: 0, y: 30, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="grid grid-cols-1 lg:grid-cols-12 w-full max-w-5xl bg-white dark:bg-slate-900 rounded-3xl shadow-xl overflow-hidden border border-zinc-100 dark:border-slate-800/60 min-h-[600px] transition-colors duration-200"
+        className="grid grid-cols-1 lg:grid-cols-12 w-full max-w-5xl bg-white dark:bg-slate-900 rounded-3xl shadow-xl overflow-hidden border border-slate-100 dark:border-slate-800/60 min-h-[600px] transition-colors duration-200"
       >
         {/* Left Column: Visual Branding Sidebar */}
         <motion.div
@@ -88,14 +88,14 @@ export default function LogInForm() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="lg:col-span-5 bg-[#1E3A8A] dark:bg-slate-950 p-8 lg:p-12 flex flex-col justify-between text-white relative overflow-hidden transition-colors duration-200"
         >
-          <div className="absolute -top-10 -left-10 w-40 h-40 bg-indigo-800 dark:bg-indigo-900 rounded-full blur-2xl opacity-40"></div>
-          <div className="absolute -bottom-10 -right-10 w-52 h-52 bg-[#FF6B35] rounded-full blur-3xl opacity-20"></div>
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-teal-800 dark:bg-teal-900 rounded-full blur-2xl opacity-40"></div>
+          <div className="absolute -bottom-10 -right-10 w-52 h-52 bg-emerald-600 rounded-full blur-3xl opacity-20"></div>
 
           <div>
             <h2 className="text-3xl font-extrabold tracking-tight">
-              Ticket<span className="text-[#FF6B35]">Bari</span>
+              Ticket<span className="text-emerald-400">Bari</span>
             </h2>
-            <p className="text-indigo-200 dark:text-indigo-300 text-sm mt-2">Your Trusted Journey Companion</p>
+            <p className="text-teal-200 dark:text-teal-300 text-sm mt-2">Your Trusted Journey Companion</p>
           </div>
 
           <div className="my-8 lg:my-0 space-y-4">
@@ -103,12 +103,12 @@ export default function LogInForm() {
               Welcome Back! <br />
               Ready to Explore?
             </h3>
-            <p className="text-indigo-100 dark:text-slate-300 text-xs leading-relaxed max-w-xs">
+            <p className="text-teal-100 dark:text-slate-300 text-xs leading-relaxed max-w-xs">
               Log in to access your secured ticket management portal, dashboard history, and personalized preferences effortlessly.
             </p>
           </div>
 
-          <div className="text-xs text-indigo-300 dark:text-slate-500">
+          <div className="text-xs text-teal-300 dark:text-slate-500">
             &copy; 2026 TicketBari. All rights reserved.
           </div>
         </motion.div>
@@ -117,8 +117,8 @@ export default function LogInForm() {
         <div className="lg:col-span-7 p-8 lg:p-12 flex flex-col justify-center bg-white dark:bg-slate-900 transition-colors duration-200">
           <motion.div variants={containerVariants} initial="hidden" animate="visible" className="w-full">
             <motion.div variants={itemVariants} className="mb-6">
-              <h1 className="text-2xl font-extrabold text-zinc-900 dark:text-slate-100">Sign In</h1>
-              <p className="text-sm text-zinc-500 dark:text-slate-400 mt-1">Access secure ticket booking parameters</p>
+              <h1 className="text-2xl font-extrabold text-slate-900 dark:text-slate-100">Sign In</h1>
+              <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">Access secure ticket booking parameters</p>
             </motion.div>
 
             <Form className="flex flex-col gap-4 w-full" onSubmit={handleLoginSubmit}>
@@ -136,12 +136,12 @@ export default function LogInForm() {
                     return null;
                   }}
                 >
-                  <Label className="text-sm font-semibold text-zinc-700 dark:text-slate-300">Email Address</Label>
+                  <Label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Email Address</Label>
                   <div className="relative flex items-center">
-                    <Mail className="absolute left-3 h-4 w-4 text-zinc-400 dark:text-slate-500 pointer-events-none" />
+                    <Mail className="absolute left-3 h-4 w-4 text-slate-400 dark:text-slate-500 pointer-events-none" />
                     <Input
                       placeholder="you@example.com"
-                      className="w-full h-11 pl-10 pr-3 rounded-xl border border-zinc-200 dark:border-slate-800 bg-transparent focus:border-indigo-500 dark:focus:border-blue-500 text-zinc-800 dark:text-slate-100 text-sm outline-none transition-colors"
+                      className="w-full h-11 pl-10 pr-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-transparent focus:border-teal-500 dark:focus:border-blue-500 text-slate-800 dark:text-slate-100 text-sm outline-none transition-colors"
                     />
                   </div>
                   <FieldError className="text-xs text-red-500 mt-0.5" />
@@ -152,23 +152,23 @@ export default function LogInForm() {
               <motion.div variants={itemVariants} className="w-full">
                 <TextField isRequired name="password" type={isVisible ? "text" : "password"} className="flex flex-col gap-1 w-full">
                   <div className="flex items-center justify-between">
-                    <Label className="text-sm font-semibold text-zinc-700 dark:text-slate-300">Password</Label>
+                    <Label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Password</Label>
                     <span className="text-xs font-bold text-[#1E3A8A] dark:text-blue-400 hover:underline cursor-pointer">
                       Forgot?
                     </span>
                   </div>
                   <div className="relative flex items-center">
-                    <Lock className="absolute left-3 h-4 w-4 text-zinc-400 dark:text-slate-500 pointer-events-none" />
+                    <Lock className="absolute left-3 h-4 w-4 text-slate-400 dark:text-slate-500 pointer-events-none" />
                     <Input
                       placeholder="Enter your password"
-                      className="w-full h-11 pl-10 pr-10 rounded-xl border border-zinc-200 dark:border-slate-800 bg-transparent focus:border-indigo-500 dark:focus:border-blue-500 text-zinc-800 dark:text-slate-100 text-sm outline-none transition-colors"
+                      className="w-full h-11 pl-10 pr-10 rounded-xl border border-slate-200 dark:border-slate-800 bg-transparent focus:border-teal-500 dark:focus:border-blue-500 text-slate-800 dark:text-slate-100 text-sm outline-none transition-colors"
                     />
                     <button
                       type="button"
                       onClick={toggleVisibility}
-                      className="absolute right-3 p-1 rounded-full hover:bg-zinc-100 dark:hover:bg-slate-800 transition-colors focus:outline-none z-20"
+                      className="absolute right-3 p-1 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none z-20"
                     >
-                      {isVisible ? <EyeOff className="h-4 w-4 text-zinc-400 dark:text-slate-500" /> : <Eye className="h-4 w-4 text-zinc-400 dark:text-slate-500" />}
+                      {isVisible ? <EyeOff className="h-4 w-4 text-slate-400 dark:text-slate-500" /> : <Eye className="h-4 w-4 text-slate-400 dark:text-slate-500" />}
                     </button>
                   </div>
                   <FieldError className="text-xs text-red-500 mt-0.5" />
@@ -180,23 +180,23 @@ export default function LogInForm() {
                 <motion.div variants={itemVariants}>
                   <Button
                     type="submit"
-                    className="w-full bg-[#1E3A8A] dark:bg-blue-600 hover:bg-indigo-900 dark:hover:bg-blue-700 text-white font-bold h-11 rounded-xl shadow-md active:scale-[0.98] transition-all"
+                    className="w-full bg-[#1E3A8A] dark:bg-blue-600 hover:bg-teal-900 dark:hover:bg-blue-700 text-white font-bold h-11 rounded-xl shadow-md active:scale-[0.98] transition-all"
                   >
                     Log In
                   </Button>
                 </motion.div>
 
                 <motion.div variants={itemVariants} className="flex items-center my-2">
-                  <div className="flex-1 border-t border-zinc-200 dark:border-slate-800"></div>
-                  <span className="px-3 text-xs text-zinc-400 dark:text-slate-500 uppercase font-medium">Or continue with</span>
-                  <div className="flex-1 border-t border-zinc-200 dark:border-slate-800"></div>
+                  <div className="flex-1 border-t border-slate-200 dark:border-slate-800"></div>
+                  <span className="px-3 text-xs text-slate-400 dark:text-slate-500 uppercase font-medium">Or continue with</span>
+                  <div className="flex-1 border-t border-slate-200 dark:border-slate-800"></div>
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
                   <button
                     type="button"
                     onClick={handleGoogleSignIn}
-                    className="w-full flex items-center justify-center space-x-2.5 h-11 border border-zinc-200 dark:border-slate-800 hover:bg-zinc-50 dark:hover:bg-slate-800/50 rounded-xl text-sm font-bold text-zinc-700 dark:text-slate-300 active:scale-[0.98] transition-all bg-white dark:bg-slate-900"
+                    className="w-full flex items-center justify-center space-x-2.5 h-11 border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-xl text-sm font-bold text-slate-700 dark:text-slate-300 active:scale-[0.98] transition-all bg-white dark:bg-slate-900"
                   >
                     <svg className="h-4 w-4" viewBox="0 0 24 24">
                       <path fill="#EA4335" d="M12.24 10.285V14.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l3.227-3.11C18.422 1.242 15.583 0 12.24 0 5.58 0 0 5.37 0 12s5.58 12 12.24 12c6.96 0 11.57-4.83 11.57-11.79 0-.795-.085-1.4-.195-1.925H12.24z" />
@@ -205,10 +205,10 @@ export default function LogInForm() {
                   </button>
                 </motion.div>
 
-                <motion.p variants={itemVariants} className="text-xs text-center text-zinc-500 dark:text-slate-400 mt-2">
+                <motion.p variants={itemVariants} className="text-xs text-center text-slate-500 dark:text-slate-400 mt-2">
                   Don't have an account yet?{" "}
                   <motion.span className="inline-block" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Link href="/register" className="text-[#FF6B35] font-bold hover:underline">
+                    <Link href="/register" className="text-emerald-400 font-bold hover:underline">
                       Sign Up
                     </Link>
                   </motion.span>

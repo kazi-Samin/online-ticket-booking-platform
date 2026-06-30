@@ -21,11 +21,11 @@ const RequestedBookingsPage = async () => {
   const bookings = await getVendorBookingRequest(vendorId) || [];
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-black p-4 md:p-8 text-left transition-colors duration-300 text-slate-800 dark:text-zinc-200">
+    <div className="min-h-screen bg-slate-50 dark:bg-black p-4 md:p-8 text-left transition-colors duration-300 text-slate-800 dark:text-slate-200">
       <div className="max-w-7xl mx-auto space-y-8">
 
         {/* ==================== 🏆 PREMIUM BRAND HEADER CONTAINER ==================== */}
-        <div className="relative overflow-hidden bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 p-6 md:p-8 rounded-3xl shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="relative overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 md:p-8 rounded-3xl shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
 
           {/* Decorative Gradient Background Blur Element */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-2xl pointer-events-none" />
@@ -42,7 +42,7 @@ const RequestedBookingsPage = async () => {
             <h1 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
               Passenger Reservation <span className='text-blue-600 dark:text-blue-400'>Requests</span>
             </h1>
-            <p className="text-xs font-bold text-slate-500 dark:text-zinc-400 uppercase tracking-widest leading-relaxed">
+            <p className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest leading-relaxed">
               Track system reservation queues and manage ticketing transactions safely
             </p>
           </div>

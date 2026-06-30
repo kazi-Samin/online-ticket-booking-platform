@@ -110,7 +110,7 @@ export default function VendorDashboardClient({ user, tickets = [], bookings = [
       {/* 🌟 PREMIUM WELCOME HEADER */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white dark:bg-slate-900 p-6 md:p-8 rounded-[32px] border border-slate-200/80 dark:border-slate-800/60 shadow-sm relative overflow-hidden transition-colors duration-200">
         <div className="space-y-1.5 z-10">
-          <span className="text-[11px] font-black uppercase text-[#FF6B35] tracking-widest block">Operational Node</span>
+          <span className="text-[11px] font-black uppercase text-emerald-400 tracking-widest block">Operational Node</span>
           <h1 className="text-2xl md:text-3xl font-black text-[#1E293B] dark:text-slate-100 tracking-tight">
             Welcome back, <span className="text-[#1E3A8A] dark:text-blue-400">{user?.name || 'Premium Vendor'}</span> 👋
           </h1>
@@ -121,7 +121,7 @@ export default function VendorDashboardClient({ user, tickets = [], bookings = [
           <Link href="/" className="flex items-center px-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 dark:text-slate-200 text-xs font-bold rounded-xl transition-all shadow-sm">
             <Home className="h-4 w-4 mr-1.5" /> Back Home
           </Link>
-          <Link href="/dashboard/vendor/add-ticket" className="flex items-center px-4 py-2.5 bg-[#FF6B35] hover:bg-[#e05626] text-white text-xs font-bold rounded-xl transition-all shadow-md shadow-[#FF6B35]/20">
+          <Link href="/dashboard/vendor/add-ticket" className="flex items-center px-4 py-2.5 bg-emerald-600 hover:bg-[#e05626] text-white text-xs font-bold rounded-xl transition-all shadow-md shadow-emerald-500/20">
             <PlusCircle className="h-4 w-4 mr-1.5" /> Add New Ticket
           </Link>
         </div>
@@ -229,10 +229,10 @@ export default function VendorDashboardClient({ user, tickets = [], bookings = [
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <FolderCheck className="h-5 w-5 text-[#FF6B35]" />
+            <FolderCheck className="h-5 w-5 text-emerald-400" />
             <h2 className="text-lg font-black text-[#1E293B] dark:text-slate-100 tracking-tight">Booking Pipeline Orders</h2>
           </div>
-          <Link href="/dashboard/vendor/bookings" className="text-xs font-bold text-[#FF6B35] hover:underline flex items-center">
+          <Link href="/dashboard/vendor/bookings" className="text-xs font-bold text-emerald-400 hover:underline flex items-center">
             All Realtime Bookings <ArrowUpRight className="h-3.5 w-3.5 ml-0.5" />
           </Link>
         </div>
@@ -304,13 +304,13 @@ export default function VendorDashboardClient({ user, tickets = [], bookings = [
 
           {/* Bar Chart */}
           <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/60 rounded-2xl p-5 shadow-sm flex flex-col justify-between transition-colors duration-200">
-            <span className="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-wider mb-2 flex items-center"><TrendingUp className="h-3 w-3 mr-1 text-[#FF6B35]" /> Booking Velocity</span>
+            <span className="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-wider mb-2 flex items-center"><TrendingUp className="h-3 w-3 mr-1 text-emerald-400" /> Booking Velocity</span>
             <div className="w-full h-40">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={chartData}>
                   <XAxis dataKey="name" stroke="#94A3B8" fontSize={10} tickLine={false} />
                   <Tooltip cursor={{ fill: 'transparent' }} />
-                  <Bar dataKey="Sales" fill="#FF6B35" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="Sales" fill="#10b981" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>

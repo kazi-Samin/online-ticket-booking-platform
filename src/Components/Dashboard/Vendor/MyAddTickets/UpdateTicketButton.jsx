@@ -129,7 +129,7 @@ const UpdateTicketButton = ({ ticket }) => {
 
     return (
         <Modal>
-            <Button className="flex-1 py-3 px-5 rounded-xl text-xs font-black tracking-wider uppercase bg-indigo-600 hover:bg-indigo-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white shadow-md shadow-indigo-600/10 dark:shadow-blue-600/10 active:scale-95 transition-all duration-200 disabled:opacity-20 disabled:cursor-not-allowed border-none flex items-center justify-center gap-2">
+            <Button className="flex-1 py-3 px-5 rounded-xl text-xs font-black tracking-wider uppercase bg-teal-600 hover:bg-teal-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white shadow-md shadow-teal-600/10 dark:shadow-blue-600/10 active:scale-95 transition-all duration-200 disabled:opacity-20 disabled:cursor-not-allowed border-none flex items-center justify-center gap-2">
                 <PencilLine className="h-4 w-4 stroke-[2.5]" />
                 <span>Update Ticket</span>
             </Button>
@@ -137,10 +137,10 @@ const UpdateTicketButton = ({ ticket }) => {
                 <Modal.Container placement="auto">
                     <Modal.Dialog className="sm:max-w-2xl">
                         <Modal.CloseTrigger />
-                        <Modal.Header className="flex items-center justify-between gap-4 pt-5 pb-3 px-1 border-b border-zinc-100 dark:border-zinc-800/60 w-full">
+                        <Modal.Header className="flex items-center justify-between gap-4 pt-5 pb-3 px-1 border-b border-slate-100 dark:border-slate-800/60 w-full">
                             {/* 📝 Left Side Text Group */}
                             <div className="flex flex-col text-left">
-                                <Modal.Heading className="text-lg md:text-xl font-black tracking-tight text-zinc-900 dark:text-white leading-none">
+                                <Modal.Heading className="text-lg md:text-xl font-black tracking-tight text-slate-900 dark:text-white leading-none">
                                     Update Ticket Info
                                 </Modal.Heading>
                                 <span className="text-[11px] font-medium text-gray-400 mt-1 uppercase tracking-wider">
@@ -156,17 +156,17 @@ const UpdateTicketButton = ({ ticket }) => {
                             >
                                 {/* SECTION 1: Core Identity Metadata */}
                                 <div className="space-y-5">
-                                    <h3 className="text-sm font-extrabold uppercase tracking-widest text-[#1E3A8A] dark:text-blue-400 border-b border-zinc-100 dark:border-zinc-800 pb-2 flex items-center gap-2">
+                                    <h3 className="text-sm font-extrabold uppercase tracking-widest text-[#1E3A8A] dark:text-blue-400 border-b border-slate-100 dark:border-slate-800 pb-2 flex items-center gap-2">
                                         <Tag className="h-4 w-4" /> Primary Metadata
                                     </h3>
 
                                     <div className="space-y-2">
-                                        <label className="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider block">
+                                        <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">
                                             Ticket Title / Fleet Route Label
                                         </label>
                                         <div className="relative">
                                             <span className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                                <Tag className="h-4 w-4 text-zinc-400 dark:text-zinc-600" />
+                                                <Tag className="h-4 w-4 text-slate-400 dark:text-slate-600" />
                                             </span>
                                             <input
                                                 type="text"
@@ -174,7 +174,7 @@ const UpdateTicketButton = ({ ticket }) => {
                                                 required
                                                 value={formData.title}
                                                 onChange={handleInputChange}
-                                                className="w-full pl-11 pr-4 py-3 text-sm font-semibold rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/20 focus:border-[#1E3A8A]"
+                                                className="w-full pl-11 pr-4 py-3 text-sm font-semibold rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/20 focus:border-[#1E3A8A]"
                                                 placeholder="Ex: Green Line Scania Multi-Axle - Day Service"
                                             />
                                         </div>
@@ -182,7 +182,7 @@ const UpdateTicketButton = ({ ticket }) => {
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                         <div className="space-y-2">
-                                            <label className="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider block">
+                                            <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">
                                                 From (Terminal Origin)
                                             </label>
                                             <div className="relative">
@@ -195,14 +195,14 @@ const UpdateTicketButton = ({ ticket }) => {
                                                     required
                                                     value={formData.from}
                                                     onChange={handleInputChange}
-                                                    className="w-full pl-11 pr-4 py-3 text-sm font-semibold rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                                                    className="w-full pl-11 pr-4 py-3 text-sm font-semibold rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
                                                     placeholder="Ex: Dhaka (Gabtoli)"
                                                 />
                                             </div>
                                         </div>
 
                                         <div className="space-y-2">
-                                            <label className="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider block">
+                                            <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">
                                                 To (Terminal Destination)
                                             </label>
                                             <div className="relative">
@@ -215,7 +215,7 @@ const UpdateTicketButton = ({ ticket }) => {
                                                     required
                                                     value={formData.to}
                                                     onChange={handleInputChange}
-                                                    className="w-full pl-11 pr-4 py-3 text-sm font-semibold rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-rose-500/20 focus:border-rose-500"
+                                                    className="w-full pl-11 pr-4 py-3 text-sm font-semibold rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-rose-500/20 focus:border-rose-500"
                                                     placeholder="Ex: Cox's Bazar"
                                                 />
                                             </div>
@@ -225,24 +225,24 @@ const UpdateTicketButton = ({ ticket }) => {
 
                                 {/* SECTION 2: Inventory logistics */}
                                 <div className="space-y-5">
-                                    <h3 className="text-sm font-extrabold uppercase tracking-widest text-[#1E3A8A] dark:text-blue-400 border-b border-zinc-100 dark:border-zinc-800 pb-2 flex items-center gap-2">
+                                    <h3 className="text-sm font-extrabold uppercase tracking-widest text-[#1E3A8A] dark:text-blue-400 border-b border-slate-100 dark:border-slate-800 pb-2 flex items-center gap-2">
                                         <Bus className="h-4 w-4" /> Inventory Logistics
                                     </h3>
 
                                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
                                         <div className="space-y-2">
-                                            <label className="text-[10px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider block">
+                                            <label className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">
                                                 Transport Classification
                                             </label>
                                             <div className="relative">
                                                 <span className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                                    <Bus className="h-4 w-4 text-zinc-400" />
+                                                    <Bus className="h-4 w-4 text-slate-400" />
                                                 </span>
                                                 <select
                                                     name="transportType"
                                                     value={formData.transportType}
                                                     onChange={handleInputChange}
-                                                    className="w-full pl-11 pr-4 py-3 text-sm font-semibold rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/20 focus:border-[#1E3A8A] appearance-none"
+                                                    className="w-full pl-11 pr-4 py-3 text-sm font-semibold rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/20 focus:border-[#1E3A8A] appearance-none"
                                                 >
                                                     <option value="bus">Bus</option>
                                                     <option value="train">Train</option>
@@ -253,12 +253,12 @@ const UpdateTicketButton = ({ ticket }) => {
                                         </div>
 
                                         <div className="space-y-2">
-                                            <label className="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider block">
+                                            <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">
                                                 Price (Per Unit)
                                             </label>
                                             <div className="relative">
                                                 <span className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                                    <span className="text-sm font-black text-zinc-400 dark:text-zinc-600">৳</span>
+                                                    <span className="text-sm font-black text-slate-400 dark:text-slate-600">৳</span>
                                                 </span>
                                                 <input
                                                     type="number"
@@ -267,19 +267,19 @@ const UpdateTicketButton = ({ ticket }) => {
                                                     min="1"
                                                     value={formData.pricePerUnit}
                                                     onChange={handleInputChange}
-                                                    className="w-full pl-11 pr-4 py-3 text-sm font-semibold rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/20 focus:border-[#1E3A8A]"
+                                                    className="w-full pl-11 pr-4 py-3 text-sm font-semibold rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/20 focus:border-[#1E3A8A]"
                                                     placeholder="Ex: 1250"
                                                 />
                                             </div>
                                         </div>
 
                                         <div className="space-y-2">
-                                            <label className="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider block">
+                                            <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">
                                                 Ticket Quantity
                                             </label>
                                             <div className="relative">
                                                 <span className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                                    <Layers className="h-4 w-4 text-zinc-400" />
+                                                    <Layers className="h-4 w-4 text-slate-400" />
                                                 </span>
                                                 <input
                                                     type="number"
@@ -288,7 +288,7 @@ const UpdateTicketButton = ({ ticket }) => {
                                                     min="1"
                                                     value={formData.quantity}
                                                     onChange={handleInputChange}
-                                                    className="w-full pl-11 pr-4 py-3 text-sm font-semibold rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/20 focus:border-[#1E3A8A]"
+                                                    className="w-full pl-11 pr-4 py-3 text-sm font-semibold rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/20 focus:border-[#1E3A8A]"
                                                     placeholder="Ex: 40"
                                                 />
                                             </div>
@@ -296,12 +296,12 @@ const UpdateTicketButton = ({ ticket }) => {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <label className="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider block">
+                                        <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">
                                             Departure Date & Time
                                         </label>
                                         <div className="relative">
                                             <span className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                                <Calendar className="h-4 w-4 text-[#FF6B35]" />
+                                                <Calendar className="h-4 w-4 text-emerald-400" />
                                             </span>
                                             <input
                                                 type="datetime-local"
@@ -309,7 +309,7 @@ const UpdateTicketButton = ({ ticket }) => {
                                                 required
                                                 value={formData.departureDateTime}
                                                 onChange={handleInputChange}
-                                                className="w-full pl-11 pr-4 py-3 text-sm font-semibold rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/20 focus:border-[#1E3A8A] tracking-wide"
+                                                className="w-full pl-11 pr-4 py-3 text-sm font-semibold rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]/20 focus:border-[#1E3A8A] tracking-wide"
                                             />
                                         </div>
                                     </div>
@@ -317,7 +317,7 @@ const UpdateTicketButton = ({ ticket }) => {
 
                                 {/* SECTION 3: Transit Perks */}
                                 <div className="space-y-4">
-                                    <h3 className="text-sm font-extrabold uppercase tracking-widest text-[#1E3A8A] dark:text-blue-400 border-b border-zinc-100 dark:border-zinc-800 pb-2 flex items-center gap-2">
+                                    <h3 className="text-sm font-extrabold uppercase tracking-widest text-[#1E3A8A] dark:text-blue-400 border-b border-slate-100 dark:border-slate-800 pb-2 flex items-center gap-2">
                                         <Sparkles className="h-4 w-4" /> Transit Perks & Accommodations
                                     </h3>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
@@ -325,8 +325,8 @@ const UpdateTicketButton = ({ ticket }) => {
                                             <label
                                                 key={perk.id}
                                                 className={`flex items-center space-x-3 p-4 rounded-xl border cursor-pointer select-none transition-all duration-200 ${selectedPerks.includes(perk.id)
-                                                    ? "border-[#FF6B35] bg-orange-50/40 dark:bg-orange-500/5 text-[#FF6B35] font-bold shadow-sm"
-                                                    : "border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-950 text-zinc-600 dark:text-zinc-400 font-medium"
+                                                    ? "border-emerald-500 bg-orange-50/40 dark:bg-orange-500/5 text-emerald-400 font-bold shadow-sm"
+                                                    : "border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-950 text-slate-600 dark:text-slate-400 font-medium"
                                                     }`}
                                             >
                                                 <input
@@ -337,8 +337,8 @@ const UpdateTicketButton = ({ ticket }) => {
                                                 />
                                                 <div
                                                     className={`h-5 w-5 rounded-md border flex items-center justify-center transition-all ${selectedPerks.includes(perk.id)
-                                                        ? "bg-[#FF6B35] border-[#FF6B35] text-white"
-                                                        : "border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900"
+                                                        ? "bg-emerald-600 border-emerald-500 text-white"
+                                                        : "border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"
                                                         }`}
                                                 >
                                                     {selectedPerks.includes(perk.id) && <span className="text-[10px]">✓</span>}
@@ -351,18 +351,18 @@ const UpdateTicketButton = ({ ticket }) => {
 
                                 {/* SECTION 4: Image Upload */}
                                 <div className="space-y-4">
-                                    <h3 className="text-sm font-extrabold uppercase tracking-widest text-[#1E3A8A] dark:text-blue-400 border-b border-zinc-100 dark:border-zinc-800 pb-2 flex items-center gap-2">
+                                    <h3 className="text-sm font-extrabold uppercase tracking-widest text-[#1E3A8A] dark:text-blue-400 border-b border-slate-100 dark:border-slate-800 pb-2 flex items-center gap-2">
                                         <ImageIcon className="h-4 w-4" /> Imagery Presentation Media
                                     </h3>
 
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
                                         <div className="md:col-span-2">
-                                            <label className="relative flex flex-col items-center justify-center w-full h-36 border-2 border-dashed border-zinc-300 dark:border-zinc-700 hover:border-[#1E3A8A] dark:hover:border-zinc-500 rounded-2xl cursor-pointer bg-zinc-50 dark:bg-zinc-950/40 transition-colors p-4 text-center">
+                                            <label className="relative flex flex-col items-center justify-center w-full h-36 border-2 border-dashed border-slate-300 dark:border-slate-700 hover:border-[#1E3A8A] dark:hover:border-slate-500 rounded-2xl cursor-pointer bg-slate-50 dark:bg-slate-950/40 transition-colors p-4 text-center">
                                                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
                                                     {isUploading ? (
                                                         <>
-                                                            <Loader2 className="h-8 w-8 animate-spin text-[#FF6B35] mb-2" />
-                                                            <p className="text-sm font-bold text-zinc-600 dark:text-zinc-400">
+                                                            <Loader2 className="h-8 w-8 animate-spin text-emerald-400 mb-2" />
+                                                            <p className="text-sm font-bold text-slate-600 dark:text-slate-400">
                                                                 Uploading asset to Imgbb...
                                                             </p>
                                                         </>
@@ -375,11 +375,11 @@ const UpdateTicketButton = ({ ticket }) => {
                                                         </>
                                                     ) : (
                                                         <>
-                                                            <UploadCloud className="h-8 w-8 text-zinc-400 mb-2" />
-                                                            <p className="text-sm font-semibold text-zinc-600 dark:text-zinc-400">
+                                                            <UploadCloud className="h-8 w-8 text-slate-400 mb-2" />
+                                                            <p className="text-sm font-semibold text-slate-600 dark:text-slate-400">
                                                                 Click to upload vehicle banner asset
                                                             </p>
-                                                            <p className="text-xs text-zinc-400 mt-0.5">Supports PNG, JPG</p>
+                                                            <p className="text-xs text-slate-400 mt-0.5">Supports PNG, JPG</p>
                                                         </>
                                                     )}
                                                 </div>
@@ -393,7 +393,7 @@ const UpdateTicketButton = ({ ticket }) => {
                                             </label>
                                         </div>
 
-                                        <div className="flex items-center justify-center bg-zinc-50 dark:bg-zinc-950/40 rounded-2xl border border-zinc-200 dark:border-zinc-800 h-36 p-2 overflow-hidden">
+                                        <div className="flex items-center justify-center bg-slate-50 dark:bg-slate-950/40 rounded-2xl border border-slate-200 dark:border-slate-800 h-36 p-2 overflow-hidden">
                                             {imageUrl ? (
                                                 <img
                                                     src={imageUrl}
@@ -401,7 +401,7 @@ const UpdateTicketButton = ({ ticket }) => {
                                                     className="w-full h-full object-cover rounded-xl"
                                                 />
                                             ) : (
-                                                <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider text-center px-4">
+                                                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider text-center px-4">
                                                     Live Preview Container
                                                 </span>
                                             )}

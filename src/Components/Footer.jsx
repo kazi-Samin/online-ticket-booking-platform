@@ -12,8 +12,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 pb-16 border-b border-slate-200 dark:border-slate-900 w-full">
           
           <div className="md:col-span-5 space-y-5">
-            <Link href="/" className="flex items-center gap-2.5 font-extrabold tracking-tight text-indigo-600 dark:text-indigo-400 text-2xl">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/50 shadow-sm dark:shadow-none">
+            <Link href="/" className="flex items-center gap-2.5 font-extrabold tracking-tight text-teal-600 dark:text-teal-400 text-2xl">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-teal-50 dark:bg-teal-950 text-teal-600 dark:text-teal-400 border border-teal-100 dark:border-teal-900/50 shadow-sm dark:shadow-none">
                 <FaTicketAlt className="h-5 w-5 transform -rotate-12" />
               </div>
               <span>Ticket<span className="text-slate-900 dark:text-white font-medium">Core</span></span>
@@ -22,16 +22,16 @@ export default function Footer() {
               The ultimate centralized ticketing terminal in Bangladesh. Experience secure, seamless and rapid bookings for all transport modes.
             </p>
             <div className="flex items-center gap-4 pt-2">
-              <a href="#" className="h-9 w-9 rounded-xl bg-white dark:bg-slate-900 hover:bg-indigo-600 dark:hover:bg-indigo-600 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:text-white dark:hover:text-white flex items-center justify-center text-sm transition-all shadow-sm">
+              <a href="#" className="h-9 w-9 rounded-xl bg-white dark:bg-slate-900 hover:bg-teal-600 dark:hover:bg-teal-600 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:text-white dark:hover:text-white flex items-center justify-center text-sm transition-all shadow-sm">
                 <FaFacebook />
               </a>
-              <a href="#" className="h-9 w-9 rounded-xl bg-white dark:bg-slate-900 hover:bg-indigo-600 dark:hover:bg-indigo-600 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:text-white dark:hover:text-white flex items-center justify-center text-sm transition-all shadow-sm">
+              <a href="#" className="h-9 w-9 rounded-xl bg-white dark:bg-slate-900 hover:bg-teal-600 dark:hover:bg-teal-600 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:text-white dark:hover:text-white flex items-center justify-center text-sm transition-all shadow-sm">
                 <FaTwitter />
               </a>
-              <a href="#" className="h-9 w-9 rounded-xl bg-white dark:bg-slate-900 hover:bg-indigo-600 dark:hover:bg-indigo-600 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:text-white dark:hover:text-white flex items-center justify-center text-sm transition-all shadow-sm">
+              <a href="#" className="h-9 w-9 rounded-xl bg-white dark:bg-slate-900 hover:bg-teal-600 dark:hover:bg-teal-600 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:text-white dark:hover:text-white flex items-center justify-center text-sm transition-all shadow-sm">
                 <FaInstagram />
               </a>
-              <a href="#" className="h-9 w-9 rounded-xl bg-white dark:bg-slate-900 hover:bg-indigo-600 dark:hover:bg-indigo-600 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:text-white dark:hover:text-white flex items-center justify-center text-sm transition-all shadow-sm">
+              <a href="#" className="h-9 w-9 rounded-xl bg-white dark:bg-slate-900 hover:bg-teal-600 dark:hover:bg-teal-600 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:text-white dark:hover:text-white flex items-center justify-center text-sm transition-all shadow-sm">
                 <FaLinkedin />
               </a>
             </div>
@@ -40,9 +40,9 @@ export default function Footer() {
           <div className="md:col-span-3 space-y-4">
             <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-widest">Platform</h4>
             <ul className="space-y-2.5 text-sm">
-              <li><Link href="/" className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium">Home Portal</Link></li>
-              <li><Link href="/tickets" className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium">Browse Tickets</Link></li>
-              <li><Link href="/login" className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium">Sign In</Link></li>
+              <li><Link href="/" className="text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors font-medium">Home Portal</Link></li>
+              <li><Link href="/tickets" className="text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors font-medium">Browse Tickets</Link></li>
+              <li><Link href="/login" className="text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors font-medium">Sign In</Link></li>
             </ul>
           </div>
 

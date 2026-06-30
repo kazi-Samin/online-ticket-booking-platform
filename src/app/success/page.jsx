@@ -47,8 +47,8 @@ export default async function Success({ searchParams }) {
     }
 
     return (
-      <main className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex items-center justify-center p-4 antialiased">
-        <div className="w-full max-w-md bg-white dark:bg-zinc-900 rounded-3xl border border-zinc-100 dark:border-zinc-800/80 shadow-2xl p-8 text-center space-y-6">
+      <main className="min-h-screen bg-slate-50 dark:bg-slate-950 flex items-center justify-center p-4 antialiased">
+        <div className="w-full max-w-md bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800/80 shadow-2xl p-8 text-center space-y-6">
 
           {/* Success Animated Icon */}
           <div className="flex justify-center">
@@ -59,32 +59,32 @@ export default async function Success({ searchParams }) {
 
           {/* Header Text */}
           <div className="space-y-2">
-            <h1 className="text-2xl font-black tracking-tight text-zinc-900 dark:text-white">
+            <h1 className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
               Payment Successful!
             </h1>
-            <p className="text-xs text-zinc-400 uppercase font-black tracking-widest">
+            <p className="text-xs text-slate-400 uppercase font-black tracking-widest">
               Transaction Cleared
             </p>
           </div>
 
-          <hr className="border-zinc-100 dark:border-zinc-800/60" />
+          <hr className="border-slate-100 dark:border-slate-800/60" />
 
           {/* Dynamic Invoice Metadata */}
-          <div className="bg-zinc-50 dark:bg-zinc-950/40 border border-zinc-100 dark:border-zinc-800/60 rounded-2xl p-4 text-left space-y-3 text-xs font-semibold text-zinc-600 dark:text-zinc-400">
+          <div className="bg-slate-50 dark:bg-slate-950/40 border border-slate-100 dark:border-slate-800/60 rounded-2xl p-4 text-left space-y-3 text-xs font-semibold text-slate-600 dark:text-slate-400">
             <div className="flex justify-between">
               <span>Booking Node:</span>
-              <span className="font-mono text-zinc-900 dark:text-zinc-200">#{bookingId || 'N/A'}</span>
+              <span className="font-mono text-slate-900 dark:text-slate-200">#{bookingId || 'N/A'}</span>
             </div>
             <div className="flex justify-between">
               <span>Amount Paid:</span>
-              <span className="font-black text-zinc-900 dark:text-white text-sm">৳ {(amount_total / 100).toFixed(2)}</span>
+              <span className="font-black text-slate-900 dark:text-white text-sm">৳ {(amount_total / 100).toFixed(2)}</span>
             </div>
           </div>
 
           {/* Email Info Notification */}
-          <p className="text-xs text-zinc-500 dark:text-zinc-400 font-medium leading-relaxed max-w-[320px] mx-auto">
+          <p className="text-xs text-slate-500 dark:text-slate-400 font-medium leading-relaxed max-w-[320px] mx-auto">
             We appreciate your business! A confirmation ticket invoice stream will be pushed to{" "}
-            <span className="font-bold text-zinc-900 dark:text-white">{customerEmail}</span>.
+            <span className="font-bold text-slate-900 dark:text-white">{customerEmail}</span>.
           </p>
 
           {/* Interactive Routing Call To Actions (Two Buttons Grid) */}
@@ -103,7 +103,7 @@ export default async function Success({ searchParams }) {
               {/* Button 2: Go to Home */}
               <Link
                 href="/"
-                className="inline-flex items-center justify-center space-x-2 px-4 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-100 text-white dark:text-zinc-900 font-bold text-xs uppercase tracking-wider transition-all active:scale-95 cursor-pointer shadow-md"
+                className="inline-flex items-center justify-center space-x-2 px-4 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-900 font-bold text-xs uppercase tracking-wider transition-all active:scale-95 cursor-pointer shadow-md"
               >
                 <span>Go to Home</span>
                 <ArrowRight className="h-3.5 w-3.5" />
@@ -111,8 +111,8 @@ export default async function Success({ searchParams }) {
 
             </div>
 
-            <p className="text-[10px] text-zinc-400 font-medium pt-1">
-              Need help? Contact <a href="mailto:orders@example.com" className="underline hover:text-zinc-600 dark:hover:text-zinc-300">orders@example.com</a>
+            <p className="text-[10px] text-slate-400 font-medium pt-1">
+              Need help? Contact <a href="mailto:orders@example.com" className="underline hover:text-slate-600 dark:hover:text-slate-300">orders@example.com</a>
             </p>
           </div>
 

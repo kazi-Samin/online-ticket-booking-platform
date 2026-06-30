@@ -12,7 +12,7 @@
 //     desc: "Your payments and transactions are tightly guarded with bank-grade SSL encrypted protocols. Travel with absolute peace of mind."
 //   },
 //   {
-//     icon: <Clock className="h-6 w-6 text-[#FF6B35]" />,
+//     icon: <Clock className="h-6 w-6 text-emerald-400" />,
 //     badge: "Always Available",
 //     title: "24/7 Elite Instant Support",
 //     desc: "No matter if it's midnight or dawn, our dedicated transit experts are just one click away to smooth out your booking emergencies."
@@ -42,7 +42,7 @@
 //             initial={{ opacity: 0, y: -10 }}
 //             whileInView={{ opacity: 1, y: 0 }}
 //             viewport={{ once: true }}
-//             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-950/30 text-[#FF6B35] text-xs font-black uppercase tracking-widest mb-3"
+//             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-950/30 text-emerald-400 text-xs font-black uppercase tracking-widest mb-3"
 //           >
 //             <Sparkles className="h-3.5 w-3.5" />
 //             The TicketBari Edge
@@ -77,12 +77,12 @@
 //                       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
 //                       className="w-full max-w-md bg-slate-100/90 dark:bg-slate-900/90 p-6 sm:p-8 rounded-[24px] border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-lg dark:hover:border-[#1E3A8A] transition-all duration-500 group"
 //                     >
-//                       <span className="text-[10px] font-black uppercase tracking-widest text-[#FF6B35] block mb-1">
+//                       <span className="text-[10px] font-black uppercase tracking-widest text-emerald-400 block mb-1">
 //                         {f.badge}
 //                       </span>
 
 //                       {/* 🔥 ফিক্সড টাইটেল: ডাইরেক্ট text-black আর dark:text-white দিয়ে দিয়েছি */}
-//                       <h3 className="text-lg sm:text-xl font-black text-black dark:text-white tracking-tight group-hover:text-[#FF6B35] transition-colors duration-300">
+//                       <h3 className="text-lg sm:text-xl font-black text-black dark:text-white tracking-tight group-hover:text-emerald-400 transition-colors duration-300">
 //                         {f.title}
 //                       </h3>
 
